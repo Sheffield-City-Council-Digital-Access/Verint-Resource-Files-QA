@@ -1,20 +1,13 @@
 //Start: Establish Environment
-	if (window.location.href.includes('forms-sheffield'))
-	{
-		var serverEnvironment = 'https://forms-sheffieldcc.squiz.cloud';
+	if (window.location.href.includes('forms-sheffield')) {
+		var serverEnvironment = 'https://forms-sheffield.squiz.cloud';
 		var anonID = '101001971935';
-	}
-	else
-	if (window.location.href.includes('forms-qa-sheffield'))
-	{
-		var serverEnvironment = 'https://forms-qa-sheffieldcc.squiz.cloud';
-		var anonID = '101000000791';
-	}
-	else
-	if (window.location.href.includes('forms-dev-sheffield'))
-	{
-		var serverEnvironment = 'https://forms-dev-sheffieldcc.squiz.cloud';
-		var anonID = '101000612659';
+	} else if (window.location.href.includes('forms-qa-sheffield')) {
+		var serverEnvironment = 'https://forms-qa-sheffield.squiz.cloud';
+		var anonID = '101001971935';
+	} else if (window.location.href.includes('forms-dev-sheffield')) {
+		var serverEnvironment = 'https://forms-dev-sheffield.squiz.cloud';
+		var anonID = '101001971935';
 	}
 //Finish: Establish Environment
 
