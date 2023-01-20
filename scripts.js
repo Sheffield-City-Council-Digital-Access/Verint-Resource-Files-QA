@@ -694,41 +694,24 @@
 
 //Start: Set Channel Type
 
-function setChannelType()
-{
-	if (['housing@crm.com','housingsolutionsgeneric@sheffield.gov.uk','neighbourhoods+burngreave&shiregreen@sheffield.gov.uk','neighbouhood+city&west@sheffield.gov.uk','neighbourhoods+east@sheffield.gov.uk','neighbourhoods+firthppark&southey@sheffield.gov.uk','neighbourhoods+north@sheffield.gov.uk','salaih.zahir@sheffield.gov.uk','homesarease@sheffield.gov.uk','hrmcustomerservices@sheffield.gov.uk'].includes(KDF.getVal('txt_agentteam')))
-	{
-		if(['Burngreave','Burngreave - Telephone','Crystal Peaks', 'Crystal Peaks - Telephone', 'Darnall', 'Darnall - Telephone', 'Firth Park','Firth Park - Telephone', 'Chapeltown', 'Chapeltown - Telephone', 'Hillsborough', 'Hillsborough - Telephone', 'Manor Library', 'Manor Library - Telephone', 'Jordanthorpe', 'Jordanthorpe - Telephone', 'Low Edges', 'Low Edges - Telephone', 'Newfield Green', 'Newfield Green - Telephone', 'Stocksbridge', 'Stocksbridge - Telephone', 'Wordsworth Avenue', 'Wordsworth Avenue - Telephone', 'The Sheffield Property Shop'].includes(KDF.getVal('txt_agentlocation')))
-		{
+function setChannelType() {
+	if (KDF.getVal('txt_agentteam') === '07000000004') {
+		if(['Burngreave','Burngreave - Telephone','Crystal Peaks', 'Crystal Peaks - Telephone', 'Darnall', 'Darnall - Telephone', 'Firth Park','Firth Park - Telephone', 'Chapeltown', 'Chapeltown - Telephone', 'Hillsborough', 'Hillsborough - Telephone', 'Manor Library', 'Manor Library - Telephone', 'Jordanthorpe', 'Jordanthorpe - Telephone', 'Low Edges', 'Low Edges - Telephone', 'Newfield Green', 'Newfield Green - Telephone', 'Stocksbridge', 'Stocksbridge - Telephone', 'Wordsworth Avenue', 'Wordsworth Avenue - Telephone', 'The Sheffield Property Shop'].includes(KDF.getVal('txt_agentlocation'))) {
 			KDF.setVal('le_channel', 'face_to_face');
-		}
-		else
-		{
+		} else {
 			KDF.setVal('le_channel', 'voice_in');
 		}
-	}
-	else                                         
-	if (KDF.getVal('txt_agentteam') === 'admin@crm.com' || KDF.getVal('txt_agentteam') === 'utt@sheffield.gov.uk')
-	{
-		if(['Burngreave','Burngreave - Telephone','Crystal Peaks', 'Crystal Peaks - Telephone', 'Darnall', 'Darnall - Telephone', 'Firth Park','Firth Park - Telephone', 'Chapeltown', 'Chapeltown - Telephone', 'Hillsborough', 'Hillsborough - Telephone', 'Manor Library', 'Manor Library - Telephone', 'Jordanthorpe', 'Jordanthorpe - Telephone', 'Low Edges', 'Low Edges - Telephone', 'Newfield Green', 'Newfield Green - Telephone', 'Stocksbridge', 'Stocksbridge - Telephone', 'Wordsworth Avenue', 'Wordsworth Avenue - Telephone', 'The Sheffield Property Shop'].includes(KDF.getVal('txt_agentlocation')))
-		{
+	} else if (KDF.getVal('txt_agentteam') === '07000000000') {
+		if(['Burngreave','Burngreave - Telephone','Crystal Peaks', 'Crystal Peaks - Telephone', 'Darnall', 'Darnall - Telephone', 'Firth Park','Firth Park - Telephone', 'Chapeltown', 'Chapeltown - Telephone', 'Hillsborough', 'Hillsborough - Telephone', 'Manor Library', 'Manor Library - Telephone', 'Jordanthorpe', 'Jordanthorpe - Telephone', 'Low Edges', 'Low Edges - Telephone', 'Newfield Green', 'Newfield Green - Telephone', 'Stocksbridge', 'Stocksbridge - Telephone', 'Wordsworth Avenue', 'Wordsworth Avenue - Telephone', 'The Sheffield Property Shop'].includes(KDF.getVal('txt_agentlocation'))) {
 			KDF.setVal('le_channel', 'face_to_face');
-		}
-		else 
-		{
+		} else {
 			KDF.setVal('le_channel', 'voice_in');
 		}
-	}
-	else if (KDF.getVal('txt_agentteam') === 'backoffice@crm.com')
-	{
+	} else if (KDF.getVal('txt_agentteam') === '07000000002') {
 		KDF.setVal('le_channel', 'email_in');
-	}
-	else if (KDF.getVal('txt_agentteam') === 'firstpoint@crm.com')
-	{
+	} else if (KDF.getVal('txt_agentteam') === '07000000001') {
 		KDF.setVal('le_channel', 'face_to_face');
-	}
-	else
-	{
+	} else {
 		KDF.setVal('le_channel', 'voice_in');
 	}
 }
