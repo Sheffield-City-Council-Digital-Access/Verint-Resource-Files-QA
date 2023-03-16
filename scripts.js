@@ -1078,7 +1078,7 @@ function autoCloseCase()
 
 function updateNoAction(le_queue) {
 	KDF.customdata('a_casemanagementnoaction', 'function updateNoAction', true, true, {
-		'txt_reference': kdf.form.caseid,
+		'txt_reference': KDF.getVal('txt_reference'),
 		'le_queue': le_queue,
 		'txt_casenote': `${KDF.getVal('txt_username')}: has accessed the form but released no action taken`
 	});
@@ -1087,7 +1087,7 @@ function updateNoAction(le_queue) {
 
 function updateSaveAndReturn(le_queue) {
 	KDF.customdata('a_casemanagementsaveandreturn', 'function updateSaveAndReturn', true, true, {
-		'txt_reference': kdf.form.caseid,
+		'txt_reference': KDF.getVal('txt_reference'),
 		'le_queue': le_queue,
 		'txt_casenote': `${KDF.getVal('txt_username')}: added the following update - ${KDF.getVal('txta_hc_addcasenote')}`
 	});
@@ -1097,7 +1097,7 @@ function updateSaveAndReturn(le_queue) {
 
 function updateSaveAndClose() {
 	KDF.customdata('a_casemanagementsaveandclose', 'function updateSaveAndClose', true, true, {
-		'txt_reference': kdf.form.caseid,
+		'txt_reference': KDF.getVal('txt_reference'),
 		'txt_casenote': `Final note added by: ${KDF.getVal('txt_username')} - ${KDF.getVal('txta_hc_addcasenote')}`
 	});
 	KDF.showSuccess("Saving & Closing");
