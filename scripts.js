@@ -1093,7 +1093,7 @@ function updateSaveAndReturn() {
 }
 
 function updateSaveAndClose() {
-	KDF.customdata('close-case', 'function updateSaveAndClose', true, true, {
+	KDF.customdata('close-case', 'function updateSaveAndClose', false, true, {
 		'txt_reference': KDF.getVal('txt_reference'),
 		'txt_case_note': `Final note added by: ${KDF.getVal('txt_username')} - ${KDF.getVal('txta_hc_addcasenote')}`
 	});
