@@ -1077,10 +1077,9 @@ function autoCloseCase()
 //Start: Update Case
 
 function updateNoAction(le_queue) {
-	KDF.customdata('a_casemanagementnoaction', 'function updateNoAction', true, true, {
+	KDF.customdata('add-case-note', 'function updateNoAction', true, true, {
 		'txt_reference': KDF.getVal('txt_reference'),
-		'le_queue': le_queue,
-		'txt_casenote': `${KDF.getVal('txt_username')}: has accessed the form but released no action taken`
+		'txt_case_note': `${KDF.getVal('txt_username')}: has accessed the form but released no action taken`
 	});
 	KDF.showSuccess("Saving & Returning");
 }
