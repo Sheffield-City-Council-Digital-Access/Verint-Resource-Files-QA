@@ -1082,7 +1082,6 @@ function updateNoAction() {
 		'txt_case_note': `${KDF.getVal('txt_username')}: has accessed the form but released no action taken`
 	});
 	KDF.showSuccess("Saving & Returning");
-	window.close();
 }
 
 function updateSaveAndReturn() {
@@ -1091,7 +1090,6 @@ function updateSaveAndReturn() {
 		'txt_case_note': `${KDF.getVal('txt_username')}: added the following update - ${KDF.getVal('txta_hc_addcasenote')}`
 	});
 	KDF.showSuccess("Saving & Updating");
-	KDF.save();
 }
 
 function updateSaveAndClose() {
