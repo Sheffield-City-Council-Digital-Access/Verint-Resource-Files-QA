@@ -1076,27 +1076,30 @@ function autoCloseCase()
 
 //Start: Update Case
 
-function updateNoAction(le_queue)
-{
-	KDF.setVal('le_queue', le_queue);
-	KDF.setVal('txt_casenote', KDF.getVal('txt_username') + " has accessed the form but released no action taken");
-	KDF.custom('a_casemanagementnoaction', '', 'txt_reference,le_queue,txt_casenote', 'txt_reference,le_queue,txt_casenote', false, false, false);
+function updateNoAction(le_queue) {
+	KDF.customdata('a_casemanagementnoaction', 'function updateNoAction', true, true, {
+		'txt_reference': kdf.form.caseid,
+		'le_queue': le_queue,
+		'txt_casenote': `${KDF.getVal('txt_username')}: has accessed the form but released no action taken`
+	});
 	KDF.showSuccess("Saving & Returning");
 }
 
-function updateSaveAndReturn(le_queue)
-{
-	KDF.setVal('le_queue', le_queue);
-	KDF.setVal('txt_casenote', KDF.getVal('txt_username') + " added the following update - " + KDF.getVal('txta_hc_addcasenote'));
-	KDF.custom('a_casemanagementsaveandreturn', '', 'txt_reference,le_queue,le_title,txt_casenote', 'txt_reference,le_queue,le_title,txt_casenote', false, false, false);
+function updateSaveAndReturn(le_queue) {
+	KDF.customdata('a_casemanagementsaveandreturn', 'function updateSaveAndReturn', true, true, {
+		'txt_reference': kdf.form.caseid,
+		'le_queue': le_queue,
+		'txt_casenote': `${KDF.getVal('txt_username')}: added the following update - ${KDF.getVal('txta_hc_addcasenote')}`
+	});
 	KDF.showSuccess("Saving & Updating");
 	KDF.save();
 }
 
-function updateSaveAndClose()
-{
-	KDF.setVal('txt_casenote', "Final note added by " + KDF.getVal('txt_username') + " - " + KDF.getVal('txta_hc_addcasenote'));
-	KDF.custom('a_casemanagementsaveandclose', '', 'txt_reference,txt_casenote', 'txt_reference,txt_casenote', false, false, false);
+function updateSaveAndClose() {
+	KDF.customdata('a_casemanagementsaveandclose', 'function updateSaveAndClose', true, true, {
+		'txt_reference': kdf.form.caseid,
+		'txt_casenote': `Final note added by: ${KDF.getVal('txt_username')} - ${KDF.getVal('txta_hc_addcasenote')}`
+	});
 	KDF.showSuccess("Saving & Closing");
 }
 
