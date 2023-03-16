@@ -1086,10 +1086,11 @@ function updateNoAction(le_queue)
 
 function updateSaveAndReturn(le_queue)
 {
-	KDF.setVal('le_queue', le_queue);
-	KDF.setVal('txt_casenote', KDF.getVal('txt_username') + " added the following update - " + KDF.getVal('txta_hc_addcasenote'));
-	KDF.custom('a_casemanagementsaveandreturn', '', 'txt_reference,le_queue,le_title,txt_casenote', 'txt_reference,le_queue,le_title,txt_casenote', false, false, false);
-	KDF.showSuccess("Saving & Updating");
+	// KDF.setVal('le_queue', le_queue);
+	// KDF.setVal('txt_casenote', KDF.getVal('txt_username') + " added the following update - " + KDF.getVal('txta_hc_addcasenote'));
+	// KDF.custom('a_casemanagementsaveandreturn', '', 'txt_reference,le_queue,le_title,txt_casenote', 'txt_reference,le_queue,le_title,txt_casenote', false, false, false);
+	// KDF.showSuccess("Saving & Updating");
+	KDF.save();
 }
 
 function updateSaveAndClose()
