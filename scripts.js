@@ -1412,15 +1412,17 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
   if (email_body !== "") {
     KDF.setVal("txta_emailbody", KDF.getVal(email_body));
   }
-  KDF.custom(
-    "email_generic",
-    "_KDF_save",
-    "email_from,email_to,email_cc,email_bcc,email_subject,txt_reference,txt_greeting,txta_emailbody",
-    "email_to,email_from",
-    true,
-    true,
-    true
-  );
+
+  KDF.customdata("email_generic", "_KDF_save", true, true, {
+    email_from: KDF.getVal("email_from"),
+    email_to: KDF.getVal("email_to"),
+    email_cc: KDF.getVal("email_cc"),
+    email_bcc: KDF.getVal("email_bcc"),
+    email_subject: KDF.getVal("email_subject"),
+    txt_reference: KDF.getVal("txt_reference"),
+    txt_greeting: KDF.getVal("txt_greeting"),
+    txta_emailbody: KDF.getVal("txta_emailbody"),
+  });
 }
 
 function send_email(
