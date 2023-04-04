@@ -1448,7 +1448,7 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     email_subject: KDF.getVal("email_subject"),
     txt_reference: KDF.getVal("txt_reference"),
     txt_greeting: KDF.getVal("txt_greeting"),
-    txta_emailbody: emailBody,
+    txta_emailbody: email_body,
   });
 }
 
