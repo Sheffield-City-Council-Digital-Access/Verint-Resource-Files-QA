@@ -1440,7 +1440,6 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
       " <br/><br/>Kind Regards<br/>Customer Services";
   }
 
-  let emailBody = KDF.getVal("txta_emailbody");
   KDF.customdata("email_generic", "_KDF_save", true, true, {
     email_from: KDF.getVal("email_from"),
     email_to: KDF.getVal("email_to"),
