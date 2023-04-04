@@ -1377,12 +1377,16 @@ function updateSaveAndClose() {
 //Start: Email Function
 
 function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
+  let greeting = "";
   setTimeDate();
   if (hour >= "0" && hour < "12") {
+    greeting = "Good Morning";
     KDF.setVal("txt_greeting", "Good Morning");
   } else if (hour >= "12" && hour < "18") {
+    greeting = "Good Afternoon";
     KDF.setVal("txt_greeting", "Good Afternoon");
   } else if (hour >= "18") {
+    greeting = "Good Evening";
     KDF.setVal("txt_greeting", "Good Evening");
   }
 
@@ -1393,32 +1397,12 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     KDF.setVal("email_subject", email_subject);
   }
 
-  //   if (linkurl !== undefined) {
-  //     var url = '<a Title="Opens new tab or window" href=';
-  //     var url2 = linkurl;
-  //     var url3 =
-  //       ' onClick="showPopup(this.href);return(false);" style="color:#0645AD" target="_blank">';
-  //     var url4 = "";
-  //     if (linkLabel !== undefined) {
-  //       url4 = linkLabel;
-  //     } else {
-  //       url4 = linkurl;
-  //     }
-  //     var url5 = "</a>";
-  //     KDF.setVal("txt_link", url + url2 + url3 + url4 + url5);
-  //   } else {
-  //     KDF.setVal("txt_link", "");
-  //   }
-  //   if (email_body !== "") {
-  //     KDF.setVal("txta_emailbody", KDF.getVal(email_body));
-  //   }
-
   if (linkurl !== "") {
     if (linkLabel === "" || linkLabel === null || linkLabel === undefined) {
-      linkLabel = link;
+      linkLabel = linkurl;
     }
     email_body =
-      KDF.getVal("txt_greeting") +
+      greeting +
       "<br/><br/>\
 		  Thanks for contacting Sheffield City Council.\
 		  <br/><br/>" +
@@ -1432,7 +1416,7 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
 		  <br/><br/>Kind Regards<br/>Customer Services";
   } else {
     email_body =
-      KDF.getVal("txt_greeting") +
+      greeting +
       "<br/><br/>\
 		  Thanks for contacting Sheffield City Council.\
 		  <br/><br/>" +
@@ -1447,7 +1431,7 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     email_bcc: KDF.getVal("email_bcc"),
     email_subject: KDF.getVal("email_subject"),
     txt_reference: KDF.getVal("txt_reference"),
-    txt_greeting: KDF.getVal("txt_greeting"),
+    txt_greeting: greeting,
     txta_emailbody: email_body,
   });
 }
@@ -1460,13 +1444,17 @@ function send_email(
   link,
   linkDisplay
 ) {
+  let greeting = "";
   const hours = new Date().getHours();
   KDF.setVal("txt_timecurrent", hours);
   if (hours >= "0" && hours < "12") {
+    greeting = "Good Morning";
     KDF.setVal("txt_greeting", "Good Morning");
   } else if (hours >= "12" && hours < "18") {
+    greeting = "Good Afternoon";
     KDF.setVal("txt_greeting", "Good Afternoon");
   } else if (hours >= "18") {
+    greeting = "Good Evening";
     KDF.setVal("txt_greeting", "Good Evening");
   }
 
@@ -1483,7 +1471,7 @@ function send_email(
         linkDisplay = link;
       }
       var email_body =
-        KDF.getVal("txt_greeting") +
+        greeting +
         "<br/><br/>\
 			Thanks for contacting Sheffield City Council.\
 			<br/><br/>" +
@@ -1497,7 +1485,7 @@ function send_email(
 			<br/><br/>Kind Regards<br/>Customer Services";
     } else {
       var email_body =
-        KDF.getVal("txt_greeting") +
+        greeting +
         "<br/><br/>\
 			Thanks for contacting Sheffield City Council.\
 			<br/><br/>" +
