@@ -1393,25 +1393,53 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     KDF.setVal("email_subject", email_subject);
   }
 
-  if (linkurl !== undefined) {
-    var url = '<a Title="Opens new tab or window" href=';
-    var url2 = linkurl;
-    var url3 =
-      ' onClick="showPopup(this.href);return(false);" style="color:#0645AD" target="_blank">';
-    var url4 = "";
-    if (linkLabel !== undefined) {
-      url4 = linkLabel;
-    } else {
-      url4 = linkurl;
+  //   if (linkurl !== undefined) {
+  //     var url = '<a Title="Opens new tab or window" href=';
+  //     var url2 = linkurl;
+  //     var url3 =
+  //       ' onClick="showPopup(this.href);return(false);" style="color:#0645AD" target="_blank">';
+  //     var url4 = "";
+  //     if (linkLabel !== undefined) {
+  //       url4 = linkLabel;
+  //     } else {
+  //       url4 = linkurl;
+  //     }
+  //     var url5 = "</a>";
+  //     KDF.setVal("txt_link", url + url2 + url3 + url4 + url5);
+  //   } else {
+  //     KDF.setVal("txt_link", "");
+  //   }
+  //   if (email_body !== "") {
+  //     KDF.setVal("txta_emailbody", KDF.getVal(email_body));
+  //   }
+
+  if (linkurl !== "") {
+    if (linkLabel === "" || linkLabel === null || linkLabel === undefined) {
+      linkLabel = link;
     }
-    var url5 = "</a>";
-    KDF.setVal("txt_link", url + url2 + url3 + url4 + url5);
+    email_body =
+      KDF.getVal("txt_greeting") +
+      "<br/><br/>\
+		  Thanks for contacting Sheffield City Council.\
+		  <br/><br/>" +
+      email_body +
+      " " +
+      "<a href=" +
+      linkurl +
+      ">" +
+      linkLabel +
+      "</a>\
+		  <br/><br/>Kind Regards<br/>Customer Services";
   } else {
-    KDF.setVal("txt_link", "");
+    email_body =
+      KDF.getVal("txt_greeting") +
+      "<br/><br/>\
+		  Thanks for contacting Sheffield City Council.\
+		  <br/><br/>" +
+      email_body +
+      " <br/><br/>Kind Regards<br/>Customer Services";
   }
-  if (email_body !== "") {
-    KDF.setVal("txta_emailbody", KDF.getVal(email_body));
-  }
+
   let emailBody = KDF.getVal("txta_emailbody");
   KDF.customdata("email_generic", "_KDF_save", true, true, {
     email_from: KDF.getVal("email_from"),
