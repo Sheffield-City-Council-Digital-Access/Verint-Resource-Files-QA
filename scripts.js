@@ -1412,7 +1412,7 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
   if (email_body !== "") {
     KDF.setVal("txta_emailbody", KDF.getVal(email_body));
   }
-
+  let emailBody = KDF.getVal("txta_emailbody");
   KDF.customdata("email_generic", "_KDF_save", true, true, {
     email_from: KDF.getVal("email_from"),
     email_to: KDF.getVal("email_to"),
@@ -1421,7 +1421,7 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     email_subject: KDF.getVal("email_subject"),
     txt_reference: KDF.getVal("txt_reference"),
     txt_greeting: KDF.getVal("txt_greeting"),
-    txta_emailbody: KDF.getVal("txta_emailbody"),
+    txta_emailbody: emailBody,
   });
 }
 
