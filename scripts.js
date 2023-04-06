@@ -879,9 +879,11 @@ function postcodeslice() {
 //Start: Set Channel Type
 
 function setChannelType() {
-  if (KDF.getVal("txt_agentteam") === "07000000004") {
+  if (KDF.getVal("07000000003")) {
     if (
       [
+        "Howden House Firstpoint",
+        "The Sheffield Property Shop",
         "Burngreave",
         "Burngreave - Telephone",
         "Crystal Peaks",
@@ -916,6 +918,8 @@ function setChannelType() {
   } else if (KDF.getVal("txt_agentteam") === "07000000000") {
     if (
       [
+        "Howden House Firstpoint",
+        "The Sheffield Property Shop",
         "Burngreave",
         "Burngreave - Telephone",
         "Crystal Peaks",
@@ -947,7 +951,11 @@ function setChannelType() {
     } else {
       KDF.setVal("le_channel", "voice_in");
     }
-  } else if (KDF.getVal("txt_agentteam") === "07000000002") {
+  } else if (
+    KDF.getVal("txt_agentteam") === "07000000004" ||
+    KDF.getVal("txt_agentteam") === "070000000011" ||
+    KDF.getVal("txt_agentteam") === "07000000012"
+  ) {
     KDF.setVal("le_channel", "email_in");
   } else if (KDF.getVal("txt_agentteam") === "07000000001") {
     KDF.setVal("le_channel", "face_to_face");
@@ -1297,8 +1305,8 @@ function finishInteraction() {
 
 function HousingSave() {
   /* This could be updated in the future to include classifyType to do it in one call rather than multiple
-	for instance if we're setting the values then saving it, have them just written in this function call
-	if the values had already been set earlier and are now just being sent, then KDF.getVal would work for the params */
+	  for instance if we're setting the values then saving it, have them just written in this function call
+	  if the values had already been set earlier and are now just being sent, then KDF.getVal would work for the params */
 
   agentLocation = KDF.getVal("txt_agentlocation");
   if (agentLocation.includes(" - Telephone")) {
@@ -1404,8 +1412,8 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
     email_body =
       greeting +
       "<br/><br/>\
-		  Thanks for contacting Sheffield City Council.\
-		  <br/><br/>" +
+			Thanks for contacting Sheffield City Council.\
+			<br/><br/>" +
       email_body +
       " " +
       "<a href=" +
@@ -1413,13 +1421,13 @@ function sendEmail(email_to, email_body, email_subject, linkurl, linkLabel) {
       ">" +
       linkLabel +
       "</a>\
-		  <br/><br/>Kind Regards<br/>Customer Services";
+			<br/><br/>Kind Regards<br/>Customer Services";
   } else {
     email_body =
       greeting +
       "<br/><br/>\
-		  Thanks for contacting Sheffield City Council.\
-		  <br/><br/>" +
+			Thanks for contacting Sheffield City Council.\
+			<br/><br/>" +
       email_body +
       " <br/><br/>Kind Regards<br/>Customer Services";
   }
@@ -1473,8 +1481,8 @@ function send_email(
       var email_body =
         greeting +
         "<br/><br/>\
-			Thanks for contacting Sheffield City Council.\
-			<br/><br/>" +
+			  Thanks for contacting Sheffield City Council.\
+			  <br/><br/>" +
         mainbody +
         " " +
         "<a href=" +
@@ -1482,13 +1490,13 @@ function send_email(
         ">" +
         linkDisplay +
         "</a>\
-			<br/><br/>Kind Regards<br/>Customer Services";
+			  <br/><br/>Kind Regards<br/>Customer Services";
     } else {
       var email_body =
         greeting +
         "<br/><br/>\
-			Thanks for contacting Sheffield City Council.\
-			<br/><br/>" +
+			  Thanks for contacting Sheffield City Council.\
+			  <br/><br/>" +
         mainbody +
         " <br/><br/>Kind Regards<br/>Customer Services";
     }
@@ -1777,3 +1785,15 @@ function customerparamsfunction() {
 //Finish: Customer Params
 
 //Finish: Params
+
+function capitalisation(id, value) {
+  return;
+  // const string = capitalizeString(value);
+  // const inputField = document.querySelector("#" + id);
+  // inputField.value = string;
+}
+
+const capitalizeString = (str) => {
+  str = str.toLowerCase();
+  return str.replace(/\b\w/g, (match) => match.toUpperCase());
+};
