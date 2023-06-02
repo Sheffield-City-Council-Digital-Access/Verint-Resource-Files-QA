@@ -1569,6 +1569,11 @@ function clearMapData() {
   KDF.setVal("site_code", "");
   KDF.setVal("txt_usrn", "");
   KDF.setVal("txt_prestige", "");
+  KDF.setVal("grass_category", ""); 
+
+  KDF.hideWidget("ahtm_grass_category_a");
+  KDF.hideWidget("ahtm_grass_category_d");
+  KDF.hideWidget("ahtm_grass_category_c");
 
   KDF.showWidget("but_next_page_about_the_location");
   KDF.showWidget("but_submit_anonymously_page_about_the_location");
@@ -2425,13 +2430,14 @@ function vegetationFeatureSetHandler(marker, featureSet) {
   if (featureSet.features.length >= 1) {
     var asset = featureSet.features[0];
     var attributes = asset.attributes;
+    console.log(attributes);
     KDF.setVal("object_id", attributes["objectid"]);
     KDF.setVal("longitude_x", marker.geometry.x);
     KDF.setVal("latitude_y", marker.geometry.y);
     KDF.setVal(
       "asset_type",
       attributes[
-        "sheffield.corpmap.HCFP_Assets_GrassPlantArea.feature_type_name"
+        "sheffield.corpmap.HCFP_Assets_GrassPlantArea.featuretypename"
       ]
     );
     KDF.setVal(
@@ -2450,11 +2456,11 @@ function vegetationFeatureSetHandler(marker, featureSet) {
     );
     KDF.setVal(
       "site_name",
-      attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.site_name"]
+      attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.sitename"]
     );
     KDF.setVal(
       "txt_streetdescription",
-      attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.site_name"]
+      attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.sitename"]
     );
     KDF.setVal(
       "site_code",
@@ -2464,6 +2470,20 @@ function vegetationFeatureSetHandler(marker, featureSet) {
       "txt_usrn",
       attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.sitecode"]
     );
+    KDF.setVal(
+      "txt_usrn",
+      attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.sitecode"]
+    );
+    KDF.setVal("grass_category", attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.grass_category"]);
+
+    if (attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.grass_category"].startsWith("A")) {
+      KDF.showWidget('ahtm_grass_category_a');
+    } else if (attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.grass_category"].startsWith("B")) {
+      KDF.showWidget('ahtm_grass_category_b');
+    } else if (attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.grass_category"].startsWith("C")) {
+      KDF.showWidget('ahtm_grass_category_c');
+    }
+    
     vmap.setInfoWindow({
       xcoord: marker.geometry.x,
       ycoord: marker.geometry.y,
@@ -2471,11 +2491,12 @@ function vegetationFeatureSetHandler(marker, featureSet) {
       content:
         "<strong>Feature:</strong> " +
         attributes[
-          "sheffield.corpmap.HCFP_Assets_GrassPlantArea.feature_type_name"
+          "sheffield.corpmap.HCFP_Assets_GrassPlantArea.featuretypename"
         ] +
         "<br/><strong>Site Name:</strong> " +
-        attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.site_name"],
+        attributes["sheffield.corpmap.HCFP_Assets_GrassPlantArea.sitename"],
     });
+    
     queryCityCentre(marker);
   } else {
     queryRoads(marker);
