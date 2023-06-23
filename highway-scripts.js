@@ -1569,7 +1569,7 @@ function clearMapData() {
   KDF.setVal("site_code", "");
   KDF.setVal("txt_usrn", "");
   KDF.setVal("txt_prestige", "");
-  KDF.setVal("grass_category", ""); 
+  KDF.setVal("grass_category", "");
 
   KDF.hideWidget("ahtm_grass_category_a");
   KDF.hideWidget("ahtm_grass_category_d");
