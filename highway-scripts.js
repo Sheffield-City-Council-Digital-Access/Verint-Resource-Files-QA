@@ -564,7 +564,8 @@ function updateObject() {
       KDF.getVal("txt_agentteam").toLowerCase() === "07000000004" ||
       KDF.getVal("txt_agentteam").toLowerCase() === "07000000007" ||
       KDF.getVal("txt_agentteam").toLowerCase() === "07000000011" ||
-      KDF.getVal("txt_agentteam").toLowerCase() === "07000000012")
+      KDF.getVal("txt_agentteam").toLowerCase() === "07000000012"||
+      KDF.getVal("txt_agentteam").toLowerCase() === "07000000013")
   ) {
     $(".housingHubScrean").show();
     $(".updateRecord").hide();
