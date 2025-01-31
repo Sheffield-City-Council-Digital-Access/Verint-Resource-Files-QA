@@ -1212,7 +1212,7 @@ function mapClicked(map, marker) {
 
   clearMapData();
 
-  if (KDF.getVal("txt_agentteam") === "07000000004") {
+  if (KDF.getVal("txt_agentteam") === "07000000003") {
     queryGMSitesHousing(marker);
   } else {
     queryLayer(marker);
