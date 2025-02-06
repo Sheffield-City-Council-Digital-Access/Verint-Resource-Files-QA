@@ -2585,8 +2585,8 @@ function getAndSetReviewPageData() {
       // use stored page array when case management
       relevantPages = KDF.getVal("txt_pages").split(",");
     } else if (
-      KDF.kdf().form.caseid &&
-      KDF.getVal("txt_resume_form") === "true"
+      (KDF.kdf().form.caseid && KDF.getVal("txt_resume_form") === "true") ||
+      KDF.getVal("txt_resume_form") === "false"
     ) {
       // use stored page array when resumed
       relevantPages = KDF.getVal("txt_pages").split(",");
