@@ -61,51 +61,70 @@ const makingAPayment = new ContentP(
   "Making A Payment",
   "Learn how to make a secure payment for parking tickets online, by phone, or at pay point outlets, including the necessary details for processing your payment.",
   `
-      <p>
-        It is quick, safe, and secure to make a payment online or using our automated
-        telephone payment line. To do this, you will need:
-      <br>
-      <br>
-      <ul>
-        <li>Ticket reference number (can be found on Gateway)</li>
-        <li>Credit or debit card</li>
-        <li>Your vehicle registration number</li>
-      </ul>
-      <br>
-      <br>
-      The customer must enter ** on their keypad in place of the FD letters 
-      at the start of entering their pcn number
-      <br>
-      <br>
-      Alternatively, you can:
-      <br>
-      <br>
-      <ul>
-        <li>Pay at a pay point outlet by cash</li>
-        <li>Pay at a Post Office by cash, cheque, credit, or debit card</li>
-      </ul>
-      <br>
-      <br>
-      Sheffield City Council does not accept cash, cheque, or postal orders direct.
-      <br>
-      <br>
-      Payments are taken at the same time as the 
-      application is made and the permit is then active immediately.
-      <br>
-      <br>
-      For further information, visit 
-      <a href="https://www.sheffield.gov.uk/parking" target="_blank">Sheffield Parking</a>.
-<br>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Parking'"> Send Link </button>
-      <br>
-      <br>
-      How to make a payment, visit
-      <a href="https://www.sheffield.gov.uk/parking/pay-penalty-charge-notice" target="_blank">Pay a Penalty Charge Notice</a>.
-      <br>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Pay%20Penalty%20Charge%20Notice'"> Send Link </button>
-
+    <p>
+      It is quick, safe, and secure to make a payment online or using our automated
+      telephone payment line. To do this, you will need:
     </p>
-    `,
+    <ul>
+      <li>Ticket reference number (can be found on Gateway)</li>
+      <li>Credit or debit card</li>
+      <li>Your vehicle registration number</li>
+    </ul>
+    <p>
+      The customer must enter ** on their keypad in place of the FD letters at the
+      start of entering their pcn number
+    </p>
+    <p>Alternatively, you can:</p>
+    <ul>
+      <li>Pay at a pay point outlet by cash</li>
+      <li>Pay at a Post Office by cash, cheque, credit, or debit card</li>
+    </ul>
+    <p>
+      Sheffield City Council does not accept cash, cheque, or postal orders direct.
+    </p>
+    <p>
+      Payments are taken at the same time as the application is made and the permit
+      is then active immediately.
+    </p>
+    <p>
+      For further information, visit
+      <a href="https://www.sheffield.gov.uk/parking" target="_blank"
+        >Sheffield Parking</a
+      >.
+      <button
+        type="button"
+        class="dform_widget email-btn dform_widget_type_button"
+        aria-label="Send link to further information payment link"
+        onclick="
+              window.location.href = \`\${window.location.protocol}//\${window.location.hostname}/form/launch/send_link_to_service?\${
+                KDF.getParams().customerid ? \`customerid=\${KDF.getParams().customerid}&\` : ''
+              }interactionid=\${KDF.getParams().interactionid}&sel_service=Parking\`
+            "
+      >
+        Send link to review further information
+      </button>
+    </p>
+    <p>
+      How to make a payment, visit
+      <a
+        href="https://www.sheffield.gov.uk/parking/pay-penalty-charge-notice"
+        target="_blank"
+        >Pay a Penalty Charge Notice</a
+      >.
+      <button
+        type="button"
+        class="dform_widget email-btn dform_widget_type_button"
+        aria-label="Send link to to pay for a parking fine"
+        onclick="
+              window.location.href = \`\${window.location.protocol}//\${window.location.hostname}/form/launch/send_link_to_service?\${
+                KDF.getParams().customerid ? \`customerid=\${KDF.getParams().customerid}&\` : ''
+              }interactionid=\${KDF.getParams().interactionid}&sel_service=Parking\`
+            "
+      >
+        Send link to to pay a parking fine
+      </button>
+    </p>
+  `,
   { buttonLabel: "Parking Permit", formName: "" },
   { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
@@ -188,10 +207,10 @@ const appealBlueBadge = new ContentP(
   "",
   `
       
-    `,
+  `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "blue_badge_information_provided" },
   { typeKey: "blue_badge_tarnsferred_to_service" },
+  { typeKey: "blue_badge_information_provided" },
   { type: "Appeal", keywords: [], categories: ["Parking"] },
   { date: "01/10/2024", name: "Shahzad Athar" }
 );
@@ -239,10 +258,17 @@ const applyBlueBadge = new ContentP(
       <p>
         These applications will be fast tracked and would not be held up awaiting
         payment or other evidence. When applying online these applications via
-        <a href="https://www.gov.uk" target="_blank">https://www.gov.uk</a> are
+        <a href="https://www.gov.uk/apply-blue-badge" target="_blank">https://www.gov.uk/apply-blue-badge</a> are
         processed the same working day.
-      <br>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Gov%20UK'"> Send Link </button>
+        <button type="button" class="dform_widget email-btn dform_widget_type_button"
+          aria-label="Send link to apply for a blue badge"
+          onclick="
+            window.location.href = \`\${window.location.protocol}//\${window.location.hostname}/form/launch/send_link_to_service?\${
+              KDF.getParams().customerid ? \`customerid=\${KDF.getParams().customerid}&\` : ''
+            }interactionid=\${KDF.getParams().interactionid}&sel_service=Gov%20UK\`
+          ">
+          Send link to apply online
+        </button>
       </p>
       <h3>Discretionary</h3>
       <p>
@@ -270,14 +296,14 @@ const applyBlueBadge = new ContentP(
           </p>
     </div>
   </details>
-    `,
+  `,
   {
     buttonLabel: "Apply for a blue badge",
     formName: "blue_badge_application",
   },
-  { typeKey: "blue_badge_information_provided" },
   { typeKey: "blue_badge_tarnsferred_to_service" },
-  { type: "Request", keywords: [], categories: ["Parking"] },
+  { typeKey: "blue_badge_information_provided" },
+  { type: "Apply", keywords: ["Blue Badge"], categories: ["Parking"] },
   { date: "12/11/2024", name: "Andy Walker" }
 );
 
@@ -286,26 +312,26 @@ const blueBadgeHolderPassedAway = new ContentP(
   "Badge Holder Passed Away",
   "Learn how to report the passing of a Blue Badge holder and return the badge to Sheffield City Council.",
   `
-      <p>
-        If the customer has an appointment with Registrars in Sheffield to report the
-        death, they can sign up to <strong>Tell Us Once</strong> meaning the customer
-        does not have to report it to each individual service. Alternatively the
-        details can be taken today and passed to our back office team who will update
-        our records, the badge should be returned to:
-      </p>
-      <address>
-        Customer Services<br />
-        Floor 2<br />
-        Howden House<br />
-        1 Union Street<br />
-        Sheffield<br />
-        S1 2SH
-      </address>
-    `,
+    <p>
+      If the customer has an appointment with Registrars in Sheffield to report the
+      death, they can sign up to <strong>Tell Us Once</strong> meaning the customer
+      does not have to report it to each individual service. Alternatively the
+      details can be taken today and passed to our back office team who will update
+      our records, the badge should be returned to:
+    </p>
+    <address>
+      Customer Services<br />
+      Floor 2<br />
+      Howden House<br />
+      1 Union Street<br />
+      Sheffield<br />
+      S1 2SH
+    </address>
+  `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "blue_badge_information_provided" },
   { typeKey: "blue_badge_tarnsferred_to_service" },
-  { type: "Request", keywords: [], categories: ["Parking"] },
+  { typeKey: "blue_badge_information_provided" },
+  { type: "Request", keywords: ["Blue Badge"], categories: ["Parking"] },
   { date: "01/10/2024", name: "Shahzad Athar" }
 );
 
@@ -348,9 +374,9 @@ const replacementBlueBadge = new ContentP(
     `,
 
   { buttonLabel: "", formName: "" },
-  { typeKey: "blue_badge_information_provided" },
   { typeKey: "blue_badge_tarnsferred_to_service" },
-  { type: "Request", keywords: [], categories: ["Parking"] },
+  { typeKey: "blue_badge_information_provided" },
+  { type: "Request", keywords: ["Blue Badge"], categories: ["Parking"] },
   { date: "12/11/2024", name: "Andy Walker" }
 );
 
@@ -424,8 +450,8 @@ const baySuspensions = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -449,7 +475,7 @@ const baySuspensions = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "14/10/2024", name: "Dinah WIlliams" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const carParkParkingMeterProblem = new ContentP(
@@ -519,8 +545,8 @@ const illegalParking = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -575,8 +601,8 @@ const vehicleObstruction = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -609,8 +635,8 @@ const vehicleParkedInASuspendedBay = new ContentP(
   "Learn who to report vehicles parked in a suspended bay to.",
   `<p>Should be reported to Parking Enforcement</p>`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -634,7 +660,7 @@ const vehicleParkedInASuspendedBay = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "14/10/2024", name: "Dinah WIlliams" }
+  { date: "12/02/2025", name: "Dinah WIlliams" }
 );
 
 const yellowLineDispensations = new ContentP(
@@ -681,8 +707,8 @@ const yellowLineDispensations = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -762,8 +788,8 @@ const businessPermit = new ContentP(
 		</p>
 		<h3>Cost</h3>
 		<ul>
-			<li>1st permit £111.80</li>
-			<li>Additional permits £223.20</li>
+			<li>The first permit costs £111.60</li>
+			<li>A second permit costs £223.20</li>
 		</ul>
 		<h3>Evidence Required - Vehicle Ownership</h3>
 		<p>
@@ -823,8 +849,8 @@ const businessPermit = new ContentP(
 
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -848,7 +874,7 @@ const businessPermit = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const carerPermitAndMedical = new ContentP(
@@ -899,8 +925,8 @@ const carerPermitAndMedical = new ContentP(
       </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -924,7 +950,7 @@ const carerPermitAndMedical = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 //
@@ -1018,8 +1044,8 @@ const greenParkingPermit = new ContentP(
       </p>
  	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1115,8 +1141,8 @@ const langsettAndHillsboroughBusAndTramgate = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1140,7 +1166,7 @@ const langsettAndHillsboroughBusAndTramgate = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 //
@@ -1205,8 +1231,8 @@ const medicalProfessionalCarer = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1230,7 +1256,7 @@ const medicalProfessionalCarer = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const organisationCarer = new ContentP(
@@ -1298,8 +1324,8 @@ const organisationCarer = new ContentP(
       </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1323,7 +1349,7 @@ const organisationCarer = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const residentsPermit = new ContentP(
@@ -1344,10 +1370,13 @@ const residentsPermit = new ContentP(
 		<p>You must apply for, renew, cancel, or change a residents permit online.</p>
 		<h3>Cost</h3>
 		<ul>
-			<li>City Centre inner zone: £310.00</li>
-			<li>City Centre outer zone: £155.00</li>
-			<li>Other zones - 1st permit: £55.80</li>
-			<li>Other zones - additional permit: £111.60</li>
+			<li>standard first permit £55.80</li>
+      <li>standard second permit £111.60</li>
+      <li>city centre inner residents permit £310.00</li>
+      <li>city centre outer residents permit £155.00</li>
+      <li>Hawley Street Car Park residents permit £55.80</li>
+      <li>Kelham Island and Neepsend Parking Scheme - first permit £111.60</li>
+      <li>Kelham Island and Neepsend Parking Scheme - second permit £223.20</li>
 		</ul>
 		<h3>Evidence Required - Vehicle Ownership</h3>
 		<p>
@@ -1405,8 +1434,8 @@ const residentsPermit = new ContentP(
       </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1430,7 +1459,7 @@ const residentsPermit = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const staffPermit = new ContentP(
@@ -1452,8 +1481,8 @@ const staffPermit = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1477,7 +1506,7 @@ const staffPermit = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Dinah WIlliams" }
+  { date: "12/02/2025", name: "Dinah WIlliams" }
 );
 
 const tradePermit = new ContentP(
@@ -1496,7 +1525,7 @@ const tradePermit = new ContentP(
 		</p>
 		<p>There is no limit to the number of trade permits you can buy.</p>
 		<h3>Cost</h3>
-		<p>Batch of 25 daily permits: £96.85</p>
+		<p>Trade permits costs £96.85 for a batch of 25 daily permits. They cannot be refunded or exchanged.</p>
 		<p>
 			Permits should be validated and displayed in the vehicle promptly after
 			parking. They are valid until midnight on the day of use.
@@ -1544,8 +1573,8 @@ const tradePermit = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1569,7 +1598,7 @@ const tradePermit = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const utilityPermit = new ContentP(
@@ -1579,9 +1608,14 @@ const utilityPermit = new ContentP(
   `
 		<h3>About the Permit</h3>
 		<p>
-			Utility permits are for bigger utility companies i.e. British Gas, NPower or
-			BT - for use in the Inner/Outer City Centre.
+			<li>Issued for city centre works taking place by utility companies. E.g. Yorkshire Water, BT, British Gas etc.</li>
+      <li>25 half day cards per book</li>
+      <li>Maximum of 10 books per application</li>
 		</p>
+    <p>Utility Permits are only for major utility companies who need to complete work within the city centre.
+    <p>Valid for am/pm slots (not full days).
+    <p>Customer to email customerservices@sheffield.gov.uk directly or we can send them a link to apply.
+    </p>
 		<p>
 			If a company is working outside the City Centre then they would need a Trade
 			Permit.
@@ -1601,8 +1635,8 @@ const utilityPermit = new ContentP(
       </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Apply",
     keywords: [
@@ -1626,7 +1660,7 @@ const utilityPermit = new ContentP(
     ],
     categories: ["Parking"],
   },
-  { date: "02/12/2024", name: "Andy Walker" }
+  { date: "12/02/2025", name: "Dinah Williams" }
 );
 
 const visitorsPermits = new ContentP(
@@ -1655,8 +1689,8 @@ const visitorsPermits = new ContentP(
 		</p>
 		<h3>Charge for Permit</h3>
 		<p>
-			It costs £19.35 for a batch of 25 daily permits. These are valid on the day of
-			use until 10am the following day.
+			One book of 25 permits costs £19.35. 
+      These are valid on the day of use until 10am the following day.
 		</p>
 		<section class="info-panel" role="region" aria-label="Information panel">
 			<p>These permits cannot be refunded or exchanged.</p>
@@ -1701,8 +1735,8 @@ const visitorsPermits = new ContentP(
       </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1780,8 +1814,8 @@ const confirmationOfPayment = new ContentP(
 		</p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1836,8 +1870,8 @@ const customerTriedToPayOnline = new ContentP(
 		</p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1894,8 +1928,8 @@ const customerUnableToPay = new ContentP(
 		</p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -1956,8 +1990,8 @@ const enforcementbaliffenquiries = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -2014,8 +2048,8 @@ const howCanIAppeal = new ContentP(
     </p>
 	`,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -2065,8 +2099,8 @@ const howLongDoIHaveToAppeal = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -2121,8 +2155,8 @@ const multiplepcns = new ContentP(
     </p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [
@@ -2182,8 +2216,8 @@ const haveYouReceivedMyAppeal = new ContentP(
 	  <p>This can be found by checking Gateway.</p>
   `,
   { buttonLabel: "Parking Permit", formName: "" },
-  { typeKey: "parking_permit_information_provided" },
   { typeKey: "parking_permit_transferred_to_service" },
+  { typeKey: "parking_permit_information_provided" },
   {
     type: "Information",
     keywords: [

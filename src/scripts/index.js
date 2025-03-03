@@ -1162,6 +1162,21 @@ function handlePageChangeEvent(event, kdf, currentpageid, targetpageid) {
     }
   }
 
+  if (
+    pageName === "page_review" ||
+    pageName === "page_declaration" ||
+    pageName === "save" ||
+    pageName === "complete"
+  ) {
+    if ($("#dform_progressbar_sheffield").length) {
+      $("#dform_progressbar_sheffield, #dform_ref_display").hide();
+    }
+  } else {
+    if ($("#dform_progressbar_sheffield").length) {
+      $("#dform_progressbar_sheffield, #dform_ref_display").show();
+    }
+  }
+
   if (pageName === "save") {
     KDF.setVal("txt_resume_form", "true");
     $("#dform_page_complete").css({
@@ -1496,10 +1511,20 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
       fullAddress,
       propertyId,
       uprn,
+      easting,
+      northing,
       streetId,
       usrn,
       status,
       message,
+      ohmsUprn,
+      propertyClass,
+      managementCode,
+      area,
+      ward,
+      officer,
+      areaContact,
+      officerContact,
     } = response.data;
     if (status == 400 && action === "retrieve-location-from-coordinates") {
       const $button = $(".geo-btn");
@@ -1535,6 +1560,18 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
       { alias: "usrn", value: usrn },
       { alias: "siteName", value: streetName },
       { alias: "siteCode", value: usrn },
+      { alias: "propertyId", value: propertyId },
+      { alias: "streetId", value: streetId },
+      { alias: "easting", value: easting },
+      { alias: "northing", value: northing },
+      { alias: "ohmsUprn", value: ohmsUprn },
+      { alias: "propertyClass", value: propertyClass },
+      { alias: "managementCode", value: managementCode },
+      { alias: "area", value: area },
+      { alias: "ward", value: ward },
+      { alias: "officer", value: officer },
+      { alias: "areaContact", value: areaContact },
+      { alias: "officerContact", value: officerContact },
     ]);
     setSelectedAddress(fullAddress, "show");
   }
@@ -1625,6 +1662,22 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
         { name: "but_view_rent_account", display: ohmsId ? "show" : "hide" },
       ]);
     }
+
+    if (kdf.access === "agent") {
+      setTimeout(() => {
+        KDF.customdata(
+          "retrieve-council-housing-property-details",
+          "_KDF_custom",
+          true,
+          true,
+          {
+            propertId: KDF.getVal("txt_uprn_about_you"),
+            property: KDF.getVal("txt_property_about_you"),
+            postcode: KDF.getVal("txt_postcode_about_you"),
+          }
+        );
+      }, 500);
+    }
   }
 
   // --- MAP --------------------------------------------------------------- \\
@@ -1646,6 +1699,7 @@ function handleFailedAction(event, action, xhr, settings, thrownError) {
   } else {
     if (KDF.kdf().access === "agent") {
       KDF.showError(`${action} failed: ${thrownError}`);
+      window.scrollTo(0, 0);
     }
   }
 
@@ -2299,8 +2353,12 @@ function checkDate(id, dd, mm, yy, element) {
         .toString()
         .padStart(2, "0")}-${dd.toString().padStart(2, "0")}`;
       const localFormat = new Date(date).toLocaleDateString("en-GB");
-      $(`#${id.replace("_date_", "_txt_")}`).val(localFormat);
-      $(`#${id.replace("_date_", "_dt_")}`).val(date);
+      $(`#${id.replace("_date_", "_txt_")}`)
+        .val(localFormat)
+        .change();
+      $(`#${id.replace("_date_", "_dt_")}`)
+        .val(date)
+        .change();
     } else {
       $(`#${id.replace("_date_", "_txt_")}`).val("");
       $(`#${id.replace("_date_", "_dt_")}`).val("");
@@ -2585,8 +2643,9 @@ function getAndSetReviewPageData() {
       // use stored page array when case management
       relevantPages = KDF.getVal("txt_pages").split(",");
     } else if (
-      (KDF.kdf().form.caseid && KDF.getVal("txt_resume_form") === "true") ||
-      KDF.getVal("txt_resume_form") === "false"
+      KDF.kdf().form.ref &&
+      (KDF.getVal("txt_resume_form") === "true" ||
+        KDF.getVal("txt_resume_form") === "false")
     ) {
       // use stored page array when resumed
       relevantPages = KDF.getVal("txt_pages").split(",");
@@ -4152,7 +4211,7 @@ function updateWidgetText(name, label, helpMessage, validation) {
   }
 }
 
-// --- UPDATE LABEL TEXT ---------------------------------------------------- \\
+// --- UPDATE LABEL TEXT ---------------------------------------------------- \\update labe
 
 function updateMultipleLabels(fields) {
   fields.map((field) => {
