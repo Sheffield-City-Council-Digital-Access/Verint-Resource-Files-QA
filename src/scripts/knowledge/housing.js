@@ -109,7 +109,7 @@ const universalCredit = new ContentH(
     <div class="accordion-content">
         <p>Universal Credit does not include help with your Council Tax, so you must claim this separately.</p>
         <p>You can do this at <a href="https://www.sheffield.gov.uk/benefits/council-tax-support" 
-           target="_blank">https://www.sheffield.gov.uk/benefits/council-tax-support</a>.<br><button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> </p>
+           target="_blank">https://www.sheffield.gov.uk/benefits/council-tax-support</a>.<br><button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> </p>
     </div>
 </details>
 
@@ -1353,7 +1353,7 @@ const loststolenkeys = new ContentH(
     <p>
       Please note: Howden House only deals with Rehousing enquiries and will not be able to help with fobs or keys. 
       List of Area Offices:  <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices "target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a>
-    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
       </p>
   `,
   {
@@ -1700,7 +1700,7 @@ const noHeatNoWater = new ContentH(
   </p>
   <ol> 
     <li>Does the property have an electricity supply? They will not have access to heat and hot water without it. The customer will need to Dial 105 or visit <a href="www.findmysupplier.energy.co.uk "target="_blank">www.findmysupplier.energy.co.uk</a> to find their current supplier. 
-    <br><button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Find%20My%20Supplier'"> Send Link </button>
+    <br><button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Find%20My%20Supplier'"> Send Link </button>
  </li>
 
     <li> The District Heating Meter location may vary but is usually located in the property airing cupboard. Does The Meters Home Screen say ON in the top right corner? Is your heating programmer turned on? </li>
@@ -2035,7 +2035,7 @@ const gardenPledgeScheme = new ContentH(
       The Government also has a website which lists local, trustworthy and reliable
       tradesmen, operating to Government endorsed standards
       <a href="http://www.trustmark.org.uk/ "target="_blank">http://www.trustmark.org.uk</a>.<br>
-    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Trust%20Mark'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Trust%20Mark'"> Send Link </button>
 
       </p>
   `,
@@ -2080,7 +2080,7 @@ const generalCouncilHousing = new ContentH(
   <h3>Area Office Information</h3>
   <p>
     <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices"target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a> <br>
-        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
 
   </p>
 
@@ -2134,7 +2134,7 @@ const benefitCap = new ContentH(
   "Find information about the Housing Benefit Cap on the official government website.",
   `
     <p>View website for housing benefit cap information: <a href="https://www.gov.uk/benefit-cap" target="_blank">https://www.gov.uk/benefit-cap</a> <br>
-    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Benefit%20cap'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Benefit%20cap'"> Send Link </button>
 
     </p>
   `,
@@ -2180,7 +2180,7 @@ const benefitClaim = new ContentH(
           <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
       </ul>
       <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax" target="_blank">https://www.sheffield.gov.uk/council-tax</a><br>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+      <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
 </p>
       <p><strong>Service area:</strong> Sheffield Benefits Service</p>
       <p><strong>Telephone number:</strong> <a href="tel:0114 2736777">0114 2736777</a></p>
@@ -2221,7 +2221,7 @@ const benefitFraud = new ContentH(
   "Find out about Benefit fraud and how it can be reported anonymously online.",
   `
       <p>You can can report fraud anonymously online at: <a href="https://www.gov.uk/report-benefit-fraud" target="_blank">https://www.gov.uk/report-benefit-fraud</a><br>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Report%20benefit%20fraud'"> Send Link </button>
+      <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Report%20benefit%20fraud'"> Send Link </button>
  
       
       </p>
@@ -2390,7 +2390,7 @@ const changeOfCircumstances = new ContentH(
   `
       <p>Housing Benefits can now be claimed online. Claiming online is the quickest and easiest way to claim, and paper forms are no longer available.<br> 
         You can access this via <a href="https://www.sheffield.gov.uk/benefits" target="_blank">https://www.sheffield.gov.uk/benefits</a><br> 
-        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
+        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
         </p>
     `,
   { buttonLabel: "Change of circumstances", formName: "" },
@@ -2448,7 +2448,7 @@ const contactHousingBenefits = new ContentH(
         <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
     </ul>
     <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax" target="_blank">https://www.sheffield.gov.uk/council-tax</a> <br> 
-          <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+          <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
     </p>
     <p><strong>Service area:</strong> Sheffield Benefits Service</p>
     <p><strong>Telephone number:</strong> <a href="tel:0114 2736777">0114 2736777</a></p>
@@ -2463,7 +2463,7 @@ const contactHousingBenefits = new ContentH(
         <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
     </ul>
     <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax.html" target="_blank">https://www.sheffield.gov.uk/council-tax</a><br> 
-              <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+              <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
 
     </p>
     <p><strong>Service area:</strong> Council tax</p>
@@ -2509,7 +2509,7 @@ const localAssistanceScheme = new ContentH(
   `
       <p>Housing Benefits can now be claimed online. Claiming online is the quickest and easiest way to claim, and paper forms are no longer available. <br>
          You can access this via <a href="https://www.sheffield.gov.uk/benefits" target="_blank">https://www.sheffield.gov.uk/benefits</a> <br> 
-                 <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
+                 <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
          </p>
     `,
   { buttonLabel: "Local Assistance Scheme", formName: "" },
@@ -2914,7 +2914,7 @@ const applicationChanges = new ContentH(
             <p>
               Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
               the links from the homepage.<br> 
-              <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+              <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
             </p>
             <p>Click ‘Log into my account’.</p>
             <p>
@@ -3131,7 +3131,7 @@ const bidding = new ContentH(
         property by making a bid. You only have to bid once per property. You make
         bids online at the Property Shop website
         <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> <br> 
-        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
         <br>You can bid 3 times (plus 1 FCFS) within each weekly bidding cycle (Thursday
         to Tuesday).
       </p>
@@ -3160,7 +3160,7 @@ const bidding = new ContentH(
             Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
             the links from the homepage.
             <br>
-            <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+            <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
             <br>
             <br>
               Click ‘Log into my account’.
@@ -3494,7 +3494,7 @@ const housingAssociations = new ContentH(
                 Lincolnshire<br>
                 DN21 1GG<br>
                 <a href="http://www.acisgroup.co.uk" target="_blank">http://www.acisgroup.co.uk</a> <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=ACIS%20Group'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=ACIS%20Group'"> Send Link </button>
               </address>
               <p>
                 Variety of properties across Woodthorpe and Lower Manor. Stock transfer from the Council Housing Service.
@@ -3534,13 +3534,13 @@ const housingAssociations = new ContentH(
                 Email: <a href="mailto:info@archeshousing.org.uk">info@archeshousing.org.uk</a><br>
                 Website and web chat: <a href="https://www.archeshousing.org.uk" target="_blank">https://www.archeshousing.org.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Arches%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Arches%20Housing'"> Send Link </button>
 
               </address>
               <p>
                 Mutual exchanges advertised and managed through home swapper: register on <a href="https://www.homeswapper.co.uk" target="_blank">https://www.homeswapper.co.uk</a> 
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
                 Information on lettings: Flats and houses available, including some over 60s independent living accommodation (no warden on site). Must be 18+ and eligible for benefits if not working. 
                 An affordability and risk assessment will be carried out, and a previous landlord reference requested for all nominees.
                 We do not hold a waiting list for the general public.
@@ -3600,7 +3600,7 @@ const housingAssociations = new ContentH(
                 M21 7QP<br>
                 <a href="http://www.greatplaces.org.uk" target="_blank">http://www.greatplaces.org.uk</a> 
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Great%20Places'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Great%20Places'"> Send Link </button>
               </address>
               <p>
                 Flats, houses, and bungalows in Wybourn, Richmond Park, Birklands, and Athelstan (mostly ex-Council properties). To register, a Council Housing Service rehousing registration form needs to be completed.
@@ -3622,7 +3622,7 @@ const housingAssociations = new ContentH(
                 S74 8DY<br>
                 <a href="http://www.guinnesspartnership.com" target="_blank">http://www.guinnesspartnership.com</a>
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Guinness%20Partnership'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Guinness%20Partnership'"> Send Link </button>
               </address>
               <p>
                 Available properties are either advertised through the Council’s Property Shop and Property Shop website or are allocated from Guinness Northern Counties’ own waiting list.
@@ -3734,7 +3734,7 @@ const housingAssociations = new ContentH(
                 Email: <a href="mailto:contactus@sanctuary.co.uk">contactus@sanctuary.co.uk</a><br>
                 <a href="http://www.sanctuary-housing.co.uk" target="_blank">http://www.sanctuary-housing.co.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sanctuary%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sanctuary%20Housing'"> Send Link </button>
               </address>
               <p>
                 Stock transfer from Council Housing Service. All types of properties. Current stock is in Shiregreen. To register, a Council Housing Service rehousing registration form needs to be completed.
@@ -3803,7 +3803,7 @@ const housingAssociations = new ContentH(
                 LS10 1FB<br>
                 <a href="http://www.yorkshirehousing.co.uk" target="_blank">http://www.yorkshirehousing.co.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Yorkshire%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Yorkshire%20Housing'"> Send Link </button>
               </address>
               <p>
                 Mix of housing types including some sheltered schemes. Points system - based on housing need. Generally need to be 18+, but in some cases will take 16+.
@@ -4107,7 +4107,7 @@ const mutualExchanges = new ContentH(
                 HomeSwapper offers a matching service and will send you details of suitable exchanges via email or text. 
                 The HomeSwapper website is <a href="https://www.homeswapper.co.uk" target="_blank">https://www.homeswapper.co.uk</a>.
                 <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
                 <br>
                 <br>
   
@@ -4797,7 +4797,7 @@ const balanceEnquiry = new ContentH(
   You can now check your own balance and rent account online by logging onto 
   <a href="https://www.sheffield.gov.uk/home/council-housing/check-my-rent-balance">https://www.sheffield.gov.uk/home/council-housing/check-my-rent-balance</a>.
 <br>
-  <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Check%20rent%20balance'"> Send Link </button>
+  <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Check%20rent%20balance'"> Send Link </button>
   </p> 
   <p>
     Change of circumstances are now online. When you are making changes, remember
@@ -4904,7 +4904,7 @@ const balanceEnquiry = new ContentH(
             Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
             the links from the homepage.
             <br>
-            <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+            <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
             
           </p>
           <p>Click ‘Log into my account’.</p>
@@ -5044,11 +5044,11 @@ const balanceEnquiry = new ContentH(
   </details>
 `,
   {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
+    buttonLabel: "",
+    formName: "",
   },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
+  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   {
     type: "Request",
     keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
@@ -5077,7 +5077,7 @@ const contactRentsTeam = new ContentH(
             <p>
                 Alternatively, they can complete the online form at <a href="https://www.sheffield.gov.uk/benefits/housing-benefit">https://www.sheffield.gov.uk/benefits/housing-benefit</a>.
               <br>
-                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Housing%20Benefit'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Housing%20Benefit'"> Send Link </button>
 
             </p> 
         </div>
@@ -5244,9 +5244,9 @@ const contactRentsTeam = new ContentH(
         </div>
     </details>
   `,
-  { buttonLabel: "Contact Rents Team", formName: "Rents" },
-  { typeKey: "rents_information_provided" },
+  { buttonLabel: "", formName: "" },
   { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   { type: "Contact Rents Team", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
 );
@@ -5265,11 +5265,24 @@ const arrearsorDebt = new ContentH(
       advising the court that that they do not oppose the removal.
     </p>
   `,
-  { buttonLabel: "Arrears or Debt", formName: "Rents" },
-  { typeKey: "rents_information_provided" },
+  { buttonLabel: "", formName: "" },
   { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   { type: "Information", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
+);
+
+const debtRecovery = new FormH(
+  "debtRecovery",
+  "Debt Recovery",
+  "Use this form to enquire about Debt recovery or any correspondence you have received regarding Debt Recovery.",
+  "hou_rents_debt_recovery",
+  {
+    type: "Request",
+    keywords: ["Debt", "Housing", "Rent", "Recovery"],
+    categories: ["Housing"],
+  },
+  { date: "12/03/2025", name: "Nathan Smith" }
 );
 
 const references = new ContentH(
@@ -5294,11 +5307,37 @@ const references = new ContentH(
       Social Landlords can also email details of their request to <a href="mailto:customerservices@sheffield.gov.uk">customerservices@sheffield.gov.uk</a> if they prefer to send an email.
     </p>
   `,
-  { buttonLabel: "References", formName: "Rents" },
-  { typeKey: "rents_information_provided" },
+  { buttonLabel: "", formName: "" },
   { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   { type: "References", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
+);
+
+const rentArrangements = new FormH(
+  "rentArrangements",
+  "Rent Arrangements",
+  "Use this form to set up, amend or enquire about a Rent Arrangement.",
+  "hou_rents_arrangements",
+  {
+    type: "Request",
+    keywords: ["Arrangement", "Housing", "Rent"],
+    categories: ["Housing"],
+  },
+  { date: "12/03/2025", name: "Nathan Smith" }
+);
+
+const rentRefunds = new FormH(
+  "rentRefunds",
+  "Rent Refunds",
+  "Use this form to chase or request a Rent refund.",
+  "hou_rents_refunds",
+  {
+    type: "Request",
+    keywords: ["Refund", "Housing", "Rent"],
+    categories: ["Housing"],
+  },
+  { date: "12/03/2025", name: "Nathan Smith" }
 );
 
 const rentVariation = new ContentH(
@@ -5582,9 +5621,9 @@ const rentVariation = new ContentH(
     </div>
 </details>
   `,
-  { buttonLabel: "Rent Varitaion", formName: "Rents" },
-  { typeKey: "rents_information_provided" },
+  { buttonLabel: "", formName: "" },
   { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   { type: "Rent Varitaion", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
 );
@@ -5598,7 +5637,7 @@ const statements = new ContentH(
   Statements are issued every 12 months or are available online along with rent balance enquiries at 
   <a href="https://www.gro.sheffieldhomes.org.uk">https://www.gro.sheffieldhomes.org.uk</a>. 
   <br>
-  <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Homes'"> Send Link </button>
+  <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Homes'"> Send Link </button>
   <br>
   <br>
 
@@ -5608,14 +5647,78 @@ const statements = new ContentH(
   <strong>Tenants in arrears:</strong> We will continue to send statements every 13 weeks if the customer is repaying arrears.
   </p> 
   `,
-  { buttonLabel: "Statements", formName: "Rents" },
-  { typeKey: "rents_information_provided" },
+  { buttonLabel: "", formName: "" },
   { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
   { type: "Statements", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
 );
 
 //universalCredit is in cross regions
+
+const yorkshireWater = new ContentH(
+  "yorkshireWater",
+  "Yorkshire Water",
+  "Find out how to query water charges, access support schemes, and check eligibility for reduced water charges based on household income.",
+  `
+  <p>
+    If a customer is querying their water charges:<br>
+    These are set by Yorkshire Water, and we collect these charges as part of the rent.  Any complaints about the charges need to be directed to Yorkshire Water – 03451242424 or visit <a href="https://www.yorkshirewater.com/help" target="_blank">https://www.yorkshirewater.com/help</a>.
+  </p>
+  <p>
+    There are various schemes available, including Yorkshire Water Support, where we may be able to reduce the charge depending on household make-up and income.
+    Please direct any queries to the Income Plus Specialist for that property.<br>
+    The income thresholds for support are as follows:
+  </p>
+
+  <table border="1">
+  <thead>
+    <tr>
+      <th>Household Make Up</th>
+      <th>Band 1 – Reduce to £5.40 per week</th>
+      <th>Band 2 – Reduce to £7.08 per week</th>
+      <th>Band 3 – Reduce to £8.18 per week</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Single Adult</td>
+      <td>&lt; £12,000</td>
+      <td>&lt; £15,000</td>
+      <td>&lt; £20,000</td>
+    </tr>
+    <tr>
+      <td>2 + Adults</td>
+      <td>&lt; £15,600</td>
+      <td>&lt; £19,500</td>
+      <td>&lt; £26,000</td>
+    </tr>
+    <tr>
+      <td>1 Dependant</td>
+      <td>&lt; £15,600</td>
+      <td>&lt; £19,500</td>
+      <td>&lt; £26,000</td>
+    </tr>
+    <tr>
+      <td>2 + Dependents</td>
+      <td>&lt; £16,800</td>
+      <td>&lt; £21,000</td>
+      <td>&lt; £28,000</td>
+    </tr>
+  </tbody>
+</table>
+
+  `,
+  { buttonLabel: "", formName: "" },
+  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "rents_information_provided" },
+  {
+    type: "Yorkshire Water",
+    keywords: ["Rent", "Water", "Yorkshire"],
+    categories: ["Housing"],
+  },
+  { date: "10/03/2025", name: "Nathan Smith" }
+);
 
 const rents = new MenuH(
   "rents",
@@ -5625,10 +5728,14 @@ const rents = new MenuH(
     arrearsorDebt,
     balanceEnquiry,
     contactRentsTeam,
+    debtRecovery,
     references,
+    rentArrangements,
+    rentRefunds,
     rentVariation,
     statements,
     universalCredit,
+    yorkshireWater,
   ]
 );
 
@@ -6354,7 +6461,7 @@ const fobsandKeys = new ContentH(
       Please note: Howden House only deals with Rehousing enquiries and will not be able to help with fobs or keys. 
       List of Area Offices:  <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices "target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a>
       <br>
-        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
     </p>
     </div>
   </details>
