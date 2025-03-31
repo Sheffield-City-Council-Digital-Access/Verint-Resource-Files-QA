@@ -89,6 +89,9 @@ const freeSchoolMeals = new ContentSaC(
       remain eligible until they finish the phase of schooling (primary or
       secondary) they’re in on 31 March 2025.
     </p>
+    <p>
+      If your child/ren is/are currently attending an Oasis school, they need to apply for Free School Meals with that school directly.
+    </p>
     <h3>Change in circumstance</h3>
     <p>
       If your circumstances change, such as if you no longer receive benefits, have
@@ -106,9 +109,8 @@ const freeSchoolMeals = new ContentSaC(
     </p>
     <h3>Free food supplement vouchers for October half-term holidays</h3>
     <p>
-      We're pleased to inform you that the new Government will continue funding 
-      for the Household Support Fund. 
-      We will therefore provide a £15 food supplement voucher for:
+      We are pleased to inform you that, as part of the Household Support Fund, 
+      we will be providing a £30 food supplement voucher for:
     </p>
     <ul>
       <li>Children who are in receipt of income-based free school meals</li>
@@ -116,7 +118,7 @@ const freeSchoolMeals = new ContentSaC(
       <li>Young people leaving their care setting (care leavers)</li>
     </ul>
     <p>
-      We will be issuing vouchers from the week beginning 21 October. 
+      We will be issuing vouchers from the week beginning 24 March. 
     </p>
     <p>
       You do not need to apply for the scheme. You will receive a letter 
@@ -140,7 +142,7 @@ const freeSchoolMeals = new ContentSaC(
     </ol>
     <p>
       Codes need to be activated within 3 months of the issue 
-      date (21 October) or they will be cancelled automatically. 
+      date (24 March) or they will be cancelled automatically. 
       Once vouchers have been claimed on the Edenred website, 
       they will be valid for 12 months.
     </p>
@@ -446,7 +448,7 @@ const fundedEarlyLearning = new ContentSaC(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "funded_early_learning_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "funded_early_learning_information_provided" },
   {
     type: "Apply",

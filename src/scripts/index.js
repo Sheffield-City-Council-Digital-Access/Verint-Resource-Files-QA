@@ -508,7 +508,7 @@ function handleInitialisingEvent() {
 
 // --- HANDLE ON READY EVENT ----------------------------------------------- \\
 
-function handleOnReadyEvent(event, kdf) {
+function handleOnReadyEvent(_, kdf) {
   customerState = kdf.customerset;
 
   // --- ADD CONTENT TO WHY WE NEED DATE OF BIRTH --------------------------- \\
@@ -668,7 +668,7 @@ function handleOnReadyEvent(event, kdf) {
   // --- HANDLE ADDRESS LOOKUP --------------------------------------------- \\
 
   $(".search-results").on("change", (event) => {
-    if (event.target.value) {
+    if (event.target.value && !$(event.target).data("keyboardSelection")) {
       const action =
         addressSearchType[getCurrentPageId()] === "local"
           ? "retrieve-local-address"
@@ -676,6 +676,22 @@ function handleOnReadyEvent(event, kdf) {
       KDF.customdata(action, event.target.id, true, true, {
         propertyId: event.target.value,
       });
+    }
+    $(event.target).removeData("keyboardSelection");
+  });
+
+  $(".search-results").on("keydown", (event) => {
+    if (event.key === "Enter" || event.key === "Tab") {
+      if (event.target.value) {
+        const action =
+          addressSearchType[getCurrentPageId()] === "local"
+            ? "retrieve-local-address"
+            : "retrieve-national-address";
+        KDF.customdata(action, event.target.id, true, true, {
+          propertyId: event.target.value,
+        });
+        $(event.target).data("keyboardSelection", true);
+      }
     }
   });
 
@@ -952,7 +968,11 @@ function handleOnReadyEvent(event, kdf) {
 
   $(`.date-mm`).on("input focusout", function (e) {
     const parentId = $(this).attr("id").replace("_num_", "_date_").slice(0, -3);
-    const dateMessage = getValidationMessageFromSession(parentId);
+    const txtFieldId = $(this)
+      .attr("id")
+      .replace("_num_", "_txt_")
+      .slice(0, -3);
+    const dateMessage = getValidationMessageFromSession(txtFieldId);
     const dd = $(`#${this.id.slice(0, -2)}dd`).val();
     const yy = $(`#${this.id.slice(0, -2)}yy`).val();
     if (e.type === "input") {
@@ -994,7 +1014,11 @@ function handleOnReadyEvent(event, kdf) {
         .attr("id")
         .replace("_num_", "_date_")
         .slice(0, -3);
-      const dateMessage = getValidationMessageFromSession(parentId);
+      const txtFieldId = $(this)
+        .attr("id")
+        .replace("_num_", "_txt_")
+        .slice(0, -3);
+      const dateMessage = getValidationMessageFromSession(txtFieldId);
       const dd = $(`#${this.id.slice(0, -2)}dd`).val() !== "" ? true : false;
       const mm = $(`#${this.id.slice(0, -2)}mm`).val() !== "" ? true : false;
       $(`#${parentId}`)
@@ -1110,12 +1134,165 @@ function handleOnReadyEvent(event, kdf) {
 
   // --- HANDLE CLOSE CASE CLICK ------------------------------------------- \\
 
+  function createReviewSection(pageId, pageTitle, fields) {
+    let statusCardHtml = `
+      <div class="review-section">
+          <div class="review-content">
+              <div class="review-content-header">
+                  <h3>${pageTitle}</h3>
+                  <button type="button" class="go-to-page-btn" id="go-to-${pageId}">Edit</button>
+              </div>
+              ${fields
+                .map(
+                  (field) => `
+                    <p>${field.fieldlabel}: ${field.fieldValue}</p>
+                  `
+                )
+                .join("")}
+          </div>
+      </div>
+  `;
+
+    document
+      .getElementById("review-case-content-container")
+      .insertAdjacentHTML("beforeend", statusCardHtml);
+
+    const button = document.getElementById(`go-to-${pageId}`);
+    if (button) {
+      button.addEventListener("click", function () {
+        const modal = document.getElementById("case-review-modal");
+        modal.close();
+        modal.remove();
+        KDF.gotoPage(pageId, false, false, true);
+      });
+    }
+  }
+
+  function checkIsFormComplete(fields) {
+    let isComplete = true;
+    let incompleteFields = [];
+    let pages = [];
+
+    fields.forEach((field) => {
+      let value = KDF.getVal(field);
+      if (
+        !value ||
+        value.length < 1 ||
+        value === "Pending" ||
+        value === "In progress"
+      ) {
+        isComplete = false;
+        incompleteFields.push(field);
+      }
+      console.log("incompleteFields", incompleteFields);
+    });
+
+    if (isComplete) {
+      return isComplete;
+    }
+
+    const modal = document.createElement("dialog");
+    modal.id = "case-review-modal";
+    modal.innerHTML = `
+      <div class="modal-header">
+        <h1>Incomplete process</h1>
+      </div>
+      <div class="modal-main">
+        <p>The following fields need completing before the case can be closed.</p>
+        <div id="review-case-content-container"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="close-modal-btn" id="closeModal">Close</button>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+    modal.showModal();
+
+    incompleteFields.forEach((field) => {
+      let id = `dform_widget_${field}`;
+      let element = document.getElementById(id);
+      let label, labelText, fieldValue;
+
+      if (!element) {
+        let radioContainer = document.querySelector(
+          `[data-name="${field}"][data-type="radio"]`
+        );
+        let checkboxContainer = document.querySelector(
+          `[data-name="${field}"][data-type="multicheckbox"]`
+        );
+
+        if (radioContainer) {
+          let selectedRadio = radioContainer.querySelector(
+            "input[type='radio']:checked"
+          );
+          fieldValue = selectedRadio ? selectedRadio.value : "Not Answered";
+          labelText =
+            radioContainer.querySelector("legend")?.textContent || field;
+          element = radioContainer;
+        } else if (checkboxContainer) {
+          let selectedCheckboxes = [
+            ...checkboxContainer.querySelectorAll(
+              "input[type='checkbox']:checked"
+            ),
+          ];
+          fieldValue = selectedCheckboxes.length
+            ? selectedCheckboxes.map((cb) => cb.value).join(", ")
+            : "Not Answered";
+          labelText =
+            checkboxContainer.querySelector("legend")?.textContent || field;
+          element = checkboxContainer;
+        } else {
+          fieldValue = KDF.getVal(field) || "Not Answered";
+          label = document.querySelector(`label[for='${id}']`);
+          labelText = label ? label.textContent : field;
+        }
+      } else {
+        label = document.querySelector(`label[for='${id}']`);
+        labelText = label ? label.textContent : field;
+        fieldValue = KDF.getVal(field) || "Not Answered";
+      }
+
+      let pageTitleText = "Unknown Section";
+      if (element) {
+        let page = element.closest('[data-type="page"]');
+        if (page) {
+          let pageTitle = page.querySelector(".page-title");
+          pageTitleText = pageTitle ? pageTitle.textContent : "Unknown Section";
+          let pageId = page.id
+            ? page.id.replace(/^dform_page_/, "")
+            : `page-${Math.random().toString(36).substr(2, 9)}`;
+          let pageData = pages.find((page) => page.pageId === pageId);
+          if (!pageData) {
+            pageData = { pageId, pageTitle: pageTitleText, fields: [] };
+            pages.push(pageData);
+          }
+          pageData.fields.push({
+            fieldlabel: labelText,
+            fieldValue: fieldValue,
+          });
+        }
+      }
+    });
+
+    pages.forEach((page) => {
+      createReviewSection(page.pageId, page.pageTitle, page.fields);
+    });
+
+    document
+      .getElementById("closeModal")
+      .addEventListener("click", function () {
+        modal.close();
+        modal.remove();
+      });
+
+    return isComplete;
+  }
+
   $(".close-case-btn").on("click", () => {
     if (checkIsFormComplete(fieldsToCheckBeforeClose)) {
       KDF.markComplete();
       KDF.gotoPage("complete", false, false, false);
-    } else {
-      KDF.showError("Please ensure all fields have been completed.");
     }
   });
 
@@ -1156,9 +1333,8 @@ function handlePageChangeEvent(event, kdf, currentpageid, targetpageid) {
   updateProgressBar(targetpageid);
 
   if (pageName === "page_about_you") {
-    if (kdf.access === "agent" && kdf.customerset === "agent_false") {
+    if (kdf.access === "agent" && !kdf.form.data?.num_reporter_obj_id) {
       KDF.sendDesktopAction("raised_by");
-      // createModal("setReporterModal", "system_search_record");
     }
   }
 
@@ -1183,7 +1359,7 @@ function handlePageChangeEvent(event, kdf, currentpageid, targetpageid) {
       "margin-inline": "0 40%",
     });
     $("form.dform").css({
-      margin: "8px",
+      margin: "8px, auto",
       padding: "16px",
       background: "var(--color-white)",
     });
@@ -1223,8 +1399,8 @@ function handleFieldChangeEvent(event, kdf, field) {
     field.type === "text" ||
     field.type === "number" ||
     field.type === "email" ||
-    field.type === "tel" ||
-    field.type === "textarea"
+    field.type === "tel"
+    // || field.type === "textarea"
   ) {
     $(`#${field.id}`).val(formatRemoveEccessWhiteSpace(KDF.getVal(field.name)));
   }
@@ -1250,6 +1426,18 @@ function handleOptionSelectedEvent(event, kdf, field, label, val) {
     const textField = mchkField.replace("mchk_", "txt_");
     const stringValue = KDF.getVal(mchkField).toString().replace(/,/gi, ", ");
     KDF.setVal(textField, stringValue);
+  }
+
+  // --- HANDLE TOGGLE NI NASS --------------------------------------------- \\
+
+  if (field === "chk_no_national_insurance_number") {
+    const showNass = $("#dform_widget_chk_no_national_insurance_number").is(
+      ":checked"
+    );
+    hideShowMultipleElements([
+      { name: "txt_national_asylum_support", display: showNass },
+      { name: "txt_national_insurance", display: !showNass },
+    ]);
   }
 
   // --- MAP --------------------------------------------------------------- \\
@@ -1490,7 +1678,8 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
         );
 
         if (validationMessageElement) {
-          validationMessageElement.textContent = "Enter a valid postcode";
+          validationMessageElement.textContent =
+            getValidationMessageFromSession(postcodeInput.id);
           validationMessageElement.style.display = "block";
         }
       }
@@ -1640,7 +1829,7 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
     const agentId = response.data.agendId;
     const ohmsId = response.data["profile-socialId-ohms"];
 
-    const url = `https://sccvmtholi01.sheffield.gov.uk/CRMHousing/default.asp?screenId=${screen}&crmAgentId=${agentId}&hmsPersonId=${ohmsId}&refreshParam=<xref1>&dummy=<!2!/CurrentTime/Time!>`;
+    const url = `${response.data.url}?screenId=${screen}&crmAgentId=${agentId}&hmsPersonId=${ohmsId}&refreshParam=<xref1>&dummy=<!2!/CurrentTime/Time!>`;
     const iframe = document.createElement("iframe");
 
     iframe.id = "ifrm1";
@@ -1913,7 +2102,7 @@ function checkPageProgress() {
 
   // Check if any other required fields are empty or invalid
   const hasEmptyOrInvalidOtherFields = otherFields.some((el) => {
-    let isEmpty = el.value.trim() === "";
+    let isEmpty = el.value.trim() === "" || el.value === "Please select...";
     let isValid = el.checkValidity();
     const name = el.name;
     if (
@@ -2280,7 +2469,8 @@ function getMinMaxDates(dateElementId) {
 }
 
 function checkDate(id, dd, mm, yy, element) {
-  const dateMessage = getValidationMessageFromSession(id);
+  const txtFieldId = id.replace("_num_", "_txt_").slice(0, -3);
+  const dateMessage = getValidationMessageFromSession(txtFieldId);
 
   // Clear previous errors
   $(`#${id} .date-dd, #${id} .date-mm, #${id} .date-yy`).removeClass(
@@ -2643,9 +2833,8 @@ function getAndSetReviewPageData() {
       // use stored page array when case management
       relevantPages = KDF.getVal("txt_pages").split(",");
     } else if (
-      KDF.kdf().form.ref &&
-      (KDF.getVal("txt_resume_form") === "true" ||
-        KDF.getVal("txt_resume_form") === "false")
+      KDF.kdf().form.caseid &&
+      KDF.getVal("txt_resume_form") === "true"
     ) {
       // use stored page array when resumed
       relevantPages = KDF.getVal("txt_pages").split(",");
@@ -2682,7 +2871,7 @@ function getAndSetReviewPageData() {
         // Extract the page name from the element's ID
         const pageId = $(formPages[i]).attr("id");
         const pageName = pageId.split("dform_page_")[1];
-        console.log(pageName);
+
         KDF.showPage(pageName);
         const contentDivId = `review-page-content--${pageName}`;
 
@@ -2811,103 +3000,93 @@ function refreshReviewPage() {
 // --- CONTACT TEAM PANEL --------------------------------------------------- \\
 
 function showContactTeamPanel() {
-  const contactInfo = document.createElement("aside");
-  contactInfo.classList.add("contact-information");
+  if (KDF.getVal("txt_contact_title")) {
+    const contactInfo = document.createElement("aside");
+    contactInfo.classList.add("contact-information");
 
-  const header = document.createElement("header");
-  const headerTitle = document.createElement("h2");
-  headerTitle.textContent = KDF.getVal("txt_contact_title");
-  header.appendChild(headerTitle);
+    const header = document.createElement("header");
+    const headerTitle = document.createElement("h2");
+    headerTitle.textContent = KDF.getVal("txt_contact_title");
+    header.appendChild(headerTitle);
 
-  const main = document.createElement("main");
-  main.classList.add("contact-details");
+    const main = document.createElement("main");
+    main.classList.add("contact-details");
 
-  const emailIcon = document.createElement("i");
-  emailIcon.classList.add("icon");
-  const emailIconSpan = document.createElement("span");
-  emailIconSpan.classList.add("icon-email");
-  emailIcon.appendChild(emailIconSpan);
+    if (KDF.getVal("txt_contact_link")) {
+      const emailIcon = document.createElement("i");
+      emailIcon.classList.add("icon");
+      const emailIconSpan = document.createElement("span");
+      emailIconSpan.classList.add("icon-email");
+      emailIcon.appendChild(emailIconSpan);
 
-  const emailLink = document.createElement("a");
-  emailLink.href = KDF.getVal("txt_contact_link");
-  emailLink.textContent = "Ask us a question";
+      const emailLink = document.createElement("a");
+      emailLink.href = KDF.getVal("txt_contact_link");
+      emailLink.textContent = "Ask us a question";
 
-  main.appendChild(emailIcon);
-  main.appendChild(emailLink);
+      main.appendChild(emailIcon);
+      main.appendChild(emailLink);
+    }
 
-  const phoneIcon = document.createElement("i");
-  phoneIcon.classList.add("icon");
-  const phoneIconSpan = document.createElement("span");
-  phoneIconSpan.classList.add("icon-phone");
-  phoneIcon.appendChild(phoneIconSpan);
+    if (KDF.getVal("tel_contact_number")) {
+      const phoneIcon = document.createElement("i");
+      phoneIcon.classList.add("icon");
+      const phoneIconSpan = document.createElement("span");
+      phoneIconSpan.classList.add("icon-phone");
+      phoneIcon.appendChild(phoneIconSpan);
 
-  const phoneLink = document.createElement("a");
-  phoneLink.href = `tel:${KDF.getVal("tel_contact_number")}`;
-  phoneLink.textContent = `${KDF.getVal("tel_contact_number").slice(
-    0,
-    4
-  )} ${KDF.getVal("tel_contact_number").slice(4, 7)} ${KDF.getVal(
-    "tel_contact_number"
-  ).slice(7, 11)}`;
-  main.appendChild(phoneIcon);
-  main.appendChild(phoneLink);
+      const phoneLink = document.createElement("a");
+      phoneLink.href = `tel:${KDF.getVal("tel_contact_number")}`;
+      phoneLink.textContent = `${KDF.getVal("tel_contact_number").slice(
+        0,
+        4
+      )} ${KDF.getVal("tel_contact_number").slice(4, 7)} ${KDF.getVal(
+        "tel_contact_number"
+      ).slice(7, 11)}`;
+      main.appendChild(phoneIcon);
+      main.appendChild(phoneLink);
+    }
 
-  if (KDF.getVal("txt_contact_address")) {
-    const locationIcon = document.createElement("i");
-    locationIcon.classList.add("icon");
-    locationIcon.classList.add("align-self");
-    const locationIconSpan = document.createElement("span");
-    locationIconSpan.classList.add("icon-location");
-    locationIcon.appendChild(locationIconSpan);
+    if (KDF.getVal("txt_contact_address")) {
+      const locationIcon = document.createElement("i");
+      locationIcon.classList.add("icon");
+      locationIcon.classList.add("align-self");
+      const locationIconSpan = document.createElement("span");
+      locationIconSpan.classList.add("icon-location");
+      locationIcon.appendChild(locationIconSpan);
 
-    const address = document.createElement("p");
-    const addressString = KDF.getVal("txt_contact_address").replace(
-      /, /g,
-      "<br/>"
-    );
-    address.innerHTML = addressString;
-    main.appendChild(address);
-    main.appendChild(locationIcon);
-    main.appendChild(address);
-  }
+      const address = document.createElement("p");
+      const addressString = KDF.getVal("txt_contact_address").replace(
+        /, /g,
+        "<br/>"
+      );
+      address.innerHTML = addressString;
+      main.appendChild(address);
+      main.appendChild(locationIcon);
+      main.appendChild(address);
+    }
 
-  const footer = document.createElement("footer");
-  const footerImg = document.createElement("img");
-  footerImg.src =
-    "https://www.sheffield.gov.uk/themes/custom/bbd_localgov/images/council-tax.jpeg";
-  footerImg.alt = "Footer Image";
+    const footer = document.createElement("footer");
+    const footerImg = document.createElement("img");
+    footerImg.src =
+      "https://www.sheffield.gov.uk/themes/custom/bbd_localgov/images/council-tax.jpeg";
+    footerImg.alt = "Footer Image";
 
-  footer.appendChild(footerImg);
+    footer.appendChild(footerImg);
 
-  contactInfo.appendChild(header);
-  contactInfo.appendChild(main);
-  contactInfo.appendChild(footer);
+    contactInfo.appendChild(header);
+    contactInfo.appendChild(main);
+    contactInfo.appendChild(footer);
 
-  const target = document.querySelector(".title-container");
-  if (target) {
-    target.after(contactInfo);
-  } else {
-    console.error("Element with class title-container not found");
+    const target = document.querySelector(".title-container");
+    if (target) {
+      target.after(contactInfo);
+    } else {
+      console.error("Element with class title-container not found");
+    }
   }
 }
 
 // --- CHECK CASE PROGRESS -------------------------------------------------- \\
-
-function checkIsFormComplete(fields) {
-  let isComplete = true;
-  fields.map((field) => {
-    if (
-      KDF.getVal(field) === "" ||
-      KDF.getVal(field) === null ||
-      KDF.getVal(field) === undefined ||
-      KDF.getVal(field) === "Pending" ||
-      KDF.getVal(field) === "In progress"
-    ) {
-      isComplete = false;
-    }
-  });
-  return isComplete;
-}
 
 function closeCase() {
   const noteDetails = KDF.getVal("txta_closure_details")

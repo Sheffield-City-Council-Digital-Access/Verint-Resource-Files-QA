@@ -54,25 +54,26 @@ class FormTaT extends CoreTaT {
 // --------- KEEP THIS AT THE TOP ------------------------------------------- \\
 // --- v - ADD SCRIPT BELOW THIS LINE - v ----------------------------------- \\
 
-const childrensTravelPass = new ContentTaT(
-  "childrensTravelPass",
-  "Childrens Travel Pass",
-  "Find details on eligibility, application, appeals, and replacement options for a Children's Travel Pass in Sheffield.",
+const zoomZeroFare = new ContentTaT(
+  "zoomZeroFare",
+  "Zoom Zero Travel Pass",
+  "(Previously known as a Children's Travel Pass) Find details on eligibility, application, appeals, and replacement options for a Zoom Zero travel pass in Sheffield.",
   `
     <section class="info-panel" role="region" aria-label="Information panel">
-      <h3>If You've Changed Your Address or School</h3>
+      <h3>If you have changed your address or school</h3>
       <p>
-        This could affect the distance your child travels to school, so please check your eligibility before you apply for a new Children's Travel Pass.
+        This could affect the distance your child travels to school, so please check your eligibility before you apply for a new Zoom Zero travel pass.
         <br><br>
         Applications should be made to the Council where you live and not where the school is.
         <br><br>
         If you chose not to apply for your catchment school or the three nearest qualifying secondary 
-        schools for low-income families, you are unlikely to qualify for a Children’s Travel Pass.
+        schools for low-income families, you are unlikely to qualify for a Zoom Zero travel pass.
         <br><br>
         Please be aware that if the catchment school or nearest school(s) has a 
         place available in your child's year group, you are unlikely to qualify for 
-        a Children’s Travel Pass. There may also be exceptional circumstances 
-        that could qualify your child for a Children's Travel Pass.
+        a Zoom Zero travel pass. There may also be exceptional circumstances 
+        that could qualify your child for a Zoom Zero travel pass.
+
       </p>
     </section>
     <p>
@@ -111,7 +112,7 @@ const childrensTravelPass = new ContentTaT(
         <li>the child is in foster care</li>
       </ul>
     </p>
-    <h3>Apply for or renew a Children's Travel Pass</h3>
+    <h3>Apply for or renew a Zoom Zero travel pass</h3>
     <p>
       You can apply for a new pass or renew an existing one at: <a href="https://www.sheffield.gov.uk/utilities/form/travel-and-transport/apply-childrens-travel-pass-start" target="_blank">https://www.sheffield.gov.uk/utilities/form/travel-and-transport/apply-childrens-travel-pass-start</a> 
       <br>
@@ -145,17 +146,17 @@ const childrensTravelPass = new ContentTaT(
     </details>
     <details class="accordion">
       <summary class="accordion-header">
-        <h3>Appeal a Children's Travel Pass decision</h3>
+        <h3>Appeal a Zoom Zero travel pass decision</h3>
         <div class="accordion-icon"></div>
       </summary>
       <div class="accordion-content">
         <p>
-          If you don't meet the criteria and are refused a Children’s Travel Pass, 
+          If you don't meet the criteria and are refused a Zoom Zero travel pass, 
           you have the right to appeal the decision. The appeals process has 2 stages.
         </p>
         <h4>Stage 1</h4>
         <p>
-          Request a Stage 1 review within 20 working days of our decision to refuse a Children’s Travel Pass. We'll send you a 
+          Request a Stage 1 review within 20 working days of our decision to refuse a Zoom Zero travel pass. We'll send you a
           detailed written outcome, we aim to do this within 20 working days of receiving your written request.
           <br>
           <br>
@@ -233,7 +234,7 @@ const childrensTravelPass = new ContentTaT(
     </details>
   `,
   {
-    buttonLabel: "Apply for childrens travel pass",
+    buttonLabel: "Apply for a Zoom Zero travel pass",
     formName: "childrens_travel_pass",
   },
   { typeKey: "" },
@@ -242,12 +243,17 @@ const childrensTravelPass = new ContentTaT(
     type: "Apply",
     keywords: [
       "Zoom Zero Travel Pass",
+      "Zoom Zero Fare",
+      "zz",
+      "zztp",
+      "zzf",
       "childrens travel pass",
       "childrens travel pas",
       "childrens travle pass",
       "childrens travelp ass",
       "childrens trave pass",
       "childrens travell pass",
+      "children's travel pass",
       "CTP",
       "childrens",
       "child",
@@ -269,7 +275,7 @@ const childrensTravelPass = new ContentTaT(
     ],
     categories: ["Travel and Transport"],
   },
-  { date: "20/02/2025", name: "Andy Walker" }
+  { date: "05/03/2025", name: "Sam Coupland" }
 );
 
 const disabledPersonsTravelPermit = new ContentTaT(
@@ -281,27 +287,37 @@ const disabledPersonsTravelPermit = new ContentTaT(
       You may qualify for a pass if you're aged between 5 and 66 and meet one of the
       following criteria:
       <ul>
-        <li>a current blue badge holder</li>
-        <li>registered blind, partially sighted or deaf</li>
-        <li>registered with Social Services as having a learning disability</li>
-        <li>unable to use both of your arms</li>
+        <li>are blind or partially sighted</li>
+        <li>are deaf or without speech</li>
+        <li>have a disability which has a substantial and long-term adverse effect on your ability to walk</li>
+        <li>do not have arms or have long-term loss of the use of your arms</li>
         <li>
           unable to drive because of a health problem, such as autism or epilepsy
         </li>
         <li>
-          currently suffering from, a psychiatric disorder, or have an enhanced level
-          care programme approach
-        </li>
-        <li>unable to speak</li>
-        <li>
-          suffering from a substantial and long-term disabilities or injuries which
-          severely impacts your ability to walk
+          have a learning disability
         </li>
         <li>
-          mental health
+          have been or would be refused a driver’s licence on medical grounds 
+          (other than on the grounds of persistent misuse of drugs and alcohol)</li>
+        <li>
+            PIP standard rate mobility (at least 8 points awarded for planning and following a journey)
+        </li>
+        <li>
+          PIP enhanced rate mobility (points awarded for planning and following a journey)
+        </li>
+        <li>
+          PIP enhanced rate of Daily Living.  If in receipt of minimum 4 points for mobility, eligible for with carer pass.
+        </li>
+        <li>
+          DLA high-rate care. If in receipt of low-rate mobility, eligible for with carer pass, regardless of age.
         </li>
       </ul>
     </p>
+    <p>
+    If you have any supporting evidence/eligibility that has an end date, your pass will be issued up to that date.  Maximum of 5 years.
+    </p>
+
     <h3>How long does a Disabled Travel Permit last for</h3>
        <p>
       If your application is successful, passes are issued between 1 and 5 years the
@@ -309,8 +325,6 @@ const disabledPersonsTravelPermit = new ContentTaT(
       the timescale when your application is approved.<br>
       If you have any supporting evidence/eligibility that has an end date, your
       pass will be issued up to that date.<br>
-      If during the time you have the pass, you would turn 66, your pass will expire
-      on your 66th birthday.
     </p>
     <h3>How long will my application take</h3>
     <p>Disabled Travel Permits have a 28 day process period.</p>
@@ -326,34 +340,35 @@ const disabledPersonsTravelPermit = new ContentTaT(
       </address>
     </p>
     <p>
-      Customers can also request an appeal via email by writing to  <a href="mailto:customerservices@sheffield.gov.uk">customerservices@sheffield.gov.uk</a>
+      Customers can also request an appeal via email by writing to  <a href="mailto:disabledtravelpass@sheffield.gov.uk">disabledtravelpass@sheffield.gov.uk</a>
     </p>
     <h3>When can I use my Travel Permit</h3>
     <p>
       A disabled persons pass enables free public transport on buses, trams and
       trains.
     </p>
+    <h3>Where can I use my pass</h3>
     <p>
       If the Pass is being used within South Yorkshire the pass can be used at all
-      times of the day, however if the pass is being used beyond South Yorkshire
-      (within England or Wales) your pass is only valid between 9:30am - 11pm.
+      times of the day.
+      The pass can be used outside of South Yorkshire (within England or Wales)
+      between 9:30am and 11pm weekdays, all day at weekends and on Bank Holidays.
     </p>
-      <h3>What do I do with the approval letter</h3>
+    <h3>What do I do with the approval letter</h3>
     <p>
-      The purple form needs to be completed with a passport size photograph and 
-      returned to:
+      The purple form needs to be completed with a passport size and style photograph
+      (eg white background, looking forward etc) and returned to:
       <address>
         Contact Centre<br>
         SYPTE<br>
         11 Broad Street West<br>
-        1 Union Street<br>
         Sheffield<br>
         Sheffield S1 2BQ
       </address>
     </p>
       <h3>I've sent my approval letter off but not got my pass</h3>
     <p>
-      Contact SYPTE direct <a href="tel:01709 515151">01709 515151</a>.
+      Contact SYPTE direct <a href="tel:0800 9520002">0800 9520002</a>.
     </p>
       <h3>Where is my pass (applied with SCC) Ive had a letter/phone call</h3>
     <p>
@@ -364,6 +379,10 @@ const disabledPersonsTravelPermit = new ContentTaT(
       Proof of address, copy of awards letter for DLA PIP within last 12 months, 
       medical evidence from Health Care Professional, 
       Letter from DVLA re surrendered/revoked driving licence.  
+    </p>
+    <p>
+      Evidence can be uploaded on when completing the online form, if the evidence is not uploaded it
+      needs to be sent to <a href="mailto:disabledtravelpass@sheffield.gov.uk">disabledtravelpass@sheffield.gov.uk</a> 
     </p>
     <h3>Lost or stolen pass</h3>
     <p>
@@ -380,7 +399,9 @@ const disabledPersonsTravelPermit = new ContentTaT(
     address within 7 working days.
     </p>
     <h3>Travelling with a Carer</h3>
-
+    <p>
+    There are no age retrictions in place when applying to travel with a carer.
+    </p>
   <h4>Qualifying Conditions:</h4>
 <ul>
   <li>Higher rate care component of Disability Living Allowance with some mobility</li>
@@ -390,9 +411,6 @@ const disabledPersonsTravelPermit = new ContentTaT(
   <p>Your Travel pass will allow one carer to travel with you for free.</p>
 
   <h3>Replacement Disabled Travel Permit</h3>
-
-  
-
   <p>
     You can replace your lost, damaged, or stolen Disabled Person's Pass online by visiting: 
     <a href="https://www.travelsouthyorkshire.com/Disabledreplace/" target="_blank">https://www.travelsouthyorkshire.com/Disabledreplace/</a>
@@ -419,11 +437,6 @@ const disabledPersonsTravelPermit = new ContentTaT(
       >
         Send link to review further information
       </button>
-
-
-
-
-
 
    `,
   {
@@ -476,7 +489,7 @@ const disabledPersonsTravelPermit = new ContentTaT(
 
     categories: ["Travel and Transport"],
   },
-  { date: "27/02/2025", name: "Dinah Williams" }
+  { date: "17/03/2025", name: "Andy Walker" }
 );
 
 // --- ^ - ADD SCRIPT ABOVE THIS LINE - ^ ----------------------------------- \\
@@ -486,5 +499,5 @@ const travelAndTransport = new ServiceTaT(
   "travelAndTransport",
   "Travel and Transport",
   `Public transport, driving, cycling, walking, travel cards and passes, school passes, travel news and updates…`,
-  [childrensTravelPass, disabledPersonsTravelPermit]
+  [zoomZeroFare, disabledPersonsTravelPermit]
 );

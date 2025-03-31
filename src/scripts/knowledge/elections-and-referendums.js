@@ -89,7 +89,7 @@ class FormEaR extends CoreEaR {
       </p>
     `,
     { buttonLabel: "", formName: "" },
-    { typeKey: "annual_canvass_transferred_to_service" },
+    { typeKey: "" },
     { typeKey: "annual_canvass_information_provided" },
     {
       type: "Request",
@@ -113,7 +113,7 @@ class FormEaR extends CoreEaR {
 const ccaCCBorCanvassForms = new ContentEaR(
   "ccaCCBorCanvassForms",
   "CCB or Canvass Form",
-  "CCB or Canvass Forms - People that do not live at the address",
+  "CCB or Canvass Forms - Completion of CCB or Canvass Forms",
   `
     <section class="info-panel" role="region" aria-label="Information panel">
       <p>
@@ -142,7 +142,7 @@ const ccaCCBorCanvassForms = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "e" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -210,9 +210,18 @@ const ccaCCBForms = new ContentEaR(
       >
       If there are no eligible residents, you should state why this is the case.
     </p>
+    <p>
+      If you do not want to appear on the electoral register in Sheffield you can write to us
+      stating that the address you are living at is a second home and send it to: 
+      <address>
+        Electoral Services<br/>
+        Town Hall<br/>
+        Sheffield, S1 2HH
+      </address>
+    </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -231,7 +240,7 @@ const ccaCCBForms = new ContentEaR(
     ],
     categories: ["Elections and Referendums", "Electoral"],
   },
-  { date: "03/12/2024", name: "Andy Walker" }
+  { date: "28/02/2025", name: "Dinah Williams" }
 );
 
 const informationChangeandHowToUpdateIt = new ContentEaR(
@@ -258,7 +267,7 @@ const informationChangeandHowToUpdateIt = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -304,7 +313,7 @@ const lostCCACCBorCanvassForm = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -356,7 +365,7 @@ const removalFromRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -409,7 +418,7 @@ const studentVoters = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "annual_canvass_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "annual_canvass_information_provided" },
   {
     type: "Request",
@@ -477,7 +486,7 @@ const assistanceForPartiallySightedVoters = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -497,22 +506,48 @@ const assistanceForPartiallySightedVoters = new ContentEaR(
   { date: "03/12/2024", name: "Andy Walker" }
 );
 
+
 const howToCompletePostalVote = new ContentEaR(
   "howToCompletePostalVote",
   "How to complete Postal Vote",
   "Step-by-step guide on completing a postal vote, including marking, sealing, and returning your ballot securely.",
   `
-    <section class="info-panel" role="region" aria-label="Information panel">
-      <p>
-          Click <a href="http://sccvmazelt02/WebEros/" target="_blank">here</a> to access WebEros.
-      </p>
-    </section>
-    <p>
-      Advisor Note: You can access instructions on how to complete a postal vote via weberos.
+  <p>
+     If you would prefer to return your ballot paper by post rather than going to the polling station you must apply for a postal vote.
+     If you vote by post, your poll card will confirm the address where you have asked us to send your postal vote pack,
+     what to do if you have lost or spoilt all or part of your pack, or if you haven’t received it.
+  </p>
+  <p>It is now possible to apply to vote by post using the government’s online service or by using a paper form requested from us.
+     However, you must now provide your national insurance number as part of the application. Signatures must still be handwritten, not typed in.
+  </p>
+  <p>
+  <a href="https://www.gov.uk/apply-for-a-postal-vote">GOV.UK: Apply for a postal vote</a>
+  </p>
+  <p>
+    You can send a scanned copy of a paper form by email to: 
+    <a href="mailto:electoralservices@sheffield.gov.uk">electoralservices@sheffield.gov.uk</a> 
+    or post the completed form to:
     </p>
+       <address>
+        Electoral Services<br>
+        Town Hall<br>
+        Pinstone Street<br>
+        Sheffield<br>
+        S1 2HH
+      </address>      
+    <p>
+    You can get a replacement for a lost or spoiled ballot paper up to 5pm on polling day from the Town Hall.</p>
+     <section class="info-panel" role="region" aria-label="Information panel">
+    <p>
+          Click <a href="http://sccvmazelt02/WebEros/" target="_blank">here</a> to access WebEros.
+    </p>
+      </section>
+    <p>
+      <Strong>Advisor Note:</Strong> You can also access instructions on how to complete a postal vote via weberos.
+     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -527,7 +562,7 @@ const howToCompletePostalVote = new ContentEaR(
     ],
     categories: ["Elections and Referendums", "Electoral"],
   },
-  { date: "25/09/2024", name: "Shahzad Athar" }
+  { date: "17/03/2025", name: "Dinah Williams" }
 );
 
 const localElections = new ContentEaR(
@@ -550,7 +585,7 @@ const localElections = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -607,7 +642,7 @@ const parishElections = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -673,11 +708,23 @@ const postalVoteNoLongerRequired = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
-    keywords: [],
+    keywords: [
+      "elections",
+      "ele",
+      "elect",
+      "vote",
+      "voting",
+      "voters",
+      "electorial",
+      "elect",
+      "elec",
+      "paris",
+      "pari"
+    ],
     categories: ["Elections and Referendums", "Electoral"],
   },
   { date: "03/12/2024", name: "Andy Walker" }
@@ -703,7 +750,7 @@ const postalVoteReceivedButNotRequested = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -744,7 +791,7 @@ const postalVoteSendingAbroad = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -797,7 +844,7 @@ const spoiltorDamagedPostalVote = new ContentEaR(
     <p>We will then re-issue the ballot by post.</p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -835,7 +882,7 @@ const whereDoIVote = new ContentEaR(
     ></iframe>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -943,7 +990,7 @@ const frequentlyAskedQuestions = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -966,7 +1013,6 @@ const electionsAndVoting = new MenuEaR(
   "Information about Voting in these elections can be found here.",
   [
     assistanceForPartiallySightedVoters,
-    howToCompletePostalVote,
     localElections,
     parishElections,
     postalVoteNoLongerRequired,
@@ -1005,13 +1051,14 @@ const applyingForPostalVote = new ContentEaR(
         <li>Email Link to Customer</li>
         <li>From Porters Lodge at the Town Hall or First Point at Howden House</li>
       </ul>
-      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20a%20postal%20vote'"> Send Link </button>
-      
+      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20a%20postal%20vote'"> Send Link </button><br/>
+      <br/>
+      If the customer cannot apply online, please send an email to<a href="mailto:elections@sheffield.gov.uk">electoral services</a> and select transferred to service.
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
-  { typeKey: "postal_or_proxy_voting_infomation_provided" },
+  { typeKey: "applying_for_postal_vote_transferred_to_service" },
+  { typeKey: "applying_for_postal_vote_infomation_provided" },
   {
     type: "Request",
     keywords: [
@@ -1053,7 +1100,7 @@ const postalProxyVote = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1096,7 +1143,7 @@ const postalVoteNotReceivedorLost = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1144,7 +1191,7 @@ const requestproxyVote = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1185,7 +1232,7 @@ const swappingFromPostalToProxyVoting = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1229,7 +1276,7 @@ const swappingFromProxyToPostalVoting = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1268,7 +1315,7 @@ const waiverApplication = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "postal_or_proxy_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "postal_or_proxy_voting_information_provided" },
   {
     type: "Request",
@@ -1295,6 +1342,7 @@ const postalorProxyVoting = new MenuEaR(
   "If you want someone to vote on your behalf, you can choose to vote by proxy.",
   [
     applyingForPostalVote,
+    howToCompletePostalVote,
     postalProxyVote,
     postalVoteNotReceivedorLost,
     requestproxyVote,
@@ -1330,7 +1378,7 @@ const archiveCopies = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1373,7 +1421,7 @@ const changeofAddressForm = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1411,7 +1459,7 @@ const changeofNameonTheRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1461,7 +1509,7 @@ const creditReferencingAgencies = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1491,7 +1539,7 @@ const doINeedToReRegisterEachYear = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1533,7 +1581,7 @@ const doINeedToRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1568,13 +1616,13 @@ const electoralRegisterConfirmationLetter = new ContentEaR(
     </section>
     <p>
       Letters can be requested from Electoral Services for Proof of Registration.
-      This only provides evidence that someone is registeted at an address, not that
-      they are resident. We can only send this confirmaiton letter by post to the
+      This only provides evidence that someone is registered at an address, not that
+      they are resident. We can only send this confirmation letter by post to the
       registered address.
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1608,7 +1656,7 @@ const includeSomeoneElseontheRegisterForm = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1646,7 +1694,7 @@ const incorrectDetailsOnElectoralRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1691,7 +1739,7 @@ const informationInDifferentFormats = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1725,7 +1773,7 @@ const invitationToRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1768,7 +1816,7 @@ const lostMyInvitationToRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1812,7 +1860,7 @@ const movingHomeorMovedHome = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1857,7 +1905,7 @@ const optOutofTheOpenRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1902,11 +1950,25 @@ const registerToVote = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
-    keywords: ["Register", "Vote", "Voting"],
+    keywords: [
+      "elections",
+      "ele",
+      "elect",
+      "proxy",
+      "prox",
+      "vote",
+      "voting",
+      "voters",
+      "postal",
+      "post",
+      "electorial",
+      "elect",
+      "elec"
+    ],
     categories: ["Elections and Referendums", "Electoral"],
   },
   { date: "25/11/2024", name: "Nathan Smith" }
@@ -1929,7 +1991,7 @@ const requestforEvidenceLetter = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -1971,7 +2033,7 @@ const requestOtherElectionsReferral = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -2017,7 +2079,7 @@ const revisionstoTheElectoralRegister = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -2055,7 +2117,7 @@ const successfulOnlineRegistration = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -2090,7 +2152,7 @@ const useofEmailAddressandPhoneNumber = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "registering_to_vote_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "registering_to_vote_information_provided" },
   {
     type: "Request",
@@ -2202,7 +2264,7 @@ const electionResults = new ContentEaR(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "elections_and_voting_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "elections_and_voting_information_provided" },
   {
     type: "Request",
@@ -2227,6 +2289,41 @@ const electionResults = new ContentEaR(
   { date: "25/09/2024", name: "Shahzad Athar" }
 );
 
+const overSeasVoters = new ContentEaR(
+  "overSeasVoters",
+  "Overseas Voters",
+  "Learn about eligibility and registration for Overseas Voters, including which elections you can vote in and the registration period.",
+  `
+    <p>
+      Only British citizens may register as Overseas Voters (other Commonwealth citizens and citizens of the Irish Republic may not) – allowing them to vote at UK Parliamentary and European Parliamentary elections.<br/>
+      <br/>
+      Registration is allowed for 15 years from the date an elector was last registered as a UK resident. If you were too young to register when you left the UK, your parent or guardian must have been registered.<br/>
+      <br/>
+      As an overseas voter, you are eligible to vote in elections for the UK Parliament and the European Parliament. You cannot vote in UK local or mayoral elections, or elections to the Scottish Parliament, the National Assembly for Wales or the London Assembly.<br/>
+      <br/>
+      If you live in a country which is a member of the European Union, you can vote in that country's own local and European parliamentary elections. But, you cannot vote in European elections in more than one country.
+    </p>
+  `,
+  { buttonLabel: "", formName: "" },
+  { typeKey: "" },
+  { typeKey: "elections_and_voting_information_provided" },
+  {
+    type: "Request",
+    keywords: [
+      "elections",
+      "ele",
+      "elect",
+      "oversea",
+      "seas",
+      "vote",
+      "voting",
+      "voters"
+    ],
+    categories: ["Elections and Referendums", "Electoral","Overseas"],
+  },
+  { date: "07/03/2024", name: "Sam Coupland" }
+);
+
 const familyTreeorGenealogy = new ContentEaR(
   "familyTreeorGenealogy",
   "Family Tree or Genealogy",
@@ -2240,16 +2337,16 @@ const familyTreeorGenealogy = new ContentEaR(
     <p>
       The electoral register is compiled for election purposes and is not intended
       to be used as a tool for searching for lost relatives. Registers are split
-      intot he 6 parliamentary constituencies, then into the wards wihtin those
+      into the 6 parliamentary constituencies, then into the wards wihtin those
       constituencies. Each ward is broken down into the polling district each
-      polling stations serves and then into each street within that district.
+      polling station serves and then into each street within that district.
       Properties are then sorted by address order - not by name.
     </p>
     <p>
       Sheffield Archives may be able to offer more support in this area.
     </p>
   `,
-  { buttonLabel: "", formName: "" },
+  { buttonLabel: "familyTreeorGenealogy", formName: "" },
   { typeKey: "" },
   { typeKey: "" },
   {
@@ -2267,7 +2364,7 @@ const familyTreeorGenealogy = new ContentEaR(
     ],
     categories: ["Elections and Referendums", "Electoral"],
   },
-  { date: "25/11/2024", name: "Nathan Smith" }
+  { date: "28/02/2025", name: "Dinah Williams" }
 );
 
 const wards = new ContentEaR(
@@ -2327,6 +2424,7 @@ const electionsAndReferendums = new ServiceEaR(
     electionsAndVoting,
     familyTreeorGenealogy,
     postalorProxyVoting,
+    overSeasVoters,
     registeringToVote,
     wards
   ]

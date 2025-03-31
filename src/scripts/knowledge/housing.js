@@ -5,13 +5,13 @@ class CoreH {
     this.description = description;
   }
 }
-
-class ServiceH extends CoreH {
-  constructor(id, name, description, subjects = []) {
-    super(id, name, description);
-    this.subjects = subjects;
+  
+  class ServiceH extends CoreH {
+    constructor(id, name, description, subjects = []) {
+      super(id, name, description);
+      this.subjects = subjects;
+    }
   }
-}
 
 class MenuH extends CoreH {
   constructor(id, name, description, topics = []) {
@@ -109,7 +109,7 @@ const universalCredit = new ContentH(
     <div class="accordion-content">
         <p>Universal Credit does not include help with your Council Tax, so you must claim this separately.</p>
         <p>You can do this at <a href="https://www.sheffield.gov.uk/benefits/council-tax-support" 
-           target="_blank">https://www.sheffield.gov.uk/benefits/council-tax-support</a>.<br><button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> </p>
+           target="_blank">https://www.sheffield.gov.uk/benefits/council-tax-support</a>.<br><button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> </p>
     </div>
 </details>
 
@@ -184,23 +184,23 @@ const universalCredit = new ContentH(
   {
     type: "Information",
     keywords: [
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
-      "Universal Credit",
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit',
+      'Universal Credit'
     ],
     categories: ["Housing", "Benefits"],
   },
@@ -357,26 +357,26 @@ const welfareReform = new ContentH(
   {
     type: "Information",
     keywords: [
-      "Housing Benefit",
-      "Housing Benfit",
-      "Housing Benifit",
-      "Housng Benefit",
-      "Housing Beneift",
-      "Housin Benefit",
-      "Housing Benefet",
-      "Housng Benfit",
-      "Housin Benifit",
-      "Housing Benifits",
-      "Welfare reform",
-      "Wlfare reform",
-      "Welfare refrom",
-      "Welfar reform",
-      "Welfare reforrm",
-      "Welfere reform",
-      "Welfare reformm",
-      "Welfare reformz",
-      "Welfer reform",
-    ],
+      'Housing Benefit',
+      'Housing Benfit',
+      'Housing Benifit',
+      'Housng Benefit',
+      'Housing Beneift',
+      'Housin Benefit',
+      'Housing Benefet',
+      'Housng Benfit',
+      'Housin Benifit',
+      'Housing Benifits',
+      'Welfare reform',
+      'Wlfare reform',
+      'Welfare refrom',
+      'Welfar reform',
+      'Welfare reforrm',
+      'Welfere reform',
+      'Welfare reformm',
+      'Welfare reformz',
+      'Welfer reform'
+    ],  
     categories: ["Housing", "Benefits"],
   },
   { date: "05/11/2024", name: "Andy Walker" }
@@ -393,7 +393,7 @@ const adaptationChase = new ContentH(
   `
   <details class="accordion">
   <summary class="accordion-header">
-    <h3>Different Utility supplier</h3>
+    <h3>Eligibility</h3>
     <div class="accordion-icon"></div>
   </summary>
   <div class="accordion-content">
@@ -480,7 +480,7 @@ const adaptationChase = new ContentH(
   </details>
   `,
   { buttonLabel: "Housing Adaptations Request", formName: "hou_adaptations" },
-  { typeKey: "repairs_and_investment_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "repairs_and_investment_information_provided" },
   {
     type: "Information",
@@ -536,7 +536,7 @@ const adaptationOther = new ContentH(
     buttonLabel: "Housing Adaptations Request",
     formName: "hou_adaptations",
   },
-  { typeKey: "repairs_and_investment_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "repairs_and_investment_information_provided" },
 
   {
@@ -773,7 +773,7 @@ const asbestos = new ContentH(
     buttonLabel: "Raise Housing Decant Enquiry",
     formName: "hou_sustainment_decants",
   },
-  { typeKey: "repairs_and_investment_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "repairs_and_investment_information_provided" },
   {
     type: "Information",
@@ -852,7 +852,7 @@ const communalAerials = new ContentH(
   `
   <h3>Communal Aerials List</h3>
   <p>
-    <a href="https://sccextranet.sharepoint.com/sites/CustomerServiceKnowledgePhoneDirectory/SitePages/Communal%20Aerials.aspx" target="_blank">Communal azerials list</a>
+    <a href="https://sccextranet.sharepoint.com/sites/CustomerServiceKnowledgePhoneDirectory/SitePages/Communal%20Aerials.aspx" target="_blank">Communal aerials list</a>
   </p>
 
   <h3>Customers Own Aerial</h3>
@@ -912,7 +912,7 @@ const communalAreas = new ContentH(
     buttonLabel: "Raise Housing Enquiry ",
     formName: "hou_estates_enquiry",
   },
-  { typeKey: "estates_and_environmental_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "estates_and_environmental_information_provided" },
   {
     type: "Information",
@@ -925,7 +925,7 @@ const communalAreas = new ContentH(
       "blocked",
       "bin",
       "bins",
-      "chute",
+      "chute"
     ],
     categories: ["Housing"],
   },
@@ -1172,6 +1172,7 @@ const doorEntrySystems = new ContentH(
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
+
 const emergencyCredit = new ContentH(
   "emergencyCredit",
   "Emergency Credit",
@@ -1254,6 +1255,7 @@ const emergencyRepairs = new ContentH(
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
+ 
 const homeImprovementRequests = new ContentH(
   "homeImprovementRequests",
   "Home Improvement Requests",
@@ -1284,6 +1286,7 @@ const homeImprovementRequests = new ContentH(
   },
   { date: "10/10/2024", name: "George Whitehouse" }
 );
+
 
 const homeownerDisconnection = new ContentH(
   "homeownerDisconnection",
@@ -1353,7 +1356,7 @@ const loststolenkeys = new ContentH(
     <p>
       Please note: Howden House only deals with Rehousing enquiries and will not be able to help with fobs or keys. 
       List of Area Offices:  <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices "target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a>
-    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
       </p>
   `,
   {
@@ -1398,24 +1401,11 @@ const newAndExistingRepairs = new ContentH(
     and communal/shared repairs to the block in which they live.
   </p> 
   `,
-  {
-    buttonLabel: "Raise Housing Decant Enquiry",
-    formName: "hou_sustainment_decants",
-  },
-  { typeKey: "repairs_and_investment_transferred_to_service" },
+  { buttonLabel: "Raise Housing Decant Enquiry", formName: "hou_sustainment_decants" },
+  { typeKey: "" },
   { typeKey: "repairs_and_investment_information_provided" },
 
-  {
-    type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
-    categories: ["Housing"],
-  },
+  { type: "Information", keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'], categories: ["Housing"] },
   { date: "27/02/2025", name: "Nathan Smith" }
 );
 
@@ -1524,6 +1514,7 @@ const payment = new ContentH(
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
+
 const programmedWorks = new ContentH(
   "programmedWorks",
   "Programmed Works",
@@ -1631,6 +1622,7 @@ const programmedWorks = new ContentH(
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
+
 const propertyAge = new ContentH(
   "propertyAge",
   "Property Age",
@@ -1676,17 +1668,7 @@ const refunds = new ContentH(
   { buttonLabel: "Report Rents Refunds ", formName: "hou_rents_refunds" },
   { typeKey: "repairs_and_investment_information_provided" },
   { typeKey: "repairs_and_investment_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
-    categories: ["Housing"],
-  },
+  { type: "Information", keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'], categories: ["Housing"] },
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
@@ -1699,14 +1681,25 @@ const noHeatNoWater = new ContentH(
     To access a supply of heat and hot water please follow the simple steps below: 
   </p>
   <ol> 
-    <li>Does the property have an electricity supply? They will not have access to heat and hot water without it. The customer will need to Dial 105 or visit <a href="www.findmysupplier.energy.co.uk "target="_blank">www.findmysupplier.energy.co.uk</a> to find their current supplier. 
-    <br><button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Find%20My%20Supplier'"> Send Link </button>
+    <li>Does the property have an electricity supply? They will not have access to heat and hot water without it. The customer will need to Dial 105 or visit <a href="https://www.findmysupplier.energy "target="_blank">https://www.findmysupplier.energy</a> to find their current supplier. 
+    <br><button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Find%20My%20Supplier'"> Send Link </button>
  </li>
-
-    <li> The District Heating Meter location may vary but is usually located in the property airing cupboard. Does The Meters Home Screen say ON in the top right corner? Is your heating programmer turned on? </li>
-    <li> To activate an emergency credit, press the blue button, marked ‘Press For Em Credit’ as instructed by the meters home screen. This will allow the tenant to ‘borrow’ credit up to £10.00 which will connect your heat and hot water supply for a short time. This is simply a loan and will need to be repaid on receipt of the prepayment information/number which will be with them shortly. </li>
-    <li> If the Meters screen in blank or shows something similar to ‘D bug’ then the customer can reboot the G6 unit by pressing the blue and orange button together for 10 seconds. </li>
-    <li>If the reboot is unsuccessful or for any other repair, please call the Repairs line on <a href="tel:0114 2735555">0114 2735555</a></li>
+    <li>
+      The District Heating Meter location may vary but is usually located in the property airing cupboard. Does The Meters Home Screen say ON in the top right corner? Is your heating programmer turned on?
+    </li>
+    <li>  
+      To activate an emergency credit, press the blue button, marked ‘Press For Em Credit’ as instructed by the meters home screen. 
+      This will allow the tenant to ‘borrow’ credit up to £10.00 which will connect your heat and hot water supply for a short time. 
+      This is simply a loan and will need to be repaid on receipt of the prepayment information/number which will be with them shortly.<br>
+      <strong>Advisor note</strong>: If the tenant has already reached the £10.00 limit and needs additional funds they can contact the Home Ownership and Revenues Team on: <a href="tel:0114 2735595">0114 2735595</a>.
+      This is a public number and has voicemail if the team is unavailable. They can also be contact by email at: <a href="mailto:RDH@Sheffield.gov.uk">RDH@Sheffield.gov.uk</a>
+    </li>
+    <li>
+      If the Meters screen in blank or shows something similar to ‘D bug’ then the customer can reboot the G6 unit by pressing the blue and orange button together for 10 seconds.
+    </li>
+    <li>  
+      If the reboot is unsuccessful or for any other repair, please call the Repairs line on <a href="tel:0114 2735555">0114 2735555</a>
+    </li>
   </ol>
 
   `,
@@ -1714,8 +1707,8 @@ const noHeatNoWater = new ContentH(
     buttonLabel: "",
     formName: "",
   },
+  { typeKey: "repairs_and_investment_transferred_to_service" },
   { typeKey: "repairs_and_investment_information_provided" },
-  { typeKey: "repairs_and_investment_information_requested" },
   {
     type: "Information",
     keywords: [
@@ -1727,8 +1720,9 @@ const noHeatNoWater = new ContentH(
     ],
     categories: ["Housing"],
   },
-  { date: "10/10/2024", name: "George Whitehouse" }
+  { date: "17/03/2025", name: "Nathan Smith" }
 );
+
 
 const tenantsOwnImprovements = new ContentH(
   "tenantsOwnImprovements",
@@ -1817,6 +1811,7 @@ const tenantsOwnImprovements = new ContentH(
   { date: "10/10/2024", name: "George Whitehouse" }
 );
 
+
 const assetManagementAndRepairs = new MenuH(
   "assetManagementAndRepairs",
   "Asset Management And Repairs",
@@ -1826,29 +1821,30 @@ const assetManagementAndRepairs = new MenuH(
     adaptationOther,
     asbestos,
     carbonmonoxide,
-    communalAerials,
-    communalAreas,
-    communalAreasFireSafety,
+	  communalAerials,
+	  communalAreas,
+	  communalAreasFireSafety,
     decants,
-    districtHeating,
-    doorEntrySystems,
-    emergencyCredit,
-    emergencyRepairs,
-    homeImprovementRequests,
-    homeownerDisconnection,
+	  districtHeating,
+	  doorEntrySystems,
+	  emergencyCredit,
+	  emergencyRepairs,
+	  homeImprovementRequests,
+	  homeownerDisconnection,
     inspectionRequest,
-    loststolenkeys,
-    newAndExistingRepairs,
-    noHeatNoWater,
-    payment,
-    programmedWorks,
-    propertyAge,
-    refunds,
-    tenantsOwnImprovements,
+	  loststolenkeys,
+	  newAndExistingRepairs,
+	  noHeatNoWater,
+	  payment,
+	  programmedWorks,
+	  propertyAge,
+	  refunds,
+	  tenantsOwnImprovements,
   ]
 );
 
 //#endregion Asset Management And Repairs
+
 
 //#region Estates and Environments
 
@@ -1868,21 +1864,15 @@ const communalCupboard = new ContentH(
       and they mostly require a T1 Key that is held in the local Area office.
     </p>
   `,
-  { buttonLabel: "", formName: "" },
-  { typeKey: "repairs_and_investment_information_provided" },
-  { typeKey: "repairs_and_investment_information_requested" },
+  { buttonLabel: "Raise enquiry", formName: "hou_estates_enquiry" },
+  { typeKey: "estates_and_environmental_transferred_to_service" },
+  { typeKey: "estates_and_environmental_information_provided" },
   {
-    type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    type: "Housing",
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Estates and Environments"],
   },
-  { date: "14/10/2024", name: "Omily Parkin" }
+  { date: "17/03/2025", name: "Nathan Smith" }
 );
 
 const communalFireSafety = new ContentH(
@@ -1930,13 +1920,7 @@ const communalFireSafety = new ContentH(
   { typeKey: "repairs_and_investment_information_requested" },
   {
     type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Estates and Environments"],
   },
   { date: "14/10/2024", name: "Omily Parkin" }
@@ -1967,13 +1951,7 @@ const fencesCouncilHousing = new ContentH(
   { typeKey: "repairs_and_investment_information_requested" },
   {
     type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Estates and Environments"],
   },
   { date: "09/10/2024", name: "Elliott Griffiths" }
@@ -2035,7 +2013,7 @@ const gardenPledgeScheme = new ContentH(
       The Government also has a website which lists local, trustworthy and reliable
       tradesmen, operating to Government endorsed standards
       <a href="http://www.trustmark.org.uk/ "target="_blank">http://www.trustmark.org.uk</a>.<br>
-    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Trust%20Mark'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Trust%20Mark'"> Send Link </button>
 
       </p>
   `,
@@ -2044,13 +2022,7 @@ const gardenPledgeScheme = new ContentH(
   { typeKey: "repairs_and_investment_information_requested" },
   {
     type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Estates and Environments"],
   },
   { date: "09/10/2024", name: "Elliott Griffiths" }
@@ -2065,11 +2037,12 @@ const estatesAndEnvironments = new MenuH(
     communalFireSafety,
     fencesCouncilHousing,
     garageRequest,
-    gardenPledgeScheme,
+    gardenPledgeScheme
   ]
 );
 
 //#endregion Estates and Environments
+
 
 //#region General Council Housing
 const generalCouncilHousing = new ContentH(
@@ -2080,7 +2053,7 @@ const generalCouncilHousing = new ContentH(
   <h3>Area Office Information</h3>
   <p>
     <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices"target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a> <br>
-        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
 
   </p>
 
@@ -2109,24 +2082,19 @@ const generalCouncilHousing = new ContentH(
   </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "repairs_and_investment_information_provided" },
-  { typeKey: "repairs_and_investment_information_requested" },
+  { typeKey: "housing_general_transferred_to_service" },
+  { typeKey: "housing_general_information_provided" },
   {
     type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Estates and Environments"],
   },
   { date: "09/10/2024", name: "Elliott Griffiths" }
 );
 //#endregion General Council Housing
 
-//#region Benefits
+
+//#region Benefits 
 
 const benefitCap = new ContentH(
   "benefitCap",
@@ -2134,44 +2102,44 @@ const benefitCap = new ContentH(
   "Find information about the Housing Benefit Cap on the official government website.",
   `
     <p>View website for housing benefit cap information: <a href="https://www.gov.uk/benefit-cap" target="_blank">https://www.gov.uk/benefit-cap</a> <br>
-    <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Benefit%20cap'"> Send Link </button>
+    <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Benefit%20cap'"> Send Link </button>
 
     </p>
   `,
-  { buttonLabel: "Benefit cap", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing benefit",
-      "Housing benfit",
-      "Housing benifit",
-      "Housng benefit",
-      "Housing beneift",
-      "Housin benefit",
-      "Housing benefet",
-      "Housng benfit",
-      "Housin benifit",
-      "Housing benifits",
-      "Benefit cap",
-      "Benfit cap",
-      "Beneift cap",
-      "Benifit cap",
-      "Benfit cpap",
-      "Benfit capp",
-      "Benefitt cap",
+    { buttonLabel: "Benefit cap", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+     keywords: [
+      'Housing benefit',
+      'Housing benfit',
+      'Housing benifit',
+      'Housng benefit',
+      'Housing beneift',
+      'Housin benefit',
+      'Housing benefet',
+      'Housng benfit',
+      'Housin benifit',
+      'Housing benifits',
+      'Benefit cap',
+      'Benfit cap',
+      'Beneift cap',
+      'Benifit cap',
+      'Benfit cpap',
+      'Benfit capp',
+      'Benefitt cap'
     ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
 
-const benefitClaim = new ContentH(
-  "benefitClaim",
-  "Benefit claim",
-  "Contact Sheffield Benefits Service for non-council tenant benefit claims, or complete the online form for support.",
-  `
+  const benefitClaim = new ContentH(
+    "benefitClaim",
+    "Benefit claim",
+    "Contact Sheffield Benefits Service for non-council tenant benefit claims, or complete the online form for support.",
+    `
       <h4>Customer is not a council tenant</h4>
       <p>If the customer is not a council tenant, transfer them to the benefits team on the number below. If the line is busy, 
       <strong>do not</strong> ask the customer to call back later today; instead, advise the customer to email either:</p>
@@ -2180,87 +2148,87 @@ const benefitClaim = new ContentH(
           <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
       </ul>
       <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax" target="_blank">https://www.sheffield.gov.uk/council-tax</a><br>
-      <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
 </p>
       <p><strong>Service area:</strong> Sheffield Benefits Service</p>
       <p><strong>Telephone number:</strong> <a href="tel:0114 2736777">0114 2736777</a></p>
       <p><strong>Email address:</strong> <a href="mailto:council.tax@sheffield.gov.uk">council.tax@sheffield.gov.uk</a> or <a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></p>
     `,
-  { buttonLabel: "Benefit claim", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing benefit",
-      "Housing benfit",
-      "Housing benifit",
-      "Housng benefit",
-      "Housing beneift",
-      "Housin benefit",
-      "Housing benefet",
-      "Housng benfit",
-      "Housin benifit",
-      "Housing benifits",
-      "Benefit claim",
-      "Benfit claim",
-      "Beneift claim",
-      "Benifit claim",
-      "Benfit clam",
-      "Benfit claaim",
-      "Benefitt claim",
+    { buttonLabel: "Benefit claim", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+     keywords: [
+      'Housing benefit',
+      'Housing benfit',
+      'Housing benifit',
+      'Housng benefit',
+      'Housing beneift',
+      'Housin benefit',
+      'Housing benefet',
+      'Housng benfit',
+      'Housin benifit',
+      'Housing benifits',
+      'Benefit claim',
+      'Benfit claim',
+      'Beneift claim',
+      'Benifit claim',
+      'Benfit clam',
+      'Benfit claaim',
+      'Benefitt claim'
     ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
 
-const benefitFraud = new ContentH(
-  "benefitFraud",
-  "Benefit fraud",
-  "Find out about Benefit fraud and how it can be reported anonymously online.",
-  `
+  const benefitFraud = new ContentH(
+    "benefitFraud",
+    "Benefit fraud",
+    "Find out about Benefit fraud and how it can be reported anonymously online.",
+    `
       <p>You can can report fraud anonymously online at: <a href="https://www.gov.uk/report-benefit-fraud" target="_blank">https://www.gov.uk/report-benefit-fraud</a><br>
-      <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Report%20benefit%20fraud'"> Send Link </button>
+      <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Report%20benefit%20fraud'"> Send Link </button>
  
       
       </p>
     `,
-  { buttonLabel: "Benefit fraud", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benfit",
-      "Housing Benifit",
-      "Housng Benefit",
-      "Housing Beneift",
-      "Housin Benefit",
-      "Housing Benefet",
-      "Housng Benfit",
-      "Housin Benifit",
-      "Housing Benifits",
-      "Benefit fraud",
-      "Benfit fraud",
-      "Benifit fraud",
-      "Beneift fraud",
-      "Benfit fruad",
-      "Benfit fraaud",
-      "Benefitt fraud",
-      "Benifit fraaud",
+    { buttonLabel: "Benefit fraud", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+      'Housing Benefit',
+      'Housing Benfit',
+      'Housing Benifit',
+      'Housng Benefit',
+      'Housing Beneift',
+      'Housin Benefit',
+      'Housing Benefet',
+      'Housng Benfit',
+      'Housin Benifit',
+      'Housing Benifits',
+      'Benefit fraud',
+      'Benfit fraud',
+      'Benifit fraud',
+      'Beneift fraud',
+      'Benfit fruad',
+      'Benfit fraaud',
+      'Benefitt fraud',
+      'Benifit fraaud'
     ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
 
-const benefitOnTwoHomes = new ContentH(
-  "benefitOnTwoHomes",
-  "Benefit on two homes",
-  "Guidelines for housing benefit claims in scenarios like dual liabilities, fleeing violence, delayed occupation, or hospitalisation.",
-  `
+  const benefitOnTwoHomes = new ContentH(
+    "benefitOnTwoHomes",
+    "Benefit on two homes",
+    "Guidelines for housing benefit claims in scenarios like dual liabilities, fleeing violence, delayed occupation, or hospitalisation.",
+    `
       <h4>Unavoidable liability</h4>
       <p><strong>Situation:</strong> When tenants sign for a tenancy and have moved in but have a liability on another property.</p>
       <p>This is where a tenant has signed for a Council property but has a liability at another property. 
@@ -2311,131 +2279,131 @@ const benefitOnTwoHomes = new ContentH(
         property and that this is their main home (as per the basic principles). 
         However, this does not apply if they have a property elsewhere.</p>
     `,
-  { buttonLabel: "Benefit on two homes", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benfit",
-      "Housing Benifit",
-      "Housng Benefit",
-      "Housing Beneift",
-      "Housin Benefit",
-      "Housing Benefet",
-      "Housng Benfit",
-      "Housin Benifit",
-      "Housing Benifits",
-      "Benefits on two homes",
-      "Benfits on two homes",
-      "Benifits on two homes",
-      "Beneifts on two homes",
-      "Benefits on 2 homes",
-      "Benfits on 2 homes",
-      "Benifits on 2 homes",
-      "Benefits on too homes",
-      "Benfits on too homes",
-      "Benfits on to homes",
-    ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
-
-const benefitsClawback = new ContentH(
-  "benefitsClawback",
-  "Benefits clawback",
-  "Details on housing benefit overpayment recovery, including clawback reductions and how to appeal if affordability is an issue.",
-  `
+    { buttonLabel: "Benefit on two homes", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+        'Housing Benefit',
+        'Housing Benfit',
+        'Housing Benifit',
+        'Housng Benefit',
+        'Housing Beneift',
+        'Housin Benefit',
+        'Housing Benefet',
+        'Housng Benfit',
+        'Housin Benifit',
+        'Housing Benifits',
+        'Benefits on two homes',
+        'Benfits on two homes',
+        'Benifits on two homes',
+        'Beneifts on two homes',
+        'Benefits on 2 homes',
+        'Benfits on 2 homes',
+        'Benifits on 2 homes',
+        'Benefits on too homes',
+        'Benfits on too homes',
+        'Benfits on to homes'
+      ],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
+  
+  const benefitsClawback = new ContentH(
+    "benefitsClawback",
+    "Benefits clawback",
+    "Details on housing benefit overpayment recovery, including clawback reductions and how to appeal if affordability is an issue.",
+    `
     <p>If you have been overpaid housing benefit and no longer receive it, you will receive an invoice from Sheffield Benefits Service to repay directly.
        If you still receive housing benefit, the overpayment is recovered by reducing your weekly housing benefit.
        This reduction, which increases your rent payable by the same amount, is called 'clawback'.
        If you cannot afford the increase, you can appeal to Sheffield Benefits Service to have the amount reduced.</p>
     `,
-  { buttonLabel: "Benefits clawback", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benfit",
-      "Housing Benifit",
-      "Housng Benefit",
-      "Housing Beneift",
-      "Housin Benefit",
-      "Housing Benefet",
-      "Housng Benfit",
-      "Housin Benifit",
-      "Housing Benifits",
-      "Benefits clawback",
-      "Benfits clawback",
-      "Benifits clawback",
-      "Beneifts clawback",
-      "Benefits clawbak",
-      "Benfits clawbak",
-      "Benefits clawbck",
-      "Benifits clawbck",
-    ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
+    { buttonLabel: "Benefits clawback", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+    'Housing Benefit',
+    'Housing Benfit',
+    'Housing Benifit',
+    'Housng Benefit',
+    'Housing Beneift',
+    'Housin Benefit',
+    'Housing Benefet',
+    'Housng Benfit',
+    'Housin Benifit',
+    'Housing Benifits',
+    'Benefits clawback',
+    'Benfits clawback',
+    'Benifits clawback',
+    'Beneifts clawback',
+    'Benefits clawbak',
+    'Benfits clawbak',
+    'Benefits clawbck',
+    'Benifits clawbck'
+  ],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
 
-const changeOfCircumstances = new ContentH(
-  "changeOfCircumstances",
-  "Change of circumstances",
-  "Update your Housing Benefits details online quickly and easily through the Sheffield Council website.",
-  `
+  const changeOfCircumstances = new ContentH(
+    "changeOfCircumstances",
+    "Change of circumstances",
+    "Update your Housing Benefits details online quickly and easily through the Sheffield Council website.",
+    `
       <p>Housing Benefits can now be claimed online. Claiming online is the quickest and easiest way to claim, and paper forms are no longer available.<br> 
         You can access this via <a href="https://www.sheffield.gov.uk/benefits" target="_blank">https://www.sheffield.gov.uk/benefits</a><br> 
-        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
+        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
         </p>
     `,
-  { buttonLabel: "Change of circumstances", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-      "Change of Circumstances",
-    ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
+    { buttonLabel: "Change of circumstances", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances',
+        'Change of Circumstances'
+      ],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
 
-const claimsForMoney = new FormH(
-  "claimsForMoney",
-  "Claims for money",
-  "Use this section for claims for; benefits, decoration grants or discretionary payments, following repair or programmed works, local assistance scheme, loss of earnings, personal injury, SCC home insurance or tenants own improvements",
-  "hou_sustainment_claims",
-  {
-    type: "Report",
-    keywords: ["Claim", "Money"],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "27/02/2025", name: "Nathan Smith" }
-);
-
+  const claimsForMoney = new FormH(
+    "claimsForMoney",
+    "Claims for money",
+    "Use this section for claims for; benefits, decoration grants or discretionary payments, following repair or programmed works, local assistance scheme, loss of earnings, personal injury, SCC home insurance or tenants own improvements",
+    "hou_sustainment_claims",
+    {
+      type: "Report",
+      keywords: ["Claim", "Money"],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "27/02/2025", name: "Nathan Smith" }
+  );
+  
 const contactHousingBenefits = new ContentH(
   "contactHousingBenefits",
   "Contact housing benefits",
@@ -2448,7 +2416,7 @@ const contactHousingBenefits = new ContentH(
         <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
     </ul>
     <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax" target="_blank">https://www.sheffield.gov.uk/council-tax</a> <br> 
-          <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+          <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
     </p>
     <p><strong>Service area:</strong> Sheffield Benefits Service</p>
     <p><strong>Telephone number:</strong> <a href="tel:0114 2736777">0114 2736777</a></p>
@@ -2463,7 +2431,7 @@ const contactHousingBenefits = new ContentH(
         <li><a href="mailto:benefits@sheffield.gov.uk">benefits@sheffield.gov.uk</a></li>
     </ul>
     <p>Or they can complete the online form at: <a href="https://www.sheffield.gov.uk/council-tax.html" target="_blank">https://www.sheffield.gov.uk/council-tax</a><br> 
-              <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
+              <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Council%20Tax'"> Send Link </button>
 
     </p>
     <p><strong>Service area:</strong> Council tax</p>
@@ -2478,129 +2446,131 @@ const contactHousingBenefits = new ContentH(
   {
     type: "Information",
     keywords: [
-      "Housing benefit",
-      "Housing benfit",
-      "Housing benifit",
-      "Housng benefit",
-      "Housing beneift",
-      "Housin benefit",
-      "Housing benefet",
-      "Housng benfit",
-      "Housin benifit",
-      "Housing benifits",
-      "Contact benefits",
-      "Contct benefits",
-      "Contat benefits",
-      "Contact benifits",
-      "Cntact benefits",
-      "Contct benifits",
-      "Contact benifit",
-      "Conatct benefits",
-    ],
+      'Housing benefit',
+      'Housing benfit',
+      'Housing benifit',
+      'Housng benefit',
+      'Housing beneift',
+      'Housin benefit',
+      'Housing benefet',
+      'Housng benfit',
+      'Housin benifit',
+      'Housing benifits',
+      'Contact benefits',
+      'Contct benefits',
+      'Contat benefits',
+      'Contact benifits',
+      'Cntact benefits',
+      'Contct benifits',
+      'Contact benifit',
+      'Conatct benefits'
+    ],      
     categories: ["Housing", "Benefits"],
   },
   { date: "05/11/2024", name: "Andy Walker" }
 );
 
-const localAssistanceScheme = new ContentH(
-  "localAssistanceScheme",
-  "Local Assistance Scheme",
-  "Access the Local Assistance Scheme and submit Housing Benefit claims quickly and easily online.",
-  `
+  const localAssistanceScheme = new ContentH(
+    "localAssistanceScheme",
+    "Local Assistance Scheme",
+    "Access the Local Assistance Scheme and submit Housing Benefit claims quickly and easily online.",
+    `
       <p>Housing Benefits can now be claimed online. Claiming online is the quickest and easiest way to claim, and paper forms are no longer available. <br>
          You can access this via <a href="https://www.sheffield.gov.uk/benefits" target="_blank">https://www.sheffield.gov.uk/benefits</a> <br> 
-                 <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
+                 <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Council%20Tax%20support'"> Send Link </button> 
          </p>
     `,
-  { buttonLabel: "Local Assistance Scheme", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-      "Local Assistance Scheme",
-    ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
-
-const pdsa = new ContentH(
-  "pdsa",
-  "PDSA",
-  "The Benefits Service can fax a letter to PDSA to assist with pet treatment for customers receiving benefits.",
-  `
+    { buttonLabel: "Local Assistance Scheme", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme',
+        'Local Assistance Scheme'
+      ],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
+  
+  const pdsa = new ContentH(
+    "pdsa",
+    "PDSA",
+    "The Benefits Service can fax a letter to PDSA to assist with pet treatment for customers receiving benefits.",
+    `
       <p>The Benefits Service can fax a letter to PDSA for pet treatment if the customer is on benefits.</p>
     `,
-  { buttonLabel: "PDSA", formName: "" },
-  { typeKey: "housing_benefits_information_provided" },
-  { typeKey: "housing_benefits_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "Housing Benefit",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-      "PDSA",
-    ],
-    categories: ["Housing", "Benefits"],
-  },
-  { date: "05/11/2024", name: "Andy Walker" }
-);
-
+    { buttonLabel: "PDSA", formName: "" },
+    { typeKey: "housing_benefits_information_provided" },
+    { typeKey: "housing_benefits_information_requested" },
+    {
+      type: "Information",
+      keywords: [
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'Housing Benefit',
+        'PDSA',
+        'PDSA',
+        'PDSA',
+        'PDSA',
+        'PDSA',
+        'PDSA',
+        'PDSA',
+        'PDSA'
+      ],
+      categories: ["Housing", "Benefits"],
+    },
+    { date: "05/11/2024", name: "Andy Walker" }
+  );
+  
 //Universal Credit is in Cross Region
 
-const housingBenefits = new MenuH(
-  "housingBenefits",
-  "Housing benefits",
-  "Information on housing benefits, including eligibility, claims, fraud prevention, and changes in circumstances. It also covers topics like universal credit and local assistance schemes.",
-  [
-    benefitCap,
-    benefitClaim,
-    benefitFraud,
-    benefitOnTwoHomes,
-    benefitsClawback,
-    claimsForMoney,
-    changeOfCircumstances,
-    contactHousingBenefits,
-    localAssistanceScheme,
-    pdsa,
-    universalCredit,
-    welfareReform,
-  ]
-);
+  const housingBenefits = new MenuH(
+    "housingBenefits",
+    "Housing benefits",
+    "Information on housing benefits, including eligibility, claims, fraud prevention, and changes in circumstances. It also covers topics like universal credit and local assistance schemes.",
+    [
+      benefitCap,
+      benefitClaim,
+      benefitFraud,
+      benefitOnTwoHomes,
+      benefitsClawback,
+      claimsForMoney,
+      changeOfCircumstances,
+      contactHousingBenefits,
+      localAssistanceScheme,
+      pdsa,
+      universalCredit,
+      welfareReform
+    ]
+  );  
+
 
 //#endregion Benefits
+
 
 //#region Leaseholders
 const leaseholderInformation = new ContentH(
@@ -2656,17 +2626,7 @@ const leaseholderInformation = new ContentH(
   { buttonLabel: "", formName: "" },
   { typeKey: "repairs_and_investment_information_provided" },
   { typeKey: "repairs_and_investment_information_requested" },
-  {
-    type: "Information",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
-    categories: ["Housing"],
-  },
+  { type: "Information", keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'], categories: ["Housing"] },
   { date: "11/10/2024", name: "Abishai Devarapalli" }
 );
 
@@ -2884,6 +2844,9 @@ const applicationChanges = new ContentH(
             The last 3 consecutive months of bank statements (Only where the award
             letter is not available)
           </li>
+          <li>
+            Universal Credit is also accepted if it includes the child's name on the claim.
+          </li>
         </ul>
       </div>
     </details>
@@ -2914,7 +2877,7 @@ const applicationChanges = new ContentH(
             <p>
               Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
               the links from the homepage.<br> 
-              <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+              <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
             </p>
             <p>Click ‘Log into my account’.</p>
             <p>
@@ -3024,7 +2987,8 @@ const applicationChanges = new ContentH(
       <div class="accordion-content">
         <p>
           Present three proof documents to a housing office or First Point, where ID
-          will be copied and saved. The name will be updated in our system.
+          will be copied and saved. The name will be updated in our system. See above within the "Accepted ID" section
+          for valid options of ID that can be used.
         </p>
         <p>
           Alternatively, send the name change in writing along with proof
@@ -3053,19 +3017,9 @@ const applicationChanges = new ContentH(
     </details>
   `,
   { buttonLabel: "Raise Enquiry", formName: "hou_rehousing_enquiry" },
-  { typeKey: "rehousing_services_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "rehousing_services_information_provided" },
-  {
-    type: "Apply",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
-    categories: ["Housing", "Rehousing"],
-  },
+  { type: "Apply", keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'], categories: ["Housing", "Rehousing"] },
   { date: "12/02/2025", name: "Nathan Smith" }
 );
 
@@ -3105,17 +3059,11 @@ const applyForRehousing = new ContentH(
     </p>
   `,
   { buttonLabel: "Raise Enquiry", formName: "hou_rehousing_enquiry" },
-  { typeKey: "rehousing_services_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "rehousing_services_information_provided" },
   {
     type: "Request",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
+    keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'],
     categories: ["Housing", "Rehousing"],
   },
   { date: "12/02/2025", name: "Nathan Smith" }
@@ -3125,13 +3073,13 @@ const bidding = new ContentH(
   "bidding",
   "Bidding",
   "Learn how to place bids for properties on the Sheffield Property Shop website, manage your application details, and handle restrictions or disqualifications.",
-  `
+    `
       <p>
         After you have registered for housing, you express your interest in renting a
         property by making a bid. You only have to bid once per property. You make
         bids online at the Property Shop website
         <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> <br> 
-        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
         <br>You can bid 3 times (plus 1 FCFS) within each weekly bidding cycle (Thursday
         to Tuesday).
       </p>
@@ -3160,7 +3108,7 @@ const bidding = new ContentH(
             Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
             the links from the homepage.
             <br>
-            <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
+            <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
             <br>
             <br>
               Click ‘Log into my account’.
@@ -3305,7 +3253,7 @@ const bidding = new ContentH(
           <h3>Main Applicant</h3>
           <p>
             To remove a joint applicant, you must do this online at the Property Shop
-            website.
+            website at: <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a>
           <br>
           <br>
           <h3>Joint Applicant</h3>
@@ -3318,28 +3266,18 @@ const bidding = new ContentH(
         </div>
       </details>
     `,
-  { buttonLabel: "", formName: "" },
-  { typeKey: "repairs_and_investment_information_provided" },
-  { typeKey: "repairs_and_investment_information_requested" },
-  {
-    type: "Apply",
-    keywords: [
-      "repairs and investmant",
-      "repears and investment",
-      "repairs and invesment",
-      "repair and investement",
-      "repairs and invesmant",
-    ],
-    categories: ["Housing", "Rehousing"],
-  },
-  { date: "14/10/2024", name: "Omily Parkin" }
-);
+    { buttonLabel: "", formName: "" },
+    { typeKey: "repairs_and_investment_information_provided" },
+    { typeKey: "repairs_and_investment_information_requested" },
+    { type: "Apply", keywords: ['repairs and investmant', 'repears and investment', 'repairs and invesment', 'repair and investement', 'repairs and invesmant'], categories: ["Housing", "Rehousing"] },
+    { date: "14/10/2024", name: "Omily Parkin" }
+  );
 
-const eligibility = new ContentH(
-  "eligibility",
-  "Eligibility",
-  "Check eligibility for Sheffield's Housing Register, including age, immigration status, and documentation requirements for application.",
-  `
+  const eligibility = new ContentH(
+    "eligibility",
+    "Eligibility",
+    "Check eligibility for Sheffield's Housing Register, including age, immigration status, and documentation requirements for application.",
+    `
       <p>
         Sheffield City Council operates an open register and therefore any person over
         the age of 16 can apply to join the Housing Register. However, generally you
@@ -3411,25 +3349,25 @@ const eligibility = new ContentH(
         customer is able to afford the property.
       </p>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "14/10/2024", name: "Abishai Devarapalli" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "14/10/2024", name: "Abishai Devarapalli" }
+  );
 
-const fosteringAndAdoption = new ContentH(
-  "fosteringAndAdoption",
-  "Fostering and Adoption",
-  "Details on the processes for amending bedroom eligibility for foster and adoptive applicants, including the need for confirmation from Social Services and the potential benefit implications.",
-  `
+  const fosteringAndAdoption = new ContentH(
+    "fosteringAndAdoption",
+    "Fostering and Adoption",
+    "Details on the processes for amending bedroom eligibility for foster and adoptive applicants, including the need for confirmation from Social Services and the potential benefit implications.",
+    `
    
   <h3>Adoption</h3>
   
@@ -3449,25 +3387,25 @@ const fosteringAndAdoption = new ContentH(
      application to foster after they are rehoused.</p>
   
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/22/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/22/2024", name: "George Whitehouse" }
+  );
 
-const housingAssociations = new ContentH(
-  "housingAssociations",
-  "Housing Associations",
-  "Explore various housing associations in Sheffield, offering a range of properties and eligibility criteria for different housing needs.",
-  `
+  const housingAssociations = new ContentH(
+    "housingAssociations",
+    "Housing Associations",
+    "Explore various housing associations in Sheffield, offering a range of properties and eligibility criteria for different housing needs.",
+    `
       <p>
         Housing Associations and Housing Trusts are non-profit making, independent organisations.
         They vary widely in the types of people they house.
@@ -3494,7 +3432,7 @@ const housingAssociations = new ContentH(
                 Lincolnshire<br>
                 DN21 1GG<br>
                 <a href="http://www.acisgroup.co.uk" target="_blank">http://www.acisgroup.co.uk</a> <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=ACIS%20Group'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=ACIS%20Group'"> Send Link </button>
               </address>
               <p>
                 Variety of properties across Woodthorpe and Lower Manor. Stock transfer from the Council Housing Service.
@@ -3534,13 +3472,13 @@ const housingAssociations = new ContentH(
                 Email: <a href="mailto:info@archeshousing.org.uk">info@archeshousing.org.uk</a><br>
                 Website and web chat: <a href="https://www.archeshousing.org.uk" target="_blank">https://www.archeshousing.org.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Arches%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Arches%20Housing'"> Send Link </button>
 
               </address>
               <p>
                 Mutual exchanges advertised and managed through home swapper: register on <a href="https://www.homeswapper.co.uk" target="_blank">https://www.homeswapper.co.uk</a> 
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
                 Information on lettings: Flats and houses available, including some over 60s independent living accommodation (no warden on site). Must be 18+ and eligible for benefits if not working. 
                 An affordability and risk assessment will be carried out, and a previous landlord reference requested for all nominees.
                 We do not hold a waiting list for the general public.
@@ -3600,7 +3538,7 @@ const housingAssociations = new ContentH(
                 M21 7QP<br>
                 <a href="http://www.greatplaces.org.uk" target="_blank">http://www.greatplaces.org.uk</a> 
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Great%20Places'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Great%20Places'"> Send Link </button>
               </address>
               <p>
                 Flats, houses, and bungalows in Wybourn, Richmond Park, Birklands, and Athelstan (mostly ex-Council properties). To register, a Council Housing Service rehousing registration form needs to be completed.
@@ -3622,7 +3560,7 @@ const housingAssociations = new ContentH(
                 S74 8DY<br>
                 <a href="http://www.guinnesspartnership.com" target="_blank">http://www.guinnesspartnership.com</a>
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Guinness%20Partnership'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Guinness%20Partnership'"> Send Link </button>
               </address>
               <p>
                 Available properties are either advertised through the Council’s Property Shop and Property Shop website or are allocated from Guinness Northern Counties’ own waiting list.
@@ -3734,7 +3672,7 @@ const housingAssociations = new ContentH(
                 Email: <a href="mailto:contactus@sanctuary.co.uk">contactus@sanctuary.co.uk</a><br>
                 <a href="http://www.sanctuary-housing.co.uk" target="_blank">http://www.sanctuary-housing.co.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sanctuary%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sanctuary%20Housing'"> Send Link </button>
               </address>
               <p>
                 Stock transfer from Council Housing Service. All types of properties. Current stock is in Shiregreen. To register, a Council Housing Service rehousing registration form needs to be completed.
@@ -3803,7 +3741,7 @@ const housingAssociations = new ContentH(
                 LS10 1FB<br>
                 <a href="http://www.yorkshirehousing.co.uk" target="_blank">http://www.yorkshirehousing.co.uk</a>
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Yorkshire%20Housing'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Yorkshire%20Housing'"> Send Link </button>
               </address>
               <p>
                 Mix of housing types including some sheltered schemes. Points system - based on housing need. Generally need to be 18+, but in some cases will take 16+.
@@ -3814,38 +3752,32 @@ const housingAssociations = new ContentH(
         </div>
       </details>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  {
-    typeKey: "rehousing_services_information_provided",
-  },
-  {
-    typeKey: "rehousing_services_information_requested",
-  },
-  {
-    type: "Request",
-    keywords: [
-      "rehousing",
-      "rehausing",
-      "rehousingg",
-      "rehosuing",
-      "rehouzing",
-    ],
-    categories: ["Housing"],
-  },
-  {
-    date: "15/11/2024",
-    name: "Joseph Coupland",
-  }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    {
+      typeKey: "rehousing_services_information_provided"
+    },
+    {
+      typeKey: "rehousing_services_information_requested"
+    },
+    {
+      type: "Request",
+      keywords: ["rehousing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    {
+      date: "15/11/2024",
+      name: "Joseph Coupland"
+    }
+  );
 
-const idReferences = new ContentH(
-  "idReferences",
-  "ID / References",
-  "Details on the required identification and references needed for the rehousing process, including verification procedures.",
-  `
+  const idReferences = new ContentH(
+    "idReferences",
+    "ID / References",
+    "Details on the required identification and references needed for the rehousing process, including verification procedures.",
+    `
       <p>
         For current SCC tenants, ID is required for new rehousing applications.<br>
         For non SCC tenants, ID and a Reference are required for new rehousing applications.<br><br>
@@ -3904,25 +3836,25 @@ const idReferences = new ContentH(
           <li>The last 3 consecutive months bank statements (Only where award letter is not available).</li>
         </ul>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/11/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/11/2024", name: "George Whitehouse" }
+  );
 
-const idFaq = new ContentH(
-  "idFaq",
-  "ID FAQs",
-  "Review frequently asked questions about ID requirements for rehousing applications, including document submission and validation processes.",
-  `
+  const idFaq = new ContentH(
+    "idFaq",
+    "ID FAQs",
+    "Review frequently asked questions about ID requirements for rehousing applications, including document submission and validation processes.",
+    `
       <p>
         Customers who have submitted an online application for rehousing, 
         or have made a change to an existing Application, need to provide ID, 
@@ -3952,25 +3884,25 @@ const idFaq = new ContentH(
         submit a new Application and provide the relevant ID.
       </p>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/11/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/11/2024", name: "George Whitehouse" }
+  );
 
-const movingIn = new ContentH(
-  "movingIn",
-  "Moving In",
-  "Details about moving into a new property, including scheduling, property standards, utility setup, and meter readings.",
-  `
+  const movingIn = new ContentH(
+    "movingIn",
+    "Moving In",
+    "Details about moving into a new property, including scheduling, property standards, utility setup, and meter readings.",
+    `
       <h4>When can I move in once offered a property?</h4>
       <p>
         You can arrange your moving in date as part of the viewing and Sign Up process 
@@ -4025,30 +3957,30 @@ const movingIn = new ContentH(
         The meter reading when they move out - you should contact the utility company themselves.
       </p>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/11/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/11/2024", name: "George Whitehouse" }
+  );
 
-const mutualExchanges = new ContentH(
-  "mutualExchanges",
-  "Mutual Exchanges",
-  "Details and guidelines regarding the process, eligibility, and conditions of Mutual Exchange for housing tenants, including required documentation, restrictions, and steps to complete an exchange.",
-  `
+  const mutualExchanges = new ContentH(
+    "mutualExchanges",
+    "Mutual Exchanges",
+    "Details and guidelines regarding the process, eligibility, and conditions of Mutual Exchange for housing tenants, including required documentation, restrictions, and steps to complete an exchange.",
+    `
       <p>
         A Mutual Exchange is where two or more Council or Housing Association tenants can apply to swap
         their homes. The 1985 Housing Act (part 4, section 92) gives tenants this right under certain circumstances.<br><br>
   
-        The Mutual Exchange application form can be accessed online at the Property Shop website and <a href="https://www.sheffield.gov.uk/council-housing/mutual-exchanges" target="_blank">https://www.sheffield.gov.uk/council-housing/mutual-exchanges</a>.
+        The Mutual Exchange application form can be accessed online at the Property Shop website at: <a href="https://www.sheffieldpropertyshop.org.uk/" target="_blank">https://www.sheffieldpropertyshop.org.uk/</a> and the Sheffield City Council website at: <a href="https://www.sheffield.gov.uk/council-housing/mutual-exchanges" target="_blank">https://www.sheffield.gov.uk/council-housing/mutual-exchanges</a>.
         <br>
         <button type="button" class="dform_widget email-btn dform_widget_type_button"
           aria-label="Send link to mutual exchanges page"
@@ -4107,7 +4039,7 @@ const mutualExchanges = new ContentH(
                 HomeSwapper offers a matching service and will send you details of suitable exchanges via email or text. 
                 The HomeSwapper website is <a href="https://www.homeswapper.co.uk" target="_blank">https://www.homeswapper.co.uk</a>.
                 <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Home%20Swapper'"> Send Link </button>
                 <br>
                 <br>
   
@@ -4276,25 +4208,25 @@ const mutualExchanges = new ContentH(
         </div>
       </details>
     `,
-  {
-    buttonLabel: "Raise Enquiry",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_transferred_to_service" },
-  { typeKey: "rehousing_services_information_provided" },
-  {
-    type: "Request",
-    keywords: ["rehousing", "rehousing", "rehousign", "rehozing"],
-    categories: ["Housing"],
-  },
-  { date: "12/02/2025", name: "Nathan Smith" }
-);
+    {
+      buttonLabel: "Raise Enquiry",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "" },
+    { typeKey: "rehousing_services_information_provided" },
+    {
+      type: "Request",
+      keywords: ["rehousing", "rehousing", "rehousign", "rehozing"],
+      categories: ["Housing"],
+    },
+    { date: "12/02/2025", name: "Nathan Smith" }
+  );
 
-const priorities = new ContentH(
-  "priorities",
-  "Priorities",
-  "Learn about priority for rehousing, including how priority is assessed, what it means for your housing options, and how to request a review.",
-  `
+  const priorities = new ContentH(
+    "priorities",
+    "Priorities",
+    "Learn about priority for rehousing, including how priority is assessed, what it means for your housing options, and how to request a review.",
+    `
     <p>
       Priority for rehousing can be awarded if there is a need to be rehoused urgently and immediately. When your circumstances have been assessed, we will look at whether we can give you priority for housing ahead of other people on the Housing Register. We will then write to you explaining our decision. If we give you priority, we will explain why it has been given, what sort of property it is for and how long you have to use it. The letter will also explain how to request a review of the decision if you are unhappy with it.<br><br>
   
@@ -4307,25 +4239,25 @@ const priorities = new ContentH(
       A priority does not affect your waiting time, you can apply for properties with both your waiting time and your priority. For most of the properties advertised we will consider people with priority first. If you have a priority, you must keep bidding for suitable properties. Even with a priority, you may have to bid for a considerable time before you are offered a property. In order for our system to be fair, a proportion of properties are also let on the basis of an applicant's waiting time on the housing register. This will be clearly shown in the property adverts.<br>
      </p> 
     `,
-  {
-    buttonLabel: "Raise Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_transferred_to_service" },
-  { typeKey: "rehousing_services_information_provided" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "12/02/2025", name: "Nathan Smith" }
-);
+    {
+      buttonLabel: "Raise Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "" },
+    { typeKey: "rehousing_services_information_provided" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "12/02/2025", name: "Nathan Smith" }
+  );
 
-const priorityBandingTable = new ContentH(
-  "priorityBandingTable",
-  "Priority Banding Table",
-  "Priority Banding Table details various rehousing priorities and their associated bands, along with hierarchy rules for certain categories like anti-social behaviour, homelessness, and health-related needs.",
-  `
+  const priorityBandingTable = new ContentH(
+    "priorityBandingTable",
+    "Priority Banding Table",
+    "Priority Banding Table details various rehousing priorities and their associated bands, along with hierarchy rules for certain categories like anti-social behaviour, homelessness, and health-related needs.",
+    `
       <h3>Priority Banding Table</h3>
   
       <p>The table below shows the list of priorities and the bands they fall in. </p>
@@ -4508,25 +4440,25 @@ const priorityBandingTable = new ContentH(
         </div>
       </details>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/22/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/22/2024", name: "George Whitehouse" }
+  );
 
-const PropertyOffersAndViewings = new ContentH(
-  "PropertyOffersAndViewings",
-  "Property Offers and Viewings",
-  "Understand how Sheffield City Council allocates properties, including the bidding process, property offers, and viewings based on eligibility and priority.",
-  `
+  const PropertyOffersAndViewings = new ContentH(
+    "PropertyOffersAndViewings",
+    "Property Offers and Viewings",
+    "Understand how Sheffield City Council allocates properties, including the bidding process, property offers, and viewings based on eligibility and priority.",
+    `
       <p>
         Once the bidding period has closed on a Tuesday night, 
         bids for each property are sorted automatically based on the eligibility criteria.
@@ -4544,25 +4476,25 @@ const PropertyOffersAndViewings = new ContentH(
         <li>Please note, if you make a bid for a property and your circumstances change or your priority ends during the bidding period, we will not offer you the property if you no longer meet the eligibility criteria.</li>
       </ul>
     `,
-  {
-    buttonLabel: "Raise Enquiry",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_transferred_to_service" },
-  { typeKey: "rehousing_services_information_provided" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "12/02/2025", name: "Nathan Smith" }
-);
+    {
+      buttonLabel: "Raise Enquiry",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "" },
+    { typeKey: "rehousing_services_information_provided" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "12/02/2025", name: "Nathan Smith" }
+  );
 
-const referencesFAQs = new ContentH(
-  "referencesFAQs",
-  "References FAQs",
-  "Guidelines for providing references when applying for housing or making changes to applications, including who can provide them, how to obtain them, and the timeline for submission.",
-  `
+  const referencesFAQs = new ContentH(
+    "referencesFAQs",
+    "References FAQs",
+    "Guidelines for providing references when applying for housing or making changes to applications, including who can provide them, how to obtain them, and the timeline for submission.",
+    `
     <details class="accordion">
       <summary class="accordion-header">
         <h3>Why do I need to provide a reference?</h3>
@@ -4615,7 +4547,7 @@ const referencesFAQs = new ContentH(
       <div class="accordion-content">
         <p>
           Landlord references should be submitted using the SCC reference form. This can be found online on the 
-          Property Shop website. Customer should select:
+          Property Shop website at: <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a>. Customer should select:
       </p>
       <ul>
           <li>Information header, select Identification and References</li>
@@ -4700,25 +4632,25 @@ const referencesFAQs = new ContentH(
       </div>
     </details>
     `,
-  {
-    buttonLabel: "Report Housing Enquiry ",
-    formName: "hou_rehousing_enquiry",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "07/11/2024", name: "George Whitehouse" }
-);
+    {
+      buttonLabel: "Report Housing Enquiry ",
+      formName: "hou_rehousing_enquiry",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+      categories: ["Housing"],
+    },
+    { date: "07/11/2024", name: "George Whitehouse" }
+  );
 
-const threeOffersDemotedorDisqualified = new ContentH(
-  "threeOffersDemotedorDisqualified",
-  "Three Offers Demoted or Disqualified",
-  "Understand the consequences of refusing three reasonable housing offers, including potential demotion or disqualification from the Housing Register.",
-  `
+  const threeOffersDemotedorDisqualified = new ContentH(
+    "threeOffersDemotedorDisqualified",
+    "Three Offers Demoted or Disqualified",
+    "Understand the consequences of refusing three reasonable housing offers, including potential demotion or disqualification from the Housing Register.",
+    `
   <h3>Reduced preference (demotion) following refusal of 3 reasonable offers</h3>
   <p> 
     If a customer is in band D and they have refused 3 offers in 12 months, the Sheffield City Council Allocations Policy states:<br>
@@ -4737,53 +4669,54 @@ const threeOffersDemotedorDisqualified = new ContentH(
       After 12 months the customer is able to submit an on-line application for Social Housing to re-join the Housing Register.
      </p>
     `,
-  {
-    buttonLabel: "",
-    formName: "",
-  },
-  { typeKey: "rehousing_services_information_provided" },
-  { typeKey: "rehousing_services_information_requested" },
-  {
-    type: "Request",
-    keywords: [
-      "rehosing",
-      "rehausing",
-      "rehousingg",
-      "rehosuing",
-      "rehouzing",
-      "three",
-      "offers",
-      "demoted",
-      "disqualified",
-    ],
-    categories: ["Housing"],
-  },
-  { date: "04/12/2024", name: "Joseph Coupland" }
-);
+    {
+      buttonLabel: "",
+      formName: "",
+    },
+    { typeKey: "rehousing_services_information_provided" },
+    { typeKey: "rehousing_services_information_requested" },
+    {
+      type: "Request",
+      keywords: 
+      [
+        "rehosing", 
+        "rehausing",
+        "rehousingg",
+        "rehosuing",
+        "rehouzing",
+        "three",
+        "offers",
+        "demoted",
+        "disqualified"
+      ],
+      categories: ["Housing"],
+    },
+    { date: "04/12/2024", name: "Joseph Coupland" }
+  );
 
-const rehousing = new MenuH(
-  "rehousing",
-  "Rehousing",
-  "Guidelines on applying for rehousing, understanding the process, and checking eligibility for alternative housing.",
-  [
-    allocationsPolicy,
-    applicationChanges,
-    applyForRehousing,
-    bidding,
-    eligibility,
-    fosteringAndAdoption,
-    housingAssociations,
-    idReferences,
-    idFaq,
-    movingIn,
-    mutualExchanges,
-    priorities,
-    priorityBandingTable,
-    PropertyOffersAndViewings,
-    referencesFAQs,
-    threeOffersDemotedorDisqualified,
-  ]
-);
+  const rehousing = new MenuH(
+    "rehousing",
+    "Rehousing",
+    "Guidelines on applying for rehousing, understanding the process, and checking eligibility for alternative housing.",
+    [
+      allocationsPolicy,
+      applicationChanges,
+      applyForRehousing,
+      bidding,
+      eligibility,
+      fosteringAndAdoption,
+      housingAssociations,
+      idReferences,
+      idFaq,
+      movingIn,
+      mutualExchanges,
+      priorities,
+      priorityBandingTable,
+      PropertyOffersAndViewings,
+      referencesFAQs,
+      threeOffersDemotedorDisqualified
+    ]
+  );
 
 //#endregion Rehousing
 
@@ -4797,7 +4730,7 @@ const balanceEnquiry = new ContentH(
   You can now check your own balance and rent account online by logging onto 
   <a href="https://www.sheffield.gov.uk/home/council-housing/check-my-rent-balance">https://www.sheffield.gov.uk/home/council-housing/check-my-rent-balance</a>.
 <br>
-  <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Check%20rent%20balance'"> Send Link </button>
+  <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Check%20rent%20balance'"> Send Link </button>
   </p> 
   <p>
     Change of circumstances are now online. When you are making changes, remember
@@ -4818,243 +4751,71 @@ const balanceEnquiry = new ContentH(
   <details class="accordion">
     <summary class="accordion-header">
       <h3>Accepted ID</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>
-        You must provide two forms of identification to prove changes to your
-        application. One must be from the Proof of ID documents list, while the
-        second must provide proof of your current UK address. Photo ID is also
-        required to prove your identity. If you do not have photo ID, you must
-        provide a passport-sized photo accompanied by a birth certificate. Proof
-        of child benefit is only required where children under 16 years of age are
-        being rehoused with you.
-      </p>
-      <h3>Proof of ID documents</h3>
-      <ul>
-        <li>Marriage certificate</li>
-        <li>Divorce/Annulment papers</li>
-        <li>
-          Passport (this can be expired, but if the customer is an adult, an adult
-          passport must be produced)
-        </li>
-        <li>
-          Deed poll documentation for name changes (to accompany details of former
-          name, if applicable)
-        </li>
-        <li>Current bus pass with photograph</li>
-        <li>UK resident permit</li>
-        <li>ID card issued by EEA/EU countries</li>
-        <li>Home Office standard acceptance letter</li>
-        <li>Immigration status document</li>
-        <li>NASS 35</li>
-        <li>Citizenship card (with hologram and photo to prove age)</li>
-        <li>Medical card</li>
-        <li>Birth certificate/Adoption certificate</li>
-        <li>Letter from Social Worker/Probation Officer/Solicitor</li>
-        <li>Driving licence</li>
-      </ul>
-      <h3>Proof of Address</h3>
-      <ul>
-        <li>Recent utility bill paid in that person’s name (last quarter)</li>
-        <li>Most recent council tax statement</li>
-        <li>Driving licence</li>
-        <li>Home Office standard acceptance letter</li>
-        <li>Letter from DWP for tax credits</li>
-        <li>Bank statement from within the last 3 months</li>
-        <li>Wage slip from current employer</li>
-        <li>Life assurance/Insurance policies</li>
-        <li>Proof of all other benefits</li>
-      </ul>
-      <h3>Proof of Child Benefit</h3>
-      <ul>
-        <li>Child benefit award letter</li>
-        <li>
-          The last 3 consecutive months of bank statements (Only where the award
-          letter is not available)
-        </li>
-      </ul>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Annual Renewal</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>
-        Under the Allocation Policy, customers will be required to update their
-        application on the anniversary of the date they registered.
-      </p>
-      <p>
-        If applications are not renewed within 42 days when requested, the
-        application may be cancelled.
-      </p>
-      <p>
-        Customers won’t need to submit ID for any changes they make, and this will
-        continue for the time being. This will change in the future.
-      </p>
-      <details class="details-accordion">
-        <summary>
-          Instructions for completing the renewal of your Housing Application
-          online
-        </summary>
-        <div class="details-accordion-content">
-          <p>
-            Log onto our website at <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> and follow
-            the links from the homepage.
-            <br>
-            <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Property%20Shop'"> Send Link </button>
-            
-          </p>
-          <p>Click ‘Log into my account’.</p>
-          <p>
-            Enter your login details: Your unique reference number (found on the
-            enclosed letter), your memorable date, and your password. Contact us
-            if you need these.
-          </p>
-          <p>
-            Once logged in, click ‘Update my details’ under the ‘Application
-            renewal required’ heading. Check your information carefully, confirm
-            that the details are correct, and submit the form. You must submit the
-            form even if there are no changes.
-          </p>
-        </div>
-      </details>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Disqualification/Restriction</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>
-        The Allocations Policy advises of various circumstances where we will
-        reduce the preference given to applicants on the Housing Register or
-        prevent them from joining the register. These include circumstances such
-        as rent arrears or past/current anti-social behaviour.
-      </p>
-      <p>
-        In the most serious debt cases, the Allocations Policy allows us to place
-        applicants into band E or disqualify a customer from the Housing Register
-        for an initial period of 12 months.
-      </p>
-      <p>A customer can apply for a restriction to be removed if:</p>
-      <ul>
-        <li>
-          They are able to evidence that their behaviour has significantly improved
-          (e.g., paying off arrears in full)
-        </li>
-        <li>They appeal the restriction (disqualification) within 21 days</li>
-        <li>They have exceptional circumstances</li>
-        <li>They need a priority</li>
-      </ul>
-      <p>
-        If an applicant is allowed back on the housing register, they will have to
-        re-register. ID and references will be required unless recently submitted.
-        Usual checks will be carried out and the appropriate band chosen.
-        Applicants will lose their original waiting time.
-      </p>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Assistance with Change of Circumstances</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>Log on using the details below if required.</p>
-      <p>Unique Reference - 1257822</p>
-      <p>Memorable date - 25/12/2012</p>
-      <p>Password - DMrm15</p>
-      <p>
-        Advisor note: You have logged in using dummy login details. Please do not
-        amend anything on screen. Log in if required using the login details above
-        and follow the instructions:
-      </p>
-      <p>Select "My Social Housing" on the left-hand side.</p>
-      <p>
-        Click "Update your details" and navigate through the form using the "Next
-        section" buttons.
-      </p>
-      <p>Please do not submit the application.</p>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Exceptions</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>
-        The Allocations Policy advises various circumstances in which we will
-        reduce the preference given to applicants on the Housing Register or
-        prevent them from joining the register. These include circumstances such
-        as rent arrears or past/current anti-social behaviour.
-      </p>
-      <p>
-        An Exception Request allows us to make decisions on whether it is
-        appropriate to waive these restrictions in exceptional circumstances, such
-        as awarding a priority or when an applicant wishes to move to more
-        suitable accommodation using their waiting time due to a change in
-        circumstances.
-      </p>
-      <p>
-        Applicants must demonstrate exceptional circumstances and prove that they
-        have taken action to rectify issues that led to reduced preference or
-        disqualification.
-      </p>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Name Changes</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <p>
-        Present three proof documents to a housing office or First Point, where ID
-        will be copied and saved. The name will be updated in our system.
-      </p>
-      <p>
-        Alternatively, send the name change in writing along with proof
-        (originals, not photocopies) to <a href="mailto:RegistrationID@sheffield.gov.uk">RegistrationID@sheffield.gov.uk</a>.
-      </p>
-    </div>
-  </details>
-  <details class="accordion">
-    <summary class="accordion-header">
-      <h3>Split Applications</h3>
-      <div class="accordion-icon"></div>
-    </summary>
-    <div class="accordion-content">
-      <h3>Main Applicant</h3>
-      <p>
-        To remove a joint applicant, you must do this online at the Property Shop
-        website.
-      </p>
-      <h3>Joint Applicant</h3>
-      <p>
-        Speak to the Registration team to remove your National Insurance Number.
-        You will need to submit a new application and confirm the removal from the
-        previous application.
-      </p>
+        <div class="accordion-icon"></div>
+      </summary>
+      <div class="accordion-content">
+        <h3>Proof of ID documents</h3>
+        <ul>
+          <li>Marriage certificate</li>
+          <li>Divorce/Annulment papers</li>
+          <li>
+            Passport (this can be expired, but if the customer is an adult, an adult
+            passport must be produced)
+          </li>
+          <li>
+            Deed poll documentation for name changes (to accompany details of former
+            name, if applicable)
+          </li>
+          <li>Current bus pass with photograph</li>
+          <li>UK resident permit</li>
+          <li>ID card issued by EEA/EU countries</li>
+          <li>Home Office standard acceptance letter</li>
+          <li>Immigration status document</li>
+          <li>NASS 35</li>
+          <li>Citizenship card (with hologram and photo to prove age)</li>
+          <li>Medical card</li>
+          <li>Birth certificate/Adoption certificate</li>
+          <li>Letter from Social Worker/Probation Officer/Solicitor</li>
+          <li>Driving licence</li>
+        </ul>
+        <h3>Proof of Address</h3>
+        <ul>
+          <li>Recent utility bill paid in that person’s name (last quarter)</li>
+          <li>Most recent council tax statement</li>
+          <li>Driving licence</li>
+          <li>Home Office standard acceptance letter</li>
+          <li>Letter from DWP for tax credits</li>
+          <li>Bank statement from within the last 3 months</li>
+          <li>Wage slip from current employer</li>
+          <li>Life assurance/Insurance policies</li>
+          <li>Proof of all other benefits</li>
+        </ul>
+        <h3>Proof of Child Benefit</h3>
+        <ul>
+          <li>Child benefit award letter</li>
+          <li>
+            The last 3 consecutive months of bank statements (Only where the award
+            letter is not available)
+          </li>
+          <li>
+            Universal Credit is also accepted if it includes the child's name on the claim.
+          </li>
+        </ul>
     </div>
   </details>
 `,
-  {
-    buttonLabel: "",
-    formName: "",
-  },
-  { typeKey: "rents_transfered_to_service" },
-  { typeKey: "rents_information_provided" },
-  {
-    type: "Request",
-    keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
-    categories: ["Housing"],
-  },
-  { date: "14/10/2024", name: "Omily Parkin" }
+{
+  buttonLabel: "",
+  formName: "",
+},
+{ typeKey: "" },
+{ typeKey: "rents_information_provided" },
+{
+  type: "Request",
+  keywords: ["rehosing", "rehausing", "rehousingg", "rehosuing", "rehouzing"],
+  categories: ["Housing"],
+},
+{ date: "17/03/2025", name: "Nathan Smith" }
 );
 
 const contactRentsTeam = new ContentH(
@@ -5077,7 +4838,7 @@ const contactRentsTeam = new ContentH(
             <p>
                 Alternatively, they can complete the online form at <a href="https://www.sheffield.gov.uk/benefits/housing-benefit">https://www.sheffield.gov.uk/benefits/housing-benefit</a>.
               <br>
-                <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Housing%20Benefit'"> Send Link </button>
+                <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Apply%20for%20Housing%20Benefit'"> Send Link </button>
 
             </p> 
         </div>
@@ -5245,7 +5006,7 @@ const contactRentsTeam = new ContentH(
     </details>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
   { type: "Contact Rents Team", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
@@ -5266,7 +5027,7 @@ const arrearsorDebt = new ContentH(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
   { type: "Information", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
@@ -5284,6 +5045,7 @@ const debtRecovery = new FormH(
   },
   { date: "12/03/2025", name: "Nathan Smith" }
 );
+
 
 const references = new ContentH(
   "references",
@@ -5308,7 +5070,7 @@ const references = new ContentH(
     </p>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
   { type: "References", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
@@ -5343,7 +5105,7 @@ const rentRefunds = new FormH(
 const rentVariation = new ContentH(
   "rentVariation",
   "Rent Variation",
-  "Learn about rent changes, including the annual increase, rent payment methods, and how various charges, including tenant levies and housing benefit adjustments, are handled.",
+ "Learn about rent changes, including the annual increase, rent payment methods, and how various charges, including tenant levies and housing benefit adjustments, are handled.", 
   `
   <details class="accordion">
     <summary class="accordion-header">
@@ -5622,7 +5384,7 @@ const rentVariation = new ContentH(
 </details>
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
   { type: "Rent Varitaion", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
@@ -5637,7 +5399,7 @@ const statements = new ContentH(
   Statements are issued every 12 months or are available online along with rent balance enquiries at 
   <a href="https://www.gro.sheffieldhomes.org.uk">https://www.gro.sheffieldhomes.org.uk</a>. 
   <br>
-  <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Homes'"> Send Link </button>
+  <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Sheffield%20Homes'"> Send Link </button>
   <br>
   <br>
 
@@ -5648,7 +5410,7 @@ const statements = new ContentH(
   </p> 
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
   { type: "Statements", keywords: ["Rent"], categories: ["Housing"] },
   { date: "16/10/2024", name: "Shahzad Athar" }
@@ -5710,13 +5472,9 @@ const yorkshireWater = new ContentH(
 
   `,
   { buttonLabel: "", formName: "" },
-  { typeKey: "rents_transfered_to_service" },
+  { typeKey: "" },
   { typeKey: "rents_information_provided" },
-  {
-    type: "Yorkshire Water",
-    keywords: ["Rent", "Water", "Yorkshire"],
-    categories: ["Housing"],
-  },
+  { type: "Yorkshire Water", keywords: ["Rent", "Water", "Yorkshire"], categories: ["Housing"] },
   { date: "10/03/2025", name: "Nathan Smith" }
 );
 
@@ -5735,11 +5493,13 @@ const rents = new MenuH(
     rentVariation,
     statements,
     universalCredit,
-    yorkshireWater,
+    yorkshireWater
   ]
 );
 
 //#endregion Rents
+
+
 
 //#region Sheltered and Supported
 
@@ -5856,9 +5616,17 @@ const furnishedAccommodation = new ContentH(
     <p>How it works</p>
     <p>There are three price bands to choose from:</p>
     <ul>
-      <li>Gold - £20 per week (20 points)</li>
-      <li>Silver - £15 per week (15 points)</li>
-      <li>Bronze - £10 per week (10 points)</li>
+      <li>Gold - £23.94 per week (20 points)</li>
+      <li>Silver - £17.96 per week (15 points)</li>
+      <li>Bronze - £11.97 per week (10 points)</li>
+    </ul>
+    <p>Legacy Charging Model (No longer used for New Furnished)</p>
+    <ul>
+      <li>Bedsit - £23.05</li>
+      <li>1 Bed - £26.05</li>
+      <li>2 Bed - £30.05</li>
+      <li>3 Bed - £34.04</li>
+      <li>4 Bed - £43.02</li>
     </ul>
     <p>
       Each piece of furniture or floor covering will have a points value and the
@@ -5983,7 +5751,7 @@ const gypsyAndTravellers = new ContentH(
       Sheffield<br>
       S10 4JZ
     </address>
-    <h3>What manages the sites?</h3>
+    <h3>Who manages the sites?</h3>
     <p>
       Both sites are managed by the Housing and Neighbourhood Service Gypsy and
       Traveller Site Management team based at Solpro.
@@ -6044,6 +5812,7 @@ const gypsyAndTravellers = new ContentH(
   },
   { date: "15/10/2024", name: "Joe Nixon" }
 );
+
 
 const olderPersonsIndependentLiving = new ContentH(
   "olderPersonsIndependentLiving",
@@ -6168,7 +5937,7 @@ const olderPersonsIndependentLiving = new ContentH(
     <h3>Register for OPIL Accommodation</h3>
     <p>Applicants should be registered for rehousing.</p>
     <p>
-      You can access OPIL accommodation through the Sheffield Property Shop or call
+      You can access OPIL accommodation through the Sheffield Property Shop at: <a href="https://www.sheffieldpropertyshop.org.uk" target="_blank">www.sheffieldpropertyshop.org.uk</a> or call
       in at any of the local Area Housing Offices.
     </p>
     <p>You can also be referred through:</p>
@@ -6203,11 +5972,12 @@ const shelteredAndSupported = new MenuH(
     extraCareHousing,
     furnishedAccommodation,
     gypsyAndTravellers,
-    olderPersonsIndependentLiving,
+    olderPersonsIndependentLiving
   ]
 );
 
 //#endregion Sheltered and Supported
+
 
 //#region Tenancy enforcement
 
@@ -6291,7 +6061,7 @@ const tenancyEnforcementASB = new ContentH(
     <p>Victim Support may support with target hardening.</p>
   </p>`,
   { buttonLabel: "Raise report", formName: "hou_enforcement_asb" },
-  { typeKey: "tenancy_enforcement_transferred_to_service" },
+  { typeKey: "" },
   { typeKey: "tenancy_enforcement_information_provided" },
   { type: "Request", keywords: [], categories: ["Housing"] },
   { date: "14/02/2025", name: "Nathan Smith" }
@@ -6345,8 +6115,7 @@ const fobsandKeys = new ContentH(
   "Find out how to replace lost or stolen keys and fobs, including costs, required ID, and the process for requesting replacements.",
   `
   <p>
-    For lost or stolen keys, there may be a recharge (£5). Locks will only be replaced if the customer agrees to a recharge
-    or if they have a valid crime reference number.
+    Locks will only be replaced if the customer agrees to a recharge or if they have a valid crime reference number.
   </p>
   <p>
     The only exceptions are if the person is Elderly or a Vulnerable person, in which case a Discretionary Decision would need
@@ -6357,7 +6126,7 @@ const fobsandKeys = new ContentH(
     an insurance form.
   </p>
   <p>
-    It is only communal doors that are £5. If it's your own door, it's over £200 recharge from repairs.
+    Lost or stolen keys, there may be a recharge (£5), communal doors are £5. If it's your own door, it's over £200 recharge from repairs.
   </p>
 
   <details class="accordion">
@@ -6458,20 +6227,20 @@ const fobsandKeys = new ContentH(
     </summary>
     <div class="accordion-content">
       <p>
-      Please note: Howden House only deals with Rehousing enquiries and will not be able to help with fobs or keys. 
+      Please note: Howden House will email the relevant area with the fob token code so they can put it into the system.
       List of Area Offices:  <a href="https://www.sheffield.gov.uk/council-housing/neighbourhood-offices "target="_blank">https://www.sheffield.gov.uk/council-housing/neighbourhood-offices</a>
       <br>
-        <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
+        <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Neighbourhood%20offices'"> Send Link </button>
     </p>
     </div>
   </details>
 
   `,
-  { buttonLabel: "Fobs and Keys", formName: "Tenancy Sustainment" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
+  { buttonLabel: "", formName: "" },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
   { type: "Fobs and Keys", keywords: ["Tenancy"], categories: ["Housing"] },
-  { date: "06/11/2024", name: "Shahzad Athar" }
+  { date: "19/03/2025", name: "Nathan Smith" }
 );
 
 const untidyGardensCommunalAreas = new FormH(
@@ -6502,11 +6271,12 @@ Streets Ahead, Environmental Services, Local Assistance Scheme<br>
 
   `,
   { buttonLabel: "Parking Permits", formName: "Tenancy Sustainment" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
   { type: "Parking Permits", keywords: ["Tenancy"], categories: ["Housing"] },
   { date: "07/11/2024", name: "Shahzad Athar" }
 );
+
 
 const nameChanges = new ContentH(
   "nameChanges",
@@ -6533,11 +6303,13 @@ The same document cannot be used more than once (e.g., driving licence as primar
 
   `,
   { buttonLabel: "Name Changes", formName: "Tenancy Sustainment" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
   { type: "Name Changes", keywords: ["Tenancy"], categories: ["Housing"] },
   { date: "07/11/2024", name: "Shahzad Athar" }
 );
+
+
 
 const permissions = new ContentH(
   "permissions",
@@ -6557,6 +6329,10 @@ const permissions = new ContentH(
     <li>Removing internal walls</li>
     <li>Insulation (Walls & Lofts)</li>
     <li>Conservatories (considered on an individual basis)</li>
+    <li>Driveways</li>
+    <li>Hardstandings</li>
+    <li>CCTV</li>
+    <li>Laminate flooring</li>
   </ul>
   <p>
     However, the following are highly unlikely to be granted due to extra maintenance costs and potential structural problems:
@@ -6631,23 +6407,24 @@ const permissions = new ContentH(
       <br>
         Where a tenancy condition requires you to ask for our permission, this means:<br>
         <ul>
-          <li>You must ask for our permission, and you must not proceed until we give you our permission.</li>
-          <li>We will confirm our answer in writing.</li>
-          <li>If we refuse permission, we will explain why.</li>
-          <li>If we give permission, we may attach additional conditions.</li>
-          <li>We may withdraw our permission at any time if you do not comply with the conditions we have made.</li>
-          <li>We will take action against you and/or charge you for any costs incurred if you do not comply with parts a-e above.</li>
+          <li>A. You must ask for our permission, and you must not proceed until we give you our permission.</li>
+          <li>B. We will confirm our answer in writing.</li>
+          <li>C. If we refuse permission, we will explain why.</li>
+          <li>D. If we give permission, we may attach additional conditions.</li>
+          <li>E. We may withdraw our permission at any time if you do not comply with the conditions we have made.</li>
+          <li>We will take action against you and/or charge you for any costs incurred if you do not comply with parts A-E above.</li>
         </ul>
       </blockquote>
     </div>
   </details>
   `,
   { buttonLabel: "Permissions", formName: "hou_sustainment_perm" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
   { type: "Permissions", keywords: ["Tenancy"], categories: ["Housing"] },
   { date: "07/03/2025", name: "Nathan Smith" }
 );
+
 
 const tenancyAgreementRequest = new ContentH(
   "tenancyAgreementRequest",
@@ -6712,13 +6489,9 @@ const tenancyAgreementRequest = new ContentH(
       </table>
   `,
   { buttonLabel: "tenancyAgreementRequest", formName: "Tenancy Sustainment" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
-  {
-    type: "tenancyAgreementRequest",
-    keywords: ["Tenancy"],
-    categories: ["Housing"],
-  },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
+  { type: "tenancyAgreementRequest", keywords: ["Tenancy"], categories: ["Housing"] },
   { date: "08/11/2024", name: "Shahzad Athar" }
 );
 
@@ -7049,7 +6822,7 @@ const tenancyConditions = new ContentH(
         <details class="details-accordion">
             <summary>Right to Buy</summary>
             <div class="details-accordion-content">
-                <p>If you have been a council tenant for at least two years (or five years if you became a tenant after 18th January 2005) you will probably have a right to buy your home. You can get more details from the Council's home ownership team.</p>
+                <p>If you have been a council or housing association tenant for at least three years (or five years if you became a tenant after 18th January 2005) you will probably have a right to buy your home. You can get more details from the Council's home ownership team.</p>
             </div>
         </details>
 
@@ -7149,13 +6922,9 @@ const tenancyConditions = new ContentH(
 </details>
 `,
   { buttonLabel: "tenancyAgreementRequest", formName: "Tenancy Sustainment" },
-  { typeKey: "Tenancy_Sustainment_information_provided" },
-  { typeKey: "Tenancy_Sustainment_transfered_to_service" },
-  {
-    type: "tenancyAgreementRequest",
-    keywords: ["Tenancy"],
-    categories: ["Housing"],
-  },
+  { typeKey: "" },
+  { typeKey: "tenancy_sustainment_information_provided" },
+  { type: "tenancyAgreementRequest", keywords: ["Tenancy"], categories: ["Housing"] },
   { date: "08/11/2024", name: "Shahzad Athar" }
 );
 
@@ -7175,29 +6944,29 @@ const tenancySustainment = new MenuH(
     permissions,
     tenancyAgreementRequest,
     tenancyChange,
-    tenancyConditions,
+    tenancyConditions
   ]
 );
 
 //#endregion Tenancy Management Tenancy Sustainment
 
-// --- ^ - ADD SCRIPT ABOVE THIS LINE - ^ ----------------------------------- \\
-// --------- KEEP THIS AT THE BOTTOM ---------------------------------------- \\
-
-const housing = new ServiceH(
-  "housing",
-  "Housing",
-  "Council and private housing, landlords and tenants, assisted living and care homes, heating your home, homelessness…",
-  [
-    assetManagementAndRepairs,
-    estatesAndEnvironments,
-    generalCouncilHousing,
-    housingBenefits,
-    leaseholderInformation,
-    rehousing,
-    rents,
-    shelteredAndSupported,
-    tenancyEnforcementASB,
-    tenancySustainment,
-  ]
-);
+  // --- ^ - ADD SCRIPT ABOVE THIS LINE - ^ ----------------------------------- \\
+  // --------- KEEP THIS AT THE BOTTOM ---------------------------------------- \\
+  
+  const housing = new ServiceH(
+    "housing",
+    "Housing",
+    "Council and private housing, landlords and tenants, assisted living and care homes, heating your home, homelessness…",
+    [
+      assetManagementAndRepairs, 
+      estatesAndEnvironments, 
+      generalCouncilHousing, 
+      housingBenefits, 
+      leaseholderInformation, 
+      rehousing, 
+      rents, 
+      shelteredAndSupported, 
+      tenancyEnforcementASB, 
+      tenancySustainment, 
+    ]
+  );
