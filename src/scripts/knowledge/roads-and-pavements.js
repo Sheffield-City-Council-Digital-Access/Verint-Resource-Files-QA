@@ -184,7 +184,7 @@ const reportPotholeCrack = new FormRaP(
   "report_pothole_crack",
   {
     type: "Report",
-    keywords: ["Pothole", "crack"],
+    keywords: ["Pothole", "crack", "Pot Hole", "Hole", "Pot"],
     categories: ["Roads and pavements", "Highways", "Streets Ahead", "Amey"],
   },
   { date: "30/09/2024", name: "Elliott Griffiths" }
@@ -261,7 +261,7 @@ const reportGritBin = new ContentRaP(
   "Find information about grit bin locations, criteria for new allocations, or report a problem with a grit bin.",
   `
     <iframe
-      src="https://sheffieldcc.maps.arcgis.com/apps/webappviewer/index.html?id=796ba9a88ab04607a265d78e93d36d5c"
+      src="https://sheffieldcc.maps.arcgis.com/apps/instant/sidebar/index.html?appid=1b0ca68e928849c1b7207acbe4b17a2f"
       style="height: 400px; width: 100%"
     ></iframe>
     <h3>Grit Bin Allocations</h3>
@@ -333,7 +333,7 @@ const requestGritting = new ContentRaP(
   "Find information about Sheffield's gritting routes, prioritisation criteria, and how emergency requests are handled for gritting services.",
   `
     <iframe
-    src="https://sheffieldcc.maps.arcgis.com/apps/webappviewer/index.html?id=07f393cef2684b47b429d4a232277bd0"
+    src="https://sheffieldcc.maps.arcgis.com/apps/instant/sidebar/index.html?appid=db58c53124cc4873a3b1b3a54a2517aa"
     style="height: 400px; width: 100%"
     ></iframe>
     <p>
@@ -579,6 +579,20 @@ const reportHedgePlantGrass = new ContentRaP(
   { date: "28/02/2025", name: "Dinah Williams" }
 );
 
+const reportInvasiveWeeds = new FormRaP(
+  "reportInvasiveWeeds",
+  "Invasive Weeds",
+  "Report problems with invasive weeds such as Japanese Knotweed or Giant Hogweed",
+  "report_invasive_weeds",
+  {
+    type: "Report",
+    keywords: ["Intrusive","Invasive","Weeds", "Japanese","Knotweed", "Giant","Hogweed","Japanese Knotweed", "Giant Hogweed"],
+    categories: ["Roads and pavements", "Highways", "Streets Ahead", "Amey"],
+  },
+  { date: "13/05/2025", name: "Sam Coupland" }
+);
+
+
 const reportLitterBin = new ContentRaP(
   "reportLitterBin",
   "Litter bins",
@@ -707,30 +721,31 @@ const roadsAndPavements = new ServiceRaP(
   "Roads and Pavements",
   `Roadworks, Streets Ahead, maintenance, street lighting, traffic lights, road signs, traffic cameras, bus lanes, cycling…`,
   [
-    reportDamagedMissingKerb,
     requestLitterPickCollection,
-    manholeStopcockCover,
+    reportDamagedMissingKerb,
+    reportDeadAnimal,
     reportDrainGulley,
     reportFenceBarrier,
     reportFloodedArea,
     reportGritBin,
     reportHighwayDamage,
     reportHighwaySpillage,
+    reportInvasiveWeeds,
     reportMudGravel,
     reportPotholeCrack,
     reportRoadMarking,
     reportStreetFurniture,
     reportStreetLight,
     reportTrafficSignal,
-    requestClaimsPack,
-    requestGritting,
+    manholeStopcockCover,
     roadPavementSurface,
-    reportDeadAnimal,
     reportFallenLeaves,
     reportHedgePlantGrass,
     reportLitterBin,
     reportStreetSignBollard,
     reportTree,
+    requestClaimsPack,
+    requestGritting,
     requestHighwayInfo,
   ]
 );

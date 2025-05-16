@@ -65,13 +65,13 @@ function handleInitialisingEvent() {
     const favicon = document.querySelector("link[rel~='icon']");
     if (favicon) {
       favicon.href =
-        "https://www.sheffield.gov.uk/verint-files/SCC%20Favicon.png";
+        "https://cdn.uk.empro.verintcloudservices.com/tenants/sheffield/Images/favicon.png";
     } else {
       // If favicon element doesn't exist, create it and append to head
       const newFavicon = document.createElement("link");
       newFavicon.rel = "icon";
       newFavicon.href =
-        "https://www.sheffield.gov.uk/verint-files/SCC%20Favicon.png";
+        "https://cdn.uk.empro.verintcloudservices.com/tenants/sheffield/Images/favicon.png";
       document.head.appendChild(newFavicon);
     }
   })();
@@ -142,7 +142,8 @@ function handleInitialisingEvent() {
       // Create the logo image
       const logoImg = document.createElement("img");
       logoImg.classList.add("header-logo");
-      logoImg.src = "https://www.sheffield.gov.uk/verint-files/logo.png";
+      logoImg.src =
+        "https://cdn.uk.empro.verintcloudservices.com/tenants/sheffield/Images/logo.png";
       logoImg.alt = "Sheffield City Council Logo";
 
       // Append the logo image to the logo link
@@ -409,7 +410,7 @@ function handleInitialisingEvent() {
                   </div>
                   <div class="logo-container">
                       <a href="https://www.sheffield.gov.uk" title="Back to homepage" class="footer-logo-link">
-                          <img class="footer-logo" src="https://www.sheffield.gov.uk/verint-files/logo.png" alt="Sheffield City Council Logo">
+                          <img class="footer-logo" src="https://cdn.uk.empro.verintcloudservices.com/tenants/sheffield/Images/logo.png" alt="Sheffield City Council Logo">
                       </a>
                   </div>
                   <div class="jump-container">
@@ -4699,3 +4700,43 @@ function getValidationMessageFromSession(id) {
     return validationMessages[id] || "Validation message not found";
   }
 }
+
+
+//#region CopyToClipboard
+function copyToClipboard(text) 
+{
+  navigator.clipboard.writeText(text).then(() => 
+    {
+      showPopup("Copied " + text);
+    }).catch(err => {
+      console.error("Failed to copy:", err);
+    });
+}
+
+function showPopup(message) 
+{
+  const popup = document.createElement('div');
+  popup.textContent = message;
+  popup.style.position = 'fixed';
+  popup.style.bottom = '20px';
+  popup.style.right = '20px';
+  popup.style.background = '#333';
+  popup.style.color = '#fff';
+  popup.style.padding = '10px 15px';
+  popup.style.borderRadius = '8px';
+  popup.style.fontSize = '14px';
+  popup.style.zIndex = '9999';
+  popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.3)';
+  popup.style.opacity = '1';
+  popup.style.transition = 'opacity 0.5s ease';
+  document.body.appendChild(popup);
+
+  setTimeout(() => {
+    popup.style.opacity = '0';
+  }, 1500);
+
+  setTimeout(() => {
+    popup.remove();
+  }, 2000);
+}
+//#endregion
