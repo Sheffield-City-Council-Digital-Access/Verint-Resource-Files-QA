@@ -711,7 +711,7 @@ const registerABirthAndDeath = new ContentBDMaC(
   "Register a Birth and Death",
   "Register a birth and death",
   `
-  <p> https://www.sheffield.gov.uk/births-deaths-marriages/register-death <a href src= "https://www.sheffield.gov.uk/births-deaths-marriages/register-death">form </a></p> 	<br> <button onclick="window.location.href='https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Register%20or%20reregister%20a%20birth'"> Send Link </button>
+  <p> https://www.sheffield.gov.uk/births-deaths-marriages/register-death <a href src= "https://www.sheffield.gov.uk/births-deaths-marriages/register-death">form </a></p> 	<br> <button onclick="window.location.href='https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Register%20or%20reregister%20a%20birth'"> Send Link </button>
 
 <button
   type="button"
@@ -742,21 +742,21 @@ const registerABirthAndDeath = new ContentBDMaC(
 </button>
 
 `,
-{ buttonLabel: "", formName: "" },
-{ typeKey: "register_office_information_requested" },
-{ typeKey: "register_office_information_provided" },
-{
-  type: "",
-  keywords: [],
-  categories: [
-    "Registrars",
-    "Registry Office",
-    "Register Office",
-    "Births",
-    "Deaths",
-  ],
-},
-{ date: "16/10/2024", name: "Joe Nixon" }
+  { buttonLabel: "", formName: "" },
+  { typeKey: "register_office_information_requested" },
+  { typeKey: "register_office_information_provided" },
+  {
+    type: "",
+    keywords: [],
+    categories: [
+      "Registrars",
+      "Registry Office",
+      "Register Office",
+      "Births",
+      "Deaths",
+    ],
+  },
+  { date: "16/10/2024", name: "Joe Nixon" }
 );
 
 const reRegisterABirth = new ContentBDMaC(
@@ -793,7 +793,7 @@ const registerABirth = new ContentBDMaC(
   "registerABirth",
   "Register a Birth",
   "Register a birth",
-` 
+  ` 
     <p> <a href src= "https://www.sheffield.gov.uk/births-deaths-marriages/register-death"> https://www.sheffield.gov.uk/births-deaths-marriages/register-death </a></p> 
     
     <p>
@@ -813,7 +813,7 @@ const registerABirth = new ContentBDMaC(
     </p>
 
     <p>
-    <button onclick="window.open('https://sheffielddev.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Register%20or%20reregister%20a%20birth', '_blank')">Send Link</button>
+    <button onclick="window.open('https://sheffieldqa.form.ukpreview.empro.verintcloudservices.com/form/launch/send_link_to_service?sel_service=Register%20or%20reregister%20a%20birth', '_blank')">Send Link</button>
     </p>
     <button
     type="button"
