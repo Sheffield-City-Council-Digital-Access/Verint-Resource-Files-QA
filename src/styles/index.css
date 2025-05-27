@@ -2,37 +2,37 @@
 @import url("./layout.css");
 @import url("./fonts.css");
 
-@import url("./components/loadingSpinner.css");
+@import url("./loadingSpinner.css");
 
-@import url("./components/formHeader.css");
-@import url("./components/formTitle.css");
-@import url("./components/formFooter.css");
+@import url("./formHeader.css");
+@import url("./formTitle.css");
+@import url("./formFooter.css");
 
-@import url("./components/reviewPage.css");
+@import url("./reviewPage.css");
 
-@import url("./components/modal.css");
-@import url("./components/caseReviewModal.css");
+@import url("./modal.css");
+@import url("./caseReviewModal.css");
 
-@import url("./components/noticeBanners.css");
-@import url("./components/noticePanels.css");
+@import url("./noticeBanners.css");
+@import url("./noticePanels.css");
 
-@import url("./components/progressBar.css");
+@import url("./progressBar.css");
 
-@import url("./components/coreElements.css");
-@import url("./components/buttons.css");
+@import url("./coreElements.css");
+@import url("./buttons.css");
 
-@import url("./components/customMultiCheck.css");
+@import url("./customMultiCheck.css");
 
-@import url("./components/accordion.css");
-@import url("./components/detailsAccordion.css");
+@import url("./accordion.css");
+@import url("./detailsAccordion.css");
 
-@import url("./components/contactPanel.css");
+@import url("./contactPanel.css");
 
-@import url("./components/customDate.css");
-@import url("./components/customSearch.css");
-@import url("./components/customMap.css");
+@import url("./customDate.css");
+@import url("./customSearch.css");
+@import url("./customMap.css");
 
-@import url("./components/rentAccount.css");
+@import url("./rentAccount.css");
 
 :root {
   /* ----- COLOURS ---------------------------------------------------------- */
