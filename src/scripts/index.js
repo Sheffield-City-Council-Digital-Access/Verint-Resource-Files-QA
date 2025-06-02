@@ -463,6 +463,15 @@ function handleInitialisingEvent() {
     });
   })();
 
+  // --- UPDATE ACCEPTED EMAIL PATTERN ------------------------------------- \\
+
+  (() => {
+    $('input[type="email"]').attr(
+      "pattern",
+      "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+    );
+  })();
+
   // --- HANDLE FILE UPLOAD ------------------------------------------------ \\
 
   $(document).ajaxComplete(function (event, xhr, settings) {
@@ -582,7 +591,16 @@ function handleOnReadyEvent(_, kdf) {
       );
     }
 
+    KDF.setWidgetNotRequired("tel_phone_number");
     KDF.setWidgetNotRequired("eml_address");
+    KDF.setWidgetNotRequired("num_date_of_birth_dd");
+    KDF.setWidgetNotRequired("num_date_of_birth_mm");
+    KDF.setWidgetNotRequired("num_date_of_birth_yy");
+    KDF.setWidgetNotRequired("dt_date_of_birth");
+    KDF.setWidgetNotRequired("txt_date_of_birth");
+    $(
+      "#dform_widget_html_ahtm_date_of_birth_about_you .container-date input"
+    ).removeAttr("required");
   }
 
   // --- SET EQUALITIES LINK ----------------------------------------------- \\
@@ -1861,6 +1879,32 @@ function handleSuccessfulAction(event, kdf, response, action, actionedby) {
         { name: "area_address_details_about_you", display: "hide" },
         { name: "but_view_rent_account", display: ohmsId ? "show" : "hide" },
       ]);
+
+      // Field/Server validation causing form to loop
+      const $phoneNumber = $("#dform_widget_tel_phone_number");
+      let val = $phoneNumber.val().replace(/\s+/g, "");
+      if (val.startsWith("+44") && !val.startsWith("+440")) {
+        val = val.replace(/^\+44/, "0");
+      }
+      if (/^[17]\d{9}$/.test(val)) {
+        val = "0" + val;
+      }
+      if (/^[234]\d{6}$/.test(val)) {
+        val = "0114" + val;
+      }
+      $phoneNumber.removeAttr("pattern").val(val).change();
+
+      $("#dform_widget_eml_address").removeAttr("pattern");
+
+      $("#dform_widget_dt_date_of_birth")
+        .removeAttr("min")
+        .removeAttr("data-mindate");
+
+      $(
+        "#dform_widget_html_ahtm_date_of_birth_about_you .dform_validationMessage"
+      ).css("display", "none");
+
+      checkPageProgress();
     }
 
     if (kdf.access === "agent") {
@@ -2628,6 +2672,22 @@ function validDate(id, day, month, year, activeField) {
   const { minDate, maxDate } = getMinMaxDates(dateElementId);
 
   // Validate against min and max dates
+  // if (date < minDate) {
+  //   const yearsPast = new Date().getFullYear() - minDate.getFullYear();
+  //   if (yearsPast > 0) {
+  //     validationMsg
+  //       .text(
+  //         `Date cannot be more than ${yearsPast} ${getYearLabel(
+  //           yearsPast
+  //         )} in the past`
+  //       )
+  //       .show();
+  //   } else {
+  //     validationMsg.text(`Date can't be before today`).show();
+  //   }
+  //   return false;
+  // }
+
   if (date < minDate) {
     const yearsPast = new Date().getFullYear() - minDate.getFullYear();
 
@@ -2702,20 +2762,6 @@ function validDate(id, day, month, year, activeField) {
   }
 
   return true; // If all validations pass
-}
-
-function updateMinDate(startDateValue, endDateElement, offsetDays) {
-  const startDate = new Date(startDateValue);
-  if (!isNaN(startDate)) {
-    const minDate = new Date(startDate);
-    minDate.setDate(startDate.getDate() + offsetDays);
-
-    const formattedMinDate = minDate.toISOString().split("T")[0];
-    $(`#dform_widget_${endDateElement}`)
-      .attr("min", formattedMinDate)
-      .attr("data-mindate", "2025-06-13")
-      .attr("data-maxdate", "2030-05-19");
-  }
 }
 
 // --- PROGRESS BAR --------------------------------------------------------- \\

@@ -2019,10 +2019,10 @@ const ratTreatment = new ContentPaN(
     <h3>Cost for Treatment</h3>
     <p>
       The treatment cost for Rats is <strong>£124.00.</strong> This covers you for up to 3 visits.
-      If you require further treatments, each additional treatment will cost <strong>£39.00.</strong>
+      If you require further treatments, each additional treatment will cost <strong>£58.00.</strong>
     </p>
     <p>
-      All prices include a call-out fee of <strong>£39.00.</strong> This fee applies if our officer
+      All prices include a call-out fee of <strong>£41.00.</strong> This fee applies if our officer
       attends the property but is unable to complete the treatment.
     </p>
     <p>
@@ -2649,6 +2649,19 @@ const pestControl = new MenuPaN(
 
 //#endregion Pest Control
 
+const reportFilthyPremises = new FormPaN(
+  "reportFilthyPremises",
+  "Report Filthy Premises",
+  "Report a Filthy Premise",
+  "report_filthy_premises",
+  {
+    type: "Report",
+    keywords: ["Filthy Premises", "Filthy Premise","Filthy","Premise"],
+    categories: ["Pollution and Nuisance", "Environmental", "Environmental Health"],
+  },
+  { date: "30/05/2025", name: "Gee Whitehouse" }
+);
+
 const reportNeedlesGlass = new FormPaN(
   "reportNeedlesGlass",
   "Needles or broken glass",
@@ -3213,6 +3226,7 @@ const pollutionAndNuisance = new ServicePaN(
     pestControl,
     reportDangerousDog, 
     reportDogFouling,
+    reportFilthyPremises,
     reportStrayingDog,
     reportDogAsLost,
     handoverDogtoCouncil,

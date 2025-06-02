@@ -1945,6 +1945,19 @@ const communalCupboard = new ContentH(
     <p>
       <strong>Advisor Note:</strong> Use the form below to request a communal cupboard key if required.
     </p>
+    <p>
+      <Strong>Alternatively, contact: </strong>
+    </p>
+<ul>
+  <li>North – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037018')">0114 2037018</a></li>
+  <li>North East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037445')">0114 2037445</a></li>
+  <li>Central – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037022')">0114 2037022</a></li>
+  <li>South West – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037120')">0114 2037120</a></li>
+  <li>South East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142039339')">0114 2039339</a></li>
+  <li>East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142039148')">0114 2039148</a></li>
+  <li>Sheltered – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037022')">0114 2037022</a></li>
+</ul>
+
   `,
   { buttonLabel: "Raise enquiry", formName: "hou_estates_enquiry" },
   { typeKey: "estates_and_environmental_transferred_to_service" },
@@ -5476,14 +5489,14 @@ const rentVariation = new ContentH(
         <p>
             You can check an outline of the changes to rents and charges at Sheffield city council website
             by visiting the following links:
+        </p> 
+        <p>
+            <a href="https://www.sheffield.gov.uk/council-housing/rents/learn-about-rents/how-we-calculate-rent" target="_blank">https://www.sheffield.gov.uk/council-housing/rents/learn-about-rents/how-we-calculate-rent</a>
         </p>
         <p>
-            <a href="/council-housing/how-rent-is-calculated">How we calculate your rent</a>
+            <a href="https://www.sheffield.gov.uk/council-housing/rents/pay-my-rent" target="_blank">https://www.sheffield.gov.uk/council-housing/rents/pay-my-rent</a>
         </p>
-        <p>
-            <a href="/council-housing/paying-your-rent" data-drupal-link-system-path="node/3140">Paying your rent</a>
-        </p>
-    </div>
+    </div> 
 </details>
 
 <details class="accordion">

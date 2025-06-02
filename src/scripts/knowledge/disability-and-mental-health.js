@@ -78,10 +78,6 @@ class FormDaMH extends CoreDaMH {
     "Short Breaks Grants",
     "Apply for a short break grant",
     `
-      <p>
-        Warm transfer the call to: <a href="tel:0114 2735068">0114 2735068</a>. If the
-        call is not answered raise a case.
-      </p>
       <h2>Eligibility</h2>
       <h1>Who can apply</h1>
       <p>
@@ -146,7 +142,7 @@ class FormDaMH extends CoreDaMH {
         <ul>
         <li>SNIPS activity including mainstream leisure clubs such as:
             <li>guides</li>
-            <li>scouts<li>
+            <li>scouts</li>
             <li>sports club (tennis, football, swimming, karate etc)</li>
             <li>where children without additional needs or disabilities also attend short break clubs
              for disabled children only</li>
