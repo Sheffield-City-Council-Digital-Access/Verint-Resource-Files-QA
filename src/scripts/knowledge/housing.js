@@ -96,7 +96,7 @@ const communalFireSafety = new ContentH(
       on stairs or landings which are the means of escape from the building.
     </p>
   `,
-  { buttonLabel: "Raise enquiry", formName: "hou_estates_enquiry" },
+  { buttonLabel: "Raise enquiry", formName: "hou_routing_enquiry" },
   { typeKey: "" },
   { typeKey: "estates_and_environmental_information_provided" },
   {
@@ -986,7 +986,7 @@ const communalAreas = new ContentH(
   `,
   {
     buttonLabel: "Raise Housing Enquiry ",
-    formName: "hou_estates_enquiry",
+    formName: "hou_routing_enquiry",
   },
   { typeKey: "" },
   { typeKey: "estates_and_environmental_information_provided" },
@@ -1573,7 +1573,7 @@ const payment = new ContentH(
 const programmedWorks = new ContentH(
   "programmedWorks",
   "Programmed Works",
-  "",
+  "Information regarding programmed works",
   `
   <details class="accordion">
   <summary class="accordion-header">
@@ -1945,22 +1945,9 @@ const communalCupboard = new ContentH(
     <p>
       <strong>Advisor Note:</strong> Use the form below to request a communal cupboard key if required.
     </p>
-    <p>
-      <Strong>Alternatively, contact: </strong>
-    </p>
-<ul>
-  <li>North – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037018')">0114 2037018</a></li>
-  <li>North East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037445')">0114 2037445</a></li>
-  <li>Central – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037022')">0114 2037022</a></li>
-  <li>South West – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037120')">0114 2037120</a></li>
-  <li>South East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142039339')">0114 2039339</a></li>
-  <li>East – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142039148')">0114 2039148</a></li>
-  <li>Sheltered – <a href="#" class="telephoneNumber" onclick="copyToClipboard('01142037022')">0114 2037022</a></li>
-</ul>
-
   `,
-  { buttonLabel: "Raise enquiry", formName: "hou_estates_enquiry" },
-  { typeKey: "estates_and_environmental_transferred_to_service" },
+  { buttonLabel: "Raise enquiry", formName: "hou_routing_enquiry" },
+  { typeKey: "" },
   { typeKey: "estates_and_environmental_information_provided" },
   {
     type: "Housing",
@@ -2175,7 +2162,7 @@ const generalCouncilHousing = new ContentH(
     <a href="https://sccextranet.sharepoint.com/sites/CustomerServiceKnowledgePhoneDirectory/SitePages/Telephone%20Directory.aspx"target="_blank">Telephone Directory</a>
   </p>
   `,
-  { buttonLabel: "", formName: "" },
+  { buttonLabel: "Raise enquiry", formName: "hou_routing_enquiry" },
   { typeKey: "housing_general_transferred_to_service" },
   { typeKey: "housing_general_information_provided" },
   {
@@ -5129,7 +5116,7 @@ const balanceEnquiry = new ContentH(
 `,
   {
     buttonLabel: "Check balance",
-    formName: "hou_check_balance",
+    formName: "hou_rents_enquiry",
   },
   { typeKey: "" },
   { typeKey: "rents_information_provided" },
@@ -5392,7 +5379,7 @@ const debtRecovery = new FormH(
   "debtRecovery",
   "Debt Recovery",
   "Use this form to enquire about Debt recovery or any correspondence you have received regarding Debt Recovery.",
-  "hou_rents_debt_recovery",
+  "hou_rents_enquiry",
   {
     type: "Request",
     keywords: ["Debt", "Housing", "Rent", "Recovery"],
@@ -5434,7 +5421,7 @@ const rentArrangements = new FormH(
   "rentArrangements",
   "Rent Arrangements",
   "Use this form to set up, amend or enquire about a Rent Arrangement.",
-  "hou_rents_arrangements",
+  "hou_rents_enquiry",
   {
     type: "Request",
     keywords: ["Arrangement", "Housing", "Rent"],
@@ -5447,7 +5434,7 @@ const rentRefunds = new FormH(
   "rentRefunds",
   "Rent Refunds",
   "Use this form to chase or request a Rent refund. You must more than 4 weeks in credit to request a refund and the refund will leave the account 4 weeks in credit.",
-  "hou_rents_refunds",
+  "hou_rents_enquiry",
   {
     type: "Request",
     keywords: ["Refund", "Housing", "Rent"],
