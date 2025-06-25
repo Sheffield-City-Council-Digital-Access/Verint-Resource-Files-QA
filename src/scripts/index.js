@@ -1,4 +1,4 @@
-console.log("Version 15:27:");
+console.log("Version 15:40:");
 
 function logArguments(event, kdf, ...args) {
   console.group(event.type ? event.type : "event");
@@ -1475,13 +1475,13 @@ function handleObjectIdLoaded(event, kdf, response, type, id) {
   // clear email field
   KDF.setVal("eml_address", "");
   // repopulate meial field
-  console("response" + response);
-  console("response" + response["profile-Email"]);
-  console("response" + response["profile-Email"].toLowerCase());
+  console.log("response" + response);
+  console.log("response" + response["profile-Email"]);
+  console.log("response" + response["profile-Email"].toLowerCase());
   KDF.setVal("eml_address", response["profile-Email"].toLowerCase());
-  console("response" + response);
-  console("response" + response["profile-Email"]);
-  console("response" + response["profile-Email"].toLowerCase());
+  console.log("response" + response);
+  console.log("response" + response["profile-Email"]);
+  console.log("response" + response["profile-Email"].toLowerCase());
 
   // setTimeout(() => 
   //   {
