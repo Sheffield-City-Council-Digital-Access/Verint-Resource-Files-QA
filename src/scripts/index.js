@@ -1,3 +1,5 @@
+console.log("Version 14:41:");
+
 function logArguments(event, kdf, ...args) {
   console.group(event.type ? event.type : "event");
   console.log("event", event);
