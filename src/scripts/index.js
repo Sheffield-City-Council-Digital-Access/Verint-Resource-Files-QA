@@ -1,4 +1,4 @@
-console.log("Version 14:41:");
+console.log("Version 15:27:");
 
 function logArguments(event, kdf, ...args) {
   console.group(event.type ? event.type : "event");
@@ -1475,16 +1475,20 @@ function handleObjectIdLoaded(event, kdf, response, type, id) {
   // clear email field
   KDF.setVal("eml_address", "");
   // repopulate meial field
-  KDF.setVal("eml_address", response["profile-Email"]);
+  console("response" + response);
+  console("response" + response["profile-Email"]);
+  console("response" + response["profile-Email"].toLowerCase());
+  KDF.setVal("eml_address", response["profile-Email"].toLowerCase());
+  console("response" + response);
+  console("response" + response["profile-Email"]);
+  console("response" + response["profile-Email"].toLowerCase());
 
-  KDF.setVal("eml_address", "");
-
-  setTimeout(() => 
-    {
-      // repopulate meial field
-      KDF.setVal("eml_address", response["profile-Email"]);
-      console.log("test time out");
-    }, 10000);
+  // setTimeout(() => 
+  //   {
+  //     // repopulate meial field
+  //     KDF.setVal("eml_address", response["profile-Email"].toLowerCase());
+  //     console.log("test time out");
+  //   }, 10000);
 
   // keep at the bottom
   checkPageProgress();
