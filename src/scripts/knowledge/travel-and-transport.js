@@ -310,8 +310,8 @@ const zoomZeroFare = new ContentTaT(
 
 const disabledPersonsTravelPermit = new ContentTaT(
   "disabledPersonsTravelPermit",
-  "Disabled Pass",
-  "Find information on eligibility, application process, usage, and appeal details for a Disabled Pass in Sheffield.",
+  "Disabled Person's Travel Permit",
+  "Find information on eligibility, application process, usage, and appeal details for a Disabled Travel Permit in Sheffield.",
   `
     <p>
       You may qualify for a pass if you're aged between 5 and 66 and meet one of the
@@ -362,21 +362,7 @@ const disabledPersonsTravelPermit = new ContentTaT(
     Send link to review further information
 </button>
 
-    <h3>I want to fill out a paper application</h3>
-    <p>
-      Use the form to request a paper application.
-      <br>
-      <a href="${window.location.protocol}//${
-    window.location.hostname
-  }/form/launch/dtp_enquiry?${
-    KDF.getParams().customerid
-      ? `customerid=${KDF.getParams().customerid}&`
-      : ""
-  }interactionid=${KDF.getParams().interactionid}&rad_dtp_enquiry=Request%20a%20paper%20application">Request a paper application</a>
-
-    </p>
-
-    <h3>How long does a Disabled Pass last for</h3>
+    <h3>How long does a Disabled Travel Permit last for</h3>
        <p>
       If your application is successful, passes are issued between 1 and 5 years the
       timescale is dependent on your qualifying criteria, you will be made aware of
@@ -385,7 +371,7 @@ const disabledPersonsTravelPermit = new ContentTaT(
       pass will be issued up to that date.<br>
     </p>
     <h3>How long will my application take</h3>
-    <p>Disabled Passes have a 28 day process period.</p>
+    <p>Disabled Travel Permits have a 28 day process period.</p>
     <h3>How do I appeal the decision</h3>
     <p>Appeals must be made in writing to:<br>
       <address>
@@ -400,23 +386,10 @@ const disabledPersonsTravelPermit = new ContentTaT(
     <p>
       Customers can also request an appeal via email by writing to  <a href="mailto:disabledtravelpass@sheffield.gov.uk">disabledtravelpass@sheffield.gov.uk</a>
     </p>
-    <h3>When can I use my Disabled Pass</h3>
+    <h3>When can I use my Travel Permit</h3>
     <p>
-      A Disabled Pass enables free public transport on buses, trams and
+      A disabled persons pass enables free public transport on buses, trams and
       trains.
-    </p>
-    <h3>The pass holder has passed away</h3>
-    <p>
-      Use the form to report the death of the Disabled Pass holder.
-      <br>
-      <a href="${window.location.protocol}//${
-    window.location.hostname
-  }/form/launch/dtp_enquiry?${
-    KDF.getParams().customerid
-      ? `customerid=${KDF.getParams().customerid}&`
-      : ""
-  }interactionid=${KDF.getParams().interactionid}&rad_dtp_enquiry=Report%20a%20death">Report a death</a>
-
     </p>
     <h3>Where can I use my pass</h3>
     <p>
@@ -457,14 +430,14 @@ const disabledPersonsTravelPermit = new ContentTaT(
     </p>
     <h3>Lost or stolen pass</h3>
     <p>
-      You can replace your lost, damaged, or stolen Disabled Pass online by visiting:  
+      You can replace your lost, damaged, or stolen Disabled Person's Pass online by visiting:  
       <a href="https://www.travelsouthyorkshire.com/Disabledreplace/" target="_blank">
       https://www.travelsouthyorkshire.com/Disabledreplace/ </a>
 
          <button
         type="button"
         class="dform_widget email-btn dform_widget_type_button"
-        aria-label="Send link for Disabled Pass replacement"
+        aria-label="Send link for disabled travel pass replacement"
         onclick="
               window.location.href = \`\${window.location.protocol}//\${window.location.hostname}/form/launch/send_link_to_service?\${
                 KDF.getParams().customerid ? \`customerid=\${KDF.getParams().customerid}&\` : ''
@@ -494,11 +467,11 @@ const disabledPersonsTravelPermit = new ContentTaT(
   <li>PIP Enhanced daily living</li>
   <li>Higher rate Attendance Allowance</li>
 </ul>
-  <p>Your Disabled Pass will allow one carer to travel with you for free.</p>
+  <p>Your Travel pass will allow one carer to travel with you for free.</p>
 
-  <h3>Replacement Disabled Pass</h3>
+  <h3>Replacement Disabled Travel Permit</h3>
   <p>
-    You can replace your lost, damaged, or stolen Disabled Pass online by visiting: 
+    You can replace your lost, damaged, or stolen Disabled Person's Pass online by visiting: 
     <a href="https://www.travelsouthyorkshire.com/Disabledreplace/" target="_blank">https://www.travelsouthyorkshire.com/Disabledreplace/</a>
   </p>
   <p>
@@ -508,13 +481,13 @@ const disabledPersonsTravelPermit = new ContentTaT(
     No Charge for Stolen Passes: With a Crime Reference Number from the police.
   </p>
   <p>
-    Processing Time: The replacement pass will be posted to your home address within 7 working days.
+    Processing Time: Replacement pass will be posted to your home address within 7 working days.
   </p>
   
    <button
         type="button"
         class="dform_widget email-btn dform_widget_type_button"
-        aria-label="Send link for Disabled Pass replacement"
+        aria-label="Send link for disabled travel pass replacement"
         onclick="
               window.location.href = \`\${window.location.protocol}//\${window.location.hostname}/form/launch/send_link_to_service?\${
                 KDF.getParams().customerid ? \`customerid=\${KDF.getParams().customerid}&\` : ''
@@ -523,9 +496,16 @@ const disabledPersonsTravelPermit = new ContentTaT(
       >
         Send link to review further information
       </button>
+<a href="${window.location.protocol}//${
+       window.location.hostname
+     }/form/launch/dtp_enquiry?${
+       KDF.getParams().customerid
+         ? `customerid=${KDF.getParams().customerid}&`
+         : ""
+     }interactionid=${KDF.getParams().interactionid}">Disabled Travel Pass enquiry</a>
    `,
   {
-    buttonLabel: "Apply for Disabled Pass",
+    buttonLabel: "Apply for disabled travel permit",
     formName: "disabled_travel_pass",
   },
   { typeKey: "" },
