@@ -1853,7 +1853,7 @@ const miceTreatment = new ContentPaN(
       "Environmental Health"
     ],
   },
-  { date: "25/06/2025", name: "Joseph Coupland" }
+  { date: "11/07/2025", name: "Joseph Coupland" }
 );
 
 const mitesTreatment = new ContentPaN(
@@ -2293,7 +2293,7 @@ const ratTreatment = new ContentPaN(
       "Environmental Health"
     ],
   },
-  { date: "25/06/2025", name: "Joseph Coupland" }
+  { date: "11/07/2025", name: "Joseph Coupland" }
 );
 
 const redSpiderMitesTreatment = new ContentPaN(
