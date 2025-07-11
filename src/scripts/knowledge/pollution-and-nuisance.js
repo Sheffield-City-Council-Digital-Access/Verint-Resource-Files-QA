@@ -1750,7 +1750,6 @@ const miceTreatment = new ContentPaN(
         <h3>Frequently Asked Questions</h3>
         <div class="accordion-icon"></div>
       </summary>
-
       <div class="accordion-content">
         <details class="details-accordion">
           <summary>Should bookings be made 2 weeks apart?</summary>
@@ -1760,22 +1759,20 @@ const miceTreatment = new ContentPaN(
             </p>
           </div>
         </details>
-
         <details class="details-accordion">
-          <summary>Do Contact Centre complete SharePoint, or fulfilment Team?</summary>
+          <summary>Do the Contact Centre complete SharePoint, or the fulfilment Team?</summary>
           <div class="details-accordion-content">
             <p>
-                   Contact Centre should update SharePoint, and complete the 1st appointment & 2nd appointment fields on the CRM form.<br>  
+                   Contact Centre should update SharePoint, and complete the 1st appointment & 2nd appointment fields on the CRM form.<br>
                    Fulfilment Team will transfer the same dates into the Confirm record attributes.
             </p>
           </div>
         </details>
-
         <details class="details-accordion">
           <summary>What if the 1st booking was made prior to us changing the process?</summary>
           <div class="details-accordion-content">
             <p>
-              Please transfer to Hub Team to book the follow up appointment at <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2930356')">0114 2930356</a> or <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2930353')">0114 2930353</a>
+              Please transfer to Hub Team to book the follow up appointment at <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2930356')">0114 2930356</a> or <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2930353')">0114 2930353</a>.
             </p>
           </div>
         </details>
