@@ -1756,7 +1756,7 @@ const miceTreatment = new ContentPaN(
           <summary>Should bookings be made 2 weeks apart?</summary>
           <div class="details-accordion-content">
             <p>
-              As close after 2 weeks as possible 3 weeks is fine, we will look to allocate slots for these specific appointments on SharePoint.
+              After the first appointment, book the second as close to after two weeks later as possible. If no ideal dates are available after two weeks, you may book before, but booking after two weeks is preferred.
             </p>
           </div>
         </details>
@@ -2182,7 +2182,7 @@ const ratTreatment = new ContentPaN(
           <summary>Should bookings be made 2 weeks apart?</summary>
           <div class="details-accordion-content">
             <p>
-              As close after 2 weeks as possible – fine if 3 weeks, we will look to allocate slots for these specific appointments on SharePoint.
+              After the first appointment, book the second as close to after two weeks later as possible. If no ideal dates are available after two weeks, you may book before, but booking after two weeks is preferred.
             </p>
           </div>
         </details>
