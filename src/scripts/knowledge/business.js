@@ -340,16 +340,27 @@ const applyPrivateHire = new ContentBusiness(
             <details class="details-accordion">
             <summary>Proof of right to work document?</summary>
             <div class="details-accordion-content">
+            <p>
+                You will need to provide us with evidence that you are legally allowed to work in the UK if you are:
+            </p>
                 <ul>
-                    <li>British passport.</li>
-                    <li>Irish passport.</li>
-                    <li>Document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                    <li>Passport from immigration control.</li>
-                    <li>Immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and your name.</li>
-                    <li>UK birth certificate, together with an official document giving your permanent NI number and name.</li>
-                    <li>Channel Islands, Isle of Man or Ireland birth certificate, presented with an official document giving your permanent NI number and name.</li>
-                    <li>Certificate of naturalisation as a British citizen, presented with an official document giving your permanent NI number and your name.</li>
+                    <li>applying to become a licensed driver</li>
+                    <li>applying to become an operator</li>
+                    <li>a hackney carriage or private hire vehicle licence holder</li>
                 </ul>
+            <p>
+                To prove this, we will need to see your original right to work documents in person and take copies of them.  
+            </p>
+            <p>
+                This information can be provided when you make your in-person Disclosure and Barring Service application to us.    
+            </p>
+            <p>
+                Once we have seen you in-person, we will not need to see you again unless you have right to work restrictions.    
+            </p>
+            <p>
+                Documents that we accept can be found at <a href="https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/right-to-work" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/right-to-work</a> 
+            </p>
+
             </div>
             </details>
 
