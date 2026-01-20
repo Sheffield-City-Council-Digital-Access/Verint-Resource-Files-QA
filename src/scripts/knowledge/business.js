@@ -140,6 +140,18 @@ class CoreBusiness {
         </div>
     </details>
 
+     <details class="accordion">
+        <summary class="accordion-header">
+            <h3>Apply for a new HC licence</h3>
+            <div class="accordion-icon"></div>
+        </summary>
+        <div class="accordion-content">
+            <p>
+                Online form via Big Change portal Must licence a vehicle to use it as a HC in Sheffield.    Soon to be SCC form
+            </p>
+        </div>
+    </details>
+
     <details class="accordion">
         <summary class="accordion-header">
             <h3>Collecting the licence</h3>
