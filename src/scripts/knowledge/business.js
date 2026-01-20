@@ -375,27 +375,6 @@ const applyPrivateHire = new ContentBusiness(
             </div>
             </details>
 
-            <details class="details-accordion">
-            <summary>If the applicant is under immigration controls - applicable limitations</summary>
-            <div class="details-accordion-content">
-                <p>
-                    Only issue a licence for the period that you are entitled to work in the UK.
-                </p>
-            </div>
-            </details>
-
-            <details class="details-accordion">
-            <summary>If the right to work in the UK is a time-limited period</summary>
-            <div class="details-accordion-content">
-                <ul>
-                    <li>Document or certificate of application (non-digital) issued by the Home Office.</li>
-                    <li>Document from the Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                    <li>Application Registration Card issued by the Home Office that says you can take employment.</li>
-                    <li>Positive Verification Notice issued by the Home Office Employer Checking Service.</li>
-                </ul>
-            </div>
-            </details>
-
         </div>
         </details>
 
