@@ -65,6 +65,7 @@ class CoreBusiness {
         Application process has 3 stages.
         <ol>
             <li>Apply</li> 
+            <li><a href="https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage</a></li>
             <li>Process</li>
             <li>Determine</li>
         </ol>
