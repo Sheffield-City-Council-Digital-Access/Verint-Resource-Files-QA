@@ -194,6 +194,7 @@ const applyPrivateHire = new ContentBusiness(
     Application process has 3 stages.
     <ol>
         <li>Apply</li> 
+        <li><a href="https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage</a></li>
         <li>Process</li>
         <li>Determine</li>
     </ol>
@@ -214,7 +215,7 @@ const applyPrivateHire = new ContentBusiness(
 
     <details class="accordion">
         <summary class="accordion-header">
-            <h3>Hackney carriage disclosure and barring checks</h3>
+            <h3>Private Hire Vehicle disclosure and barring checks</h3>
             <div class="accordion-icon"></div>
         </summary>
         <div class="accordion-content">
@@ -260,8 +261,8 @@ const applyPrivateHire = new ContentBusiness(
         </summary>
         <div class="accordion-content">
             <p>
-                A hackney carriage vehicle licence costs <strong>£212</strong>.  
-                Must pay online when complete the hackney carriage application form.
+                A private hire vehicle licence costs <strong>£212</strong>.  
+                Must pay online when complete the private hire application form.
             </p>
         </div>
     </details>
