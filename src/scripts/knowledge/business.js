@@ -571,7 +571,7 @@ const applyPrivateHire = new ContentBusiness(
                 <ul>
                     <li>Email - Take clear photos of all pages and email them to taxilicensing@sheffield.gov.uk.</li>
                     <li>Post - by recorded delivery to Licensing Service Block C, Staniforth Road Depot, Staniforth Road Sheffield S9 3HD.</li>
-                    <li>In-person - drop the medical pack off in the post box on site.</li>
+                    <li>In-person - drop the medical pack off in the post box on site ensure you keep a copy of your medical certificate for your own records in all cases.</li>
                 </ul>
             </div>
             </details>
