@@ -436,7 +436,7 @@ const applyPrivateHire = new ContentBusiness(
             <summary>Cost for Driving standards test</summary>
             <div class="details-accordion-content">
                 <p>
-                    £ 70
+                    £75
                 </p>
             </div>
             </details>
@@ -764,7 +764,7 @@ const applyPrivateLicence = new ContentBusiness(
     <details class="details-accordion">
       <summary>Cost for driving standards test</summary>
       <div class="details-accordion-content">
-        <p>£70</p>
+        <p>£75</p>
       </div>
     </details>
 
