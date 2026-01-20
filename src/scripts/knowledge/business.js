@@ -399,7 +399,7 @@ const applyPrivateHire = new ContentBusiness(
             <summary>Knowledge test pass mark</summary>
             <div class="details-accordion-content">
                 <p>
-                    Score at least 80% in each section to pass the Knowledge Test.
+                    Score at least 80% in each section to pass the Knowledge Test. <p><a href="https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test</a> JCHERE add Send Link</p>
                 </p>
             </div>
             </details>
