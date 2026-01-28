@@ -192,7 +192,7 @@ const applyPrivateHire = new ContentBusiness(
     `
     <p>
     Application process has 3 stages.
-    <ol>
+    <ol> <!-- JcHEre -->
         <li>Apply</li> 
         <li><a href="https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/private-hire-and-hackney-carriage-vehicles/hackney-carriage-vehicle-licence/choosing-hackney-carriage</a></li>
         <li>Process</li>
@@ -208,7 +208,7 @@ const applyPrivateHire = new ContentBusiness(
         <div class="accordion-content">
             <p>
                 Once the applicant make an application for a PHV Licence, the vehicle will be issued with a date to attend the compliance test.<br>
-                Vehicle compliance test certificate is valid for 14 days
+                Vehicle compliance test certificate is valid for 10 days
             </p>
         </div>
     </details>
@@ -319,7 +319,7 @@ const applyPrivateHire = new ContentBusiness(
   const applyTaxiDriver = new ContentBusiness(
     "applyTaxiDriver",
     "Apply for a new taxi driver licence",
-    "Apply for a new taxi driver licence",
+    "Apply for a Private Hire or Hackney Carriage Driver Licence",
     `
         <details class="accordion">
         <summary class="accordion-header">
@@ -332,7 +332,7 @@ const applyPrivateHire = new ContentBusiness(
             <summary>Obtaining the "Certificate in Introduction to the Role of Professional Taxi and Private Hire Driver"</summary>
             <div class="details-accordion-content">
                 <p>
-                    Sheffield City College or other providers from Gov. UK.
+                    Sheffield City College or other providers from Gov.UK. - https://www.sheffcol.ac.uk/courses/page/3858B78B-24D6-4FD5-9FC2-3E043293FE3B JCHERE
                 </p>
             </div>
             </details>
@@ -360,7 +360,6 @@ const applyPrivateHire = new ContentBusiness(
             <p>
                 Documents that we accept can be found at <a href="https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/right-to-work" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/right-to-work</a> 
             </p>
-
             </div>
             </details>
 
@@ -399,7 +398,7 @@ const applyPrivateHire = new ContentBusiness(
             <summary>Knowledge test pass mark</summary>
             <div class="details-accordion-content">
                 <p>
-                    Score at least 80% in each section to pass the Knowledge Test. <p><a href="https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test</a> JCHERE add Send Link</p>
+                    Score at least 80% in each section to pass the Knowledge Test. <p><a href="https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test" target="_blank">https://www.sheffield.gov.uk/taxi-licensing/taxi-drivers/applying-new-taxi-driver-licence/knowledge-test</a> JCHERE add Send Link
                 </p>
             </div>
             </details>
@@ -639,302 +638,6 @@ const applyPrivateHire = new ContentBusiness(
     { date: "21/11/2025", name: "Joseph Coupland"} 
   );
 
-const applyPrivateLicence = new ContentBusiness(
-    "applyPrivateLicence",
-    "Apply for a Priviate Hire Driver License",
-    "Apply for a Priviate Hire Driver License",
-    `
-       <details class="accordion">
-  <summary class="accordion-header">
-    <h3>Fit and Proper Test: Stage 1</h3>
-  </summary>
-  <div class="accordion-content">
-
-    <details class="details-accordion">
-      <summary>Obtaining the "Certificate in Introduction to the Role of Professional Taxi and Private Hire Driver"</summary>
-      <div class="details-accordion-content">
-        <p>Sheffield City College or other providers listed on Gov.uk</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Proof of right to work</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>British passport</li>
-          <li>Irish passport</li>
-          <li>Document from Bailiwick of Jersey, Bailiwick of Guernsey, or the Isle of Man</li>
-          <li>Passport from immigration control</li>
-          <li>Immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and name</li>
-          <li>UK birth certificate with an official document giving your permanent NI number and name</li>
-          <li>Channel Islands, Isle of Man, or Ireland birth certificate with an official document giving your permanent NI number and name</li>
-          <li>Certificate of naturalisation as a British citizen with an official document giving your permanent NI number and name</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>If you are under immigration controls</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Current passport</li>
-          <li>Document from Bailiwick of Jersey, Bailiwick of Guernsey, or the Isle of Man</li>
-          <li>Current immigration status document containing a photograph issued by the Home Office</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Limitations for applicants under immigration controls</summary>
-      <div class="details-accordion-content">
-        <p>Licence will only be issued for the period you are entitled to work in the UK.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>If right to work is time-limited</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Non-digital document or certificate of application issued by the Home Office</li>
-          <li>Document from the Bailiwick of Jersey, Bailiwick of Guernsey, or the Isle of Man</li>
-          <li>Application Registration Card issued by the Home Office stating you can take employment</li>
-          <li>Positive Verification Notice issued by the Home Office Employer Checking Service</li>
-        </ul>
-      </div>
-    </details>
-
-  </div>
-</details>
-
-<details class="accordion">
-  <summary class="accordion-header">
-    <h3>Fit and Proper Test: Stage 2</h3>
-  </summary>
-  <div class="accordion-content">
-
-    <details class="details-accordion">
-      <summary>Age & experience</summary>
-      <div class="details-accordion-content">
-        <p>Must be 21 years or older and have held a Driver and Vehicle Licensing Agency (DVLA) driver licence for more than 12 months.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Knowledge test pass mark</summary>
-      <div class="details-accordion-content">
-        <p>Score at least 80% in each section to pass the Knowledge Test.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Driving standards test</summary>
-      <div class="details-accordion-content">
-        <p>Pass a driving standards test conducted by a driving standards examiner at our Transport Department. The test will include any 3 of the following:</p>
-        <ul>
-          <li>Emergency stop</li>
-          <li>Left-hand reverse</li>
-          <li>Right-hand reverse</li>
-          <li>Turn in the road</li>
-          <li>Reverse parking</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Requirements for the driving standards test</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Must be over 21 years of age</li>
-          <li>Held a DVLA driver licence for more than 12 months</li>
-          <li>DVLA driving licence number in full</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Qualifications needed before the driving standards test</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Level 2 certificate in Introduction to the Role of the Professional Taxi and Private Hire Driver</li>
-          <li>Safeguarding training</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Cost for driving standards test</summary>
-      <div class="details-accordion-content">
-        <p>£75</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Vehicles allowed for the driving standards test</summary>
-      <div class="details-accordion-content">
-        <p>With the right insurance:</p>
-        <ul>
-          <li>Driving instructor’s vehicle</li>
-          <li>Rental vehicle</li>
-          <li>Your own vehicle</li>
-          <li>Licensed vehicle registered in applicant's name, with all licensing livery removed</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Disclosure and Barring Checks (DBS)</summary>
-      <div class="details-accordion-content">
-        <p>An Enhanced Disclosure Certificate with Barred List checks from the DBS.</p>
-        <p>Attention will be given to convictions related to:</p>
-        <ul>
-          <li>Crimes resulting in death</li>
-          <li>Exploitation</li>
-          <li>Violence</li>
-          <li>Possession of weapons</li>
-          <li>Sex and indecency offences</li>
-          <li>Dishonesty</li>
-          <li>Drugs</li>
-          <li>Discrimination</li>
-          <li>Motoring offences (drink driving, driving under influence, using a hand-held device while driving)</li>
-        </ul>
-        <p>One or more relevant convictions may result in referral to the Licensing Sub-Committee.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Applying for a DBS certificate</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Email <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a> to request a DBS pack</li>
-          <li>Complete the DBS form and attend a face-to-face appointment for document verification</li>
-          <li>Taxi licensing service will submit your application to DBS and return the certificate to you</li>
-          <li>Applicants can apply for the DBS certificate when taking the knowledge or driving standards test</li>
-        </ul>
-        <p>Cost: £49.50</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>DBS Update Service</summary>
-      <div class="details-accordion-content">
-        <p>Applicants must email a copy of the full certificate and sign up to the DBS Update Service within 30 days of receipt. Maintain the subscription with an annual fee of £16.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>DVLA checks</summary>
-      <div class="details-accordion-content">
-        <p>Applicants must provide their DVLA licence number. Consent may be required via TaxiPlus to carry out checks.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Taxi driver medical assessments</summary>
-      <div class="details-accordion-content">
-        <p>Must pass a DVLA Group 2 Medical Fitness examination.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Medical assessment areas</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Neurological disorders</li>
-          <li>Cardiovascular disorders</li>
-          <li>Diabetes</li>
-          <li>Mental health</li>
-          <li>Drug or alcohol misuse</li>
-          <li>Visual disorders</li>
-          <li>Renal disorders</li>
-          <li>Respiratory disorders</li>
-          <li>Other conditions as advised</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Medical frequency by age</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>45 years and older: every 5 years</li>
-          <li>65 years and older: every year</li>
-          <li>More frequent exams if recommended by GP</li>
-        </ul>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Submitting medical assessment</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>Email: clear photos of all pages to <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a></li>
-          <li>Post: recorded delivery to Licensing Service, Block C, Staniforth Road Depot, Sheffield S9 3HD</li>
-          <li>In-person: drop off in on-site post box</li>
-        </ul>
-      </div>
-    </details>
-
-  </div>
-</details>
-
-<details class="accordion">
-  <summary class="accordion-header">
-    <h3>Fit and Proper Test: Stage 3</h3>
-  </summary>
-  <div class="accordion-content">
-
-    <details class="details-accordion">
-      <summary>Applying for a new taxi driver licence</summary>
-      <div class="details-accordion-content">
-        <p>Applicants who completed stages 1 & 2 can apply for the new combined PH/HC driver licence.</p>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>New applications defined</summary>
-      <div class="details-accordion-content">
-        <ol>
-          <li>Applicant has never held a licence with us</li>
-          <li>Applicant's previous licence expired more than 12 months ago</li>
-          <li>Applicant applies more than 1 calendar month after last licence expiry</li>
-        </ol>
-      </div>
-    </details>
-
-    <details class="details-accordion">
-      <summary>Licence fees</summary>
-      <div class="details-accordion-content">
-        <ul>
-          <li>1 year: £223</li>
-          <li>2 years: £245</li>
-          <li>3 years: £268</li>
-        </ul>
-      </div>
-    </details>
-
-  </div>
-</details>
-
-
-    `,
-    { buttonLabel: "", formName: ""},
-    { typeKey: "switchboard_transferred_to_service" },
-    { typeKey: "switchboard_information_provided"},
-    {
-      type: "Request",
-      keywords: [
-        "Switchboard",
-        "Switch board",
-        "Switch",
-        "transfer",
-        "redirect",
-        "transfer call",
-        "call"
-      ],
-      categories: ["Your City Council"],
-    },
-    { date: "21/11/2025", name: "Joseph Coupland"} 
-  );
 
 const applyPrivateOperator = new ContentBusiness(
     "applyPrivateOperator",
@@ -1427,169 +1130,88 @@ const medicalNeeds = new ContentBusiness(
     { date: "21/11/2025", name: "Joseph Coupland"} 
   );
 
-const renewHackneyCarriage = new ContentBusiness(
-    "renewHackneyCarriage",
-    "Renew a Hackney Carriage Vehicle Licence",
-    "Information regarding taxi licensing",
+const renewDriverLicence = new ContentBusiness(
+    "renewDriverLicence",
+    "Renew a Driver Licence",
+    "Renew a Private Hire / Hackney Carriage Drivers Licence",
     `
         <p>
-            Hackney carriage vehicle licence will be valid for a maximum of 12 months.
+            We will usually contact you by email when your taxi driver’s licence needs to be renewed,
+            but it is your responsibility to renew your licence on time.
+        </p>
+        <p>
+            You can renew your badge up to 2 months before the date it expires.
         </p>
 
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Pre requirement:</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Hackney carriage vehicle needs to go through a compliance test no more than 4 weeks before its licence is due to be renewed.</p>
-            </div>
-        </details>
+        <h3>What is required to renew your badge</h3>
+        <h4>DVLA driving licence</h4>
 
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Compliance test</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Once the applicant make an renew application for a Hackney Carriage Licence, the vehicle will be issued with a date to attend the compliance test.<br>
-                Vehicle compliance test certificate is valid for 14 days.</p>
-            </div>
-        </details>
+        <p>
+            You will need to supply us with your Driving and Vehicle Licensing Agency (DVLA)
+            driving licence number. When you make your application, we will check your driving
+            licence with the DVLA.
+        </p>
+        <p>
+            You will receive an email from a company called TaxiPlus. This will ask you to give
+            consent to allow us to carry out these checks.
+        </p>
+        <p>
+            Make sure that you do not share your email address with another driver so we can
+            carry out the check.
+        </p>
+        <h4>DBS check</h4>
+        <p>
+            You need to provide us with a current Enhanced Disclosure Certificate with Barred
+            Check Lists from the Disclosure and Barring Service (DBS).
+        </p>
+        <p>
+            We will look at all convictions that are listed in the certificate.
+        </p>
+        <p>
+            If you have had one or more convictions recorded for any of the above offences,
+            your application may be referred to the Licensing Sub-Committee.
+        </p>
+        <h3>Routine checks</h3>
+        <p>
+            Once you are licensed as a taxi driver, we will carry out a routine check every
+            6 months.
+        </p>
+        <p>
+            To do this, you need to register with the DBS Update Service. If you do not use
+            this service, you will need to provide a valid DBS certificate that has been issued
+            within one month of the check.
+        </p>
+        <p>
+            Your licence will be suspended if we are not able to carry out routine checks on
+            your DBS and you are unable to supply a certificate dated within one month.
+        </p>
 
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Hackney carriage disclosure and barring checks</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>If the applicant does not currently hold a taxi driver licence with SCC, then they must provide a basic Disclosure and Barring Service (DBS) certificate.<br><br>
-                If a vehicle licence is in the name of a company or a partnership, all named directors and partners within the company will need to provide us with a Basic Disclosure from the DBS.<br><br>
-                The cost for a basic DBS check is <strong>£21.50</strong>.</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Hackney carriage vehicle insurance</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>This is a valid insurance certificate or cover note that tells applicant or a licensed driver, are insured to drive the vehicle and the purposes to carry passengers for hire and reward.<br><br>
-                A copy of the insurance certificate must be provided when making application. Service will check the insurance every month to make sure hackney carriage is insured.</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Right to work in the UK for hackney carriage vehicles</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Need to see original right to work documents in person and take copies of them.</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Right to work documents that are accept</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <ul>
-                    <li>British passport.</li>
-                    <li>Irish passport.</li>
-                    <li>Document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                    <li>Oassport from immigration control.</li>
-                    <li>Immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and your name.</li>
-                    <li>UK birth certificate, together with an official document giving your permanent NI number and name.</li>
-                    <li>Channel Islands, Isle of Man or Ireland birth certificate, presented with an official document giving your permanent NI number and name.</li>
-                    <li>Certificate of naturalisation as a British citizen, presented with an official document giving your permanent NI number and your name.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>If the applicant is under immigration controls</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <ul>
-                    <li>Current passport.</li>
-                    <li>Socument from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                    <li>Current immigration status document containing a photograph issued by the Home Office.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>If the right to work in the UK is a time-limited period</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <ul>
-                    <li>Document or certificate of application (non-digital) issued by the Home Office.</li>
-                    <li>Document from the Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                    <li>Application Registration Card issued by the Home Office that says you can take employment.</li>
-                    <li>Positive Verification Notice issued by the Home Office Employer Checking Service.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Apply for a new hackney carriage vehicle licence</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Web form<br>
-                Paper application</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Cost</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Renewing a hackney carriage hire vehicle licence costs <strong>£212</strong>.<br>
-                Must pay this online when complete the application form.</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Information needed</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <ul>
-                    <li>Basic DBS disclosure or your DBS certificate number.</li>
-                    <li>Valid insurance certificate or cover note that tells the applicant or a licensed driver, are insured to drive the vehicle and the purposes that it can be used for (to carry passengers for hire and reward).</li>
-                    <li>Original V5C registration certificate (logbook) or the keepers supplement of the V5C for recently bought vehicle.</li>
-                    <li>Right to work documents.</li>
-                    <li>Compliance certificate.</li>
-                    <li>Hackney Carriage vehicle registration number.</li>
-                    <li>Hackney Carriage licence number.</li>
-                    <li>Hackney Carriage licence expiry date.</li>
-                </ul>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary class="accordion-header">
-                <h3>Collecting the licence</h3>
-                <div class="accordion-icon"></div>
-            </summary>
-            <div class="accordion-content">
-                <p>Service will contact the applicant by email to confirm that they have issued hackney carriage licence and arrange a time for the applicant to collect licence from the reception at depot.
-                Arrange a time for pick by either by, email <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a> or telephone <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2734264')">0114 2734264</a>.</p>
-            </div>
-        </details>
-
+        <h3>How to apply</h3>
+        <p>
+            To apply for an Enhanced Disclosure Certificate with Barred Check Lists, you need
+            to do the following:
+        </p>
+        <ul>
+            <li>Email <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a> to request a DBS pack</li>
+            <li>Ensure your DBS application form is completed in black ink</li>
+            <li>Do not sign the back of the form</li>
+            <li>
+                Complete the DBS form and attend Howden House First Point to have your documents
+                checked and verified face-to-face (open 10am to 4pm, Monday to Friday)
+            </li>
+            <li>
+                Make a £49.50 payment for your application before attending Howden House
+                (the payment link is provided below)
+            </li>
+            <li>
+                We will send your completed application to the DBS, who will carry out the
+                necessary checks and return the certificate to you
+            </li>
+        </ul>
+        <p>
+            You can apply for your DBS certificate when you take your knowledge test and
+            driving standards test.
+        </p>
     `,
   
     { buttonLabel: "", formName: ""},
@@ -1611,121 +1233,7 @@ const renewHackneyCarriage = new ContentBusiness(
     { date: "21/11/2025", name: "Joseph Coupland"} 
   );
 
-  const renewPriviateHire = new ContentBusiness(
-    "renewPriviateHire",
-    "Renew a Private Hire Vehicle Licence",
-    "Renew a Private Hire Vehicle Licence",
-    `
-        <p>
-        Hackney carriage vehicle licence will be valid for a maximum of 12 months.
-        </p>
-        <h3>Pre requirement:</h3>
-        <p>
-            PHV needs to go through a compliance test no more than 4 weeks before its licence is due to be renewed.  
-        </p>
-        <h3>Compliance test</h3>
-        <p>
-            Once the applicant make an renew application for a PHV Licence, the vehicle will be issued with a date to attend the compliance test.<br>
-            Vehicle compliance test certificate is valid for 14 days.
-        </p>
-        <h3>PHV disclosure and barring check</h3>
-        <p>
-            If the applicant does not currently hold a taxi driver licence with SCC, then they must provide a  basic Disclosure and Barring Service (DBS) certificate.<br>
-            <br>
-            If a vehicle licence is in the name of a company or a partnership, all named directors and partners within the company will need to provide us with a Basic Disclosure from the DBS.<br>
-            <br>
-            The cost for a basic DBS check is <strong>£21.50</strong>.    
-        </p>
-        <h3>PHV insurance</h3>
-        <p>
-            This is a valid insurance certificate or cover note that tells applicant or a licensed driver, are insured to drive the vehicle and the purposes to carry passengers for hire and reward.<br>
-            a copy of the insurance certificate must be provided when  making application. Service will check the insurance every month to make sure hackney carriage is insured. <br>
-            To carry wheelchair passengers, then you will also need public liability insurance with a minimum cover of £2,000,000. As a minimum, this should cover personal injury claims and any damage to property.
-        </p>
-        <h3>Right to work in the UK for PHV</h3>
-        <p>
-        Need to see original right to work documents in person and take copies of them.
-        </p>
-        <h3>Right to work documents that are accept</h3>
-        <p>
-            <ul>
-                <li>British passport
-                <li>Irish passport
-                <li>Document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man
-                <li>Oassport from immigration control
-                <li>Immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and your name
-                <li>UK birth certificate, together with an official document giving your permanent NI number and name
-                <li>Channel Islands, Isle of Man or Ireland birth certificate, presented with an official document giving your permanent NI number and name
-                <li>Certificate of naturalisation as a British citizen, presented with an official document giving your permanent NI number and your name.</li>
-            </ul>
-        </p>
-        <h3>If the applicant is under immigration controls</h3>
-        <p>
-            <ul>
-                <li>Current passport.</li>
-                <li>Socument from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                <li>Current immigration status document containing a photograph issued by the Home Office.</li>
-            </ul>
-        </p>
-        <h3>If the right to work in the UK is a time-limited period</h3>
-        <p>
-            <ul>
-                <li>document or certificate of application (non-digital) issued by the Home Office.</li>
-                <li>document from the Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man.</li>
-                <li>application Registration Card issued by the Home Office that says you can take employment.</li>
-                <li>positive Verification Notice issued by the Home Office Employer Checking Service.</li>
-            </ul>
-        </p>
-        <h3>Apply for a new PHV licence</h3>
-        <p>
-            Web form<br>
-            Paper application
-        </p>
-        <h3>Cost</h3>
-        <p>
-            Renewing a PHV licence costs <strong>£212</strong>.<br>
-            Must pay this online when complete the application form.
-        </p>
-        <h3>Information needed</h3>
-        <p>
-            <ul>
-                <li>Basic DBS disclosure or your DBS certificate number.</li>
-                <li>Valid insurance certificate or cover note that tells the applicant or a licensed driver, are insured to drive the vehicle and the purposes that it can be used for (to carry passengers for hire and reward).</li>
-                <li>Original V5C registration certificate (logbook) or the keepers supplement of the V5C for recently bought vehicle.</li>
-                <li>Right to work documents.</li>
-                <li>Private hire vehicle registration number.</li>
-                <li>Private hire vehicle licence number.</li>
-                <li>Vehicle expiry date.</li>
-                <li>Compliance certificate.</li>
-            </ul>
-        </p>
-        <h3>Collecting the licence</h3>
-        <p>
-            Service will contact the applicant by email to confirm that they have issued  hackney carriage licence and arrange a time for the applicant to collect  licence from the reception at depot.
-            Arrange a time for pick by either by, email <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a> or telephone <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2734264')">0114 2734264</a>.
-        </p>
-
-    `,
   
-    { buttonLabel: "", formName: ""},
-    { typeKey: "switchboard_transferred_to_service" },
-    { typeKey: "switchboard_information_provided"},
-    {
-      type: "Request",
-      keywords: [
-        "Switchboard",
-        "Switch board",
-        "Switch",
-        "transfer",
-        "redirect",
-        "transfer call",
-        "call"
-      ],
-      categories: ["Your City Council"],
-    },
-    { date: "21/11/2025", name: "Joseph Coupland"} 
-  );
-
 const renewPrivateOperator = new ContentBusiness(
     "renewPrivateOperator",
     "Renew Private Hire Vehicle Operators Licence",
@@ -1981,289 +1489,6 @@ const renewPrivateOperator = new ContentBusiness(
     { date: "21/11/2025", name: "Joseph Coupland"} 
   );
 
-const renewVechicleLicence = new ContentBusiness(
-    "renewVechicleLicence",
-    "Renewing a Hackney Carriage Vehicle Licence",
-    "Renewing a hackney carriage vehicle licence",
-    `
-        <h3>Before you renew</h3>
-    <h4>About insurance</h4>
-    <p>You will need to have insurance in place to use your hackney carriage as a taxi.</p>
-
-    <h4>Hackney carriage vehicle insurance</h4>
-
-    <h4>About right to work</h4>
-    <p>To renew your hackney carriage vehicle licence, you must prove to us that you are legally allowed to work in the UK.</p>
-
-    <h4>Right to work in the UK for hackney carriage vehicles</h4>
-
-    <h4>Renew your licence</h4>
-    <p>Use our online form to renew your hackney carriage vehicle licence.</p>
-
-    <h4>Renew your hackney carriage vehicle licence</h4>
-    <p>
-        JCHERE no information
-    </p>
-    <h3>Hackney carriage vehicle insurance</h3>
-    <p>
-        Your hackney carriage must have in place the correct insurance to carry passengers for hire and reward.<br>
-        This is a valid insurance certificate or cover note that tells us that you or a licensed driver, are insured to drive the vehicle and the purposes that it can be used for.<br>
-        We will need to see a copy of the insurance certificate when you make your application. We will check every month to make sure your hackney carriage is insured.
-    </p>
-    <h3>Right to work in the UK for hackney carriage vehicles</h3>
-    <p>You will need to provide us with evidence that you are legally allowed to work in the UK if you are:</p>
-    <ul>
-    <li>applying to become a licensed driver</li>
-    <li>applying to become an operator</li>
-    <li>a hackney carriage or private hire vehicle licence holder</li>
-    </ul>
-
-    <p>To prove this, we will need to see your original right to work documents in person and take copies of them.
-    This information can be provided when you make your in-person Disclosure and Barring Service application to us.
-    Once we have seen you in person, we will not need to see you again unless you have right to work restrictions.</p>
-
-    <h4>Documents that we accept</h4>
-    <p>You will need to provide one of the documents listed below.</p>
-    <ul>
-    <li>British passport</li>
-    <li>Irish passport</li>
-    <li>document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-    <li>passport from immigration control</li>
-    <li>immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and your name</li>
-    <li>UK birth certificate, together with an official document giving your permanent NI number and name</li>
-    <li>Channel Islands, Isle of Man or Ireland birth certificate, presented with an official document giving your permanent NI number and name</li>
-    <li>certificate of naturalisation as a British citizen, presented with an official document giving your permanent NI number and your name</li>
-    </ul>
-
-    <h4>Under immigration controls</h4>
-    <p>If you are under immigration controls, then we will only issue a licence for the period that you are entitled to work in the UK.
-    We will need to see one of the documents listed below before we can issue your licence:</p>
-    <ul>
-    <li>current passport</li>
-    <li>document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-    <li>current immigration status document containing a photograph issued by the Home Office</li>
-    </ul>
-
-    <h4>Right to work is time-limited</h4>
-    <p>Where your right to work in the UK is a time-limited period, we will need to see a:</p>
-    <ul>
-    <li>document or certificate of application (non-digital) issued by the Home Office</li>
-    <li>document from the Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-    <li>application Registration Card issued by the Home Office that says you can take employment</li>
-    <li>positive Verification Notice issued by the Home Office Employer Checking Service</li>
-    </ul>
-
-    <h3>Renew your hackney carriage vehicle licence</h3>
-    <h4>About this licence</h4>
-    <p>We will usually contact you when your hackney carriage vehicle licence needs to be renewed. If we do not, please contact us immediately to notify us that your licence is due to expire and requires a test.
-    You should renew your licence in the month that it is due to end. If you miss this deadline, you will have up to one month to renew it.
-    After that date, you will have to apply for a new hackney carriage vehicle licence which will need to meet the vehicle age specification.</p>
-
-    <h4>Cost</h4>
-    <p>Renewing your hackney carriage hire vehicle licence costs £212.
-    You will need to pay this online when you complete your application form.</p>
-
-    <h4>Information you will need</h4>
-    <p>You will need to upload the following information when you renew your licence:</p>
-    <ul>
-    <li>valid insurance certificate</li>
-    <li>compliance certificate</li>
-    </ul>
-
-    <h4>Issuing the licence</h4>
-    <p>We will process your application within 5 working days of receipt if it is complete.
-    We will email you a PDF version of your licence and send your plate and a paper version of the licence by post.
-    If your vehicle has been for a test within the last week of the month, we will give you the option to collect it so that you have the plate in time for the end of the month.
-    If you are not available to collect your plate, you can send someone to collect it on your behalf.</p>
-    `,
-    { buttonLabel: "", formName: ""},
-    { typeKey: "switchboard_transferred_to_service" },
-    { typeKey: "switchboard_information_provided"},
-    {
-      type: "Request",
-      keywords: [
-        "Switchboard",
-        "Switch board",
-        "Switch",
-        "transfer",
-        "redirect",
-        "transfer call",
-        "call"
-      ],
-      categories: ["Your City Council"],
-    },
-    { date: "21/11/2025", name: "Joseph Coupland"} 
-  );
-
-const renewPriviateLicence = new ContentBusiness(
-    "renewPriviateLicence",
-    "Renewing a Private Hire Vehicle Licence",
-    "Renewing a private hire vehicle licence",
-    `
-        <h3>Before you renew</h3>
-        <p>
-            Your vehicle needs to pass a compliance test no more than 4 weeks before it's licence is due to be renewed.  
-        <p>
-        <h4>Test appointments</h4>
-        <p>
-            When your vehicle is due for a test, we will usually email you about 6 weeks in advance with a date and time. If you do not hear from us, please email taxilicensing@sheffield.gov.uk or telephone 0114 273 4264 to arrange the test.
-        </p>
-        <h4>Private hire vehicle insurance</h4>
-        <p>
-            You will need to have insurance to carry passengers in your vehicle.
-        </p>
-        <h4>About insurance</h4>
-        <p>
-            JCHere no information
-        </p>
-        <h4>Right to work in the UK for private hire vehicles</h4>
-        <p>
-            To licence your private hire vehicle, you must prove to us that you are legally allowed to work in the UK.
-        </p>
-
-        <h4>About right to work</h4>
-         <p>
-            JCHere no information
-        </p>
-        <h4>Renew a private hire vehicle licence</h4>
-        Use our online form to make your private hire vehicle renewal. ***JCHERE Add Send Link***
-
-        <h4>Renew your licence</h4>
-         <p>
-            JCHere no information
-        </p>
-
-    <h3>Private hire vehicle insurance</h3>
-    <p>
-        You must have vehicle insurance to carry passengers. If you want to carry wheelchair passengers, then you will also need public liability insurance.<br>
-        We will need to see copies of the relevant insurance certificates when you make your application.<br>
-    </p>
-        <h4>Vehicle insurance</h4>
-        <p>
-            You need to have a valid insurance certificate or cover note that tells us that you are insured to drive the vehicle. It should also state that the vehicle can be used to carry passengers for hire and reward.
-        </p>
-        <h4>Public liability insurance</h4>
-        <p>
-            To carry wheelchair passengers, you will have public liability insurance with a minimum cover of £2,000,000. As a minimum, this should cover personal injury claims and any damage to property.
-        </p>
-
-        <h3>Right to work in the UK for private hire vehicles</h3>
-    <p>
-        You will need to provide us with evidence that you are legally allowed to work in the UK if you are:
-        <ul>
-            <li>Applying to become a licensed driver</li>  
-            <li>Applying to become an operator</li>
-            <li>A hackney carriage or private hire vehicle licence holder</li>
-        </ul>
-        <p>
-            To prove this, we will need to see your original right to work documents in person and take copies of them.<br>
-            This information can be provided when you make your in-person Disclosure and Barring Service application to us.<br>  
-            Once we have seen you in-person, we will not need to see you again unless you have right to work restrictions.<br>
-        </p>
-        <h4>Documents that we accept</h4>
-        <p>
-            You will need to provide one of the documents listed below.
-            <ul>
-                <li>British passport</li>
-                <li>Irish passport</li>
-                <li>document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-                <li>passport from immigration control</li>
-                <li>immigration status document issued by the Home Office, presented with an official document giving your permanent National Insurance (NI) number and your name</li>
-                <li>UK birth certificate, together with an official document giving your permanent NI number and name</li>
-                <li>Channel Islands, Isle of Man or Ireland birth certificate, presented with an official document giving your permanent NI number and name</li>
-                <li>Certificate of naturalisation as a British citizen, presented with an official document giving your permanent NI number and your name</li>
-                <li>Under immigration controls</li>
-                <li>If you are under immigration controls, then we will only issue a licence for the period that you are entitled to work in the UK</li>
-            </ul>
-        </p>
-        <p>
-            We will need to see one of the documents listed below before we can issue your licence.
-        </p>
-        <ul>
-            <li>current passport</li>
-            <li>document from Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-            <li>current immigration status document containing a photograph issued by the Home Office</li>
-            <li>Right to work is time-limited</li>
-            <li>Where your right to work in the UK is a time-limited period, we will need to see a:</li>
-            <li>document or certificate of application (non-digital) issued by the Home Office</li>
-            <li>document from the Bailiwick of Jersey, Bailiwick of Guernsey or the Isle of Man</li>
-            <li>application Registration Card issued by the Home Office that says you can take employment</li>
-            <li>positive Verification Notice issued by the Home Office Employer Checking Service</li>
-        </ul>
-    </p>
-    <h3>Renew a private hire vehicle licence</h3>
-        <h4>About this licence</h4>
-        <p>
-            Your private hire vehicle licence will be valid for a maximum of 12 months.
-        /p>
-
-        <h4>When to apply</h4>
-        <p>We will usually contact you by email about 6 weeks before your vehicle licence is due to expire. This will tell you of your vehicle’s compliance test date and time. If you do not hear from us, please email <a href="mailto:taxilicensing@sheffield.gov.uk">taxilicensing@sheffield.gov.uk</a> or telephone <a href="#" class="telephoneNumber" onclick="copyToClipboard('0114 2734264')">0114 2734264</a> to make enquires.</p>
-
-        <p>Please check your expiry date to ensure that you can re-licence your vehicle on time.
-        You should renew your licence in the month that it is due to end. If you miss this deadline, you will have up to one month to renew it. After that date, you will have to apply for a new private hire vehicle licence.
-        If your licence does expire, you are not legally allowed to drive your vehicle for the purpose of hire and reward. You can only resume doing this when you receive confirmation that the licence has been renewed.</p>
-
-        <h4>Cost</h4>
-        <p>Renewing your private hire vehicle licence costs £212.
-        You will need to pay this online when you complete your application form.</p>
-
-        <h4>Information you will need</h4>
-        <p>You will need to upload the following information when you renew your licence:</p>
-        <ul>
-        <li>private hire vehicle registration number</li>
-        <li>private hire vehicle licence number</li>
-        <li>vehicle expiry date</li>
-        <li>valid insurance certificate</li>
-        <li>compliance certificate</li>
-        </ul>
-
-        <h4>Issuing the licence</h4>
-        <p>When your vehicle has passed the compliance test, we ask that you make your application straight away so that we can issue the licence to you on time.</p>
-
-        <p>Once we receive your online application and payment, we will process your application within 5 working days.
-        We will then email you a PDF version of your licence and send you a paper version by post along with your licence plate.
-        If your vehicle has been for a test within the last week of the month, we will give you the option to collect your licence so that you have it in time for the end of the month.
-        If you are not available to collect your licence, you can send someone to collect it on your behalf.</p>
-
-        <h4>Exceptional vehicles</h4>
-        <p>If you want us to licence your vehicle for longer than its licensable period, then you must be able to show us that it meets our exceptional vehicle standards. We will give your vehicle this status if:</p>
-        <ul>
-        <li>it has never failed a vehicle compliance test</li>
-        <li>it has never missed a pre-arranged vehicle compliance test</li>
-        <li>there is a complete service record, that shows us that is has been properly serviced to the manufacturer’s standards and all receipts and service book history are available</li>
-        <li>the vehicle has not been suspended at any time due to its mechanical or physical condition</li>
-        <li>the vehicle is Zero Emission Capable (ZEC)</li>
-        </ul>
-
-        <p>The following parts of the vehicle must be in A1 condition:</p>
-        <ul>
-        <li>bodywork has no signs of rust, dents, scratches, stone chips, or any other problems with its appearance</li>
-        <li>paintwork must not be faded, discoloured or mismatched</li>
-        <li>interior, including carpets, mats and seats</li>
-        <li>all luggage compartments are clean and free from damage</li>
-        </ul>
-    </p>
-
-    `,
-    { buttonLabel: "", formName: ""},
-    { typeKey: "switchboard_transferred_to_service" },
-    { typeKey: "switchboard_information_provided"},
-    {
-      type: "Request",
-      keywords: [
-        "Switchboard",
-        "Switch board",
-        "Switch",
-        "transfer",
-        "redirect",
-        "transfer call",
-        "call"
-      ],
-      categories: ["Your City Council"],
-    },
-    { date: "21/11/2025", name: "Joseph Coupland"} 
-  );
 
 const surrenderLicence = new ContentBusiness(
     "surrenderLicence",
@@ -2556,17 +1781,13 @@ const vechicleInspections = new ContentBusiness(
   [
     applyHackneyCarriage,
     applyPrivateHire,
-    renewHackneyCarriage,
-    renewPriviateHire,
+    renewDriverLicence,
     vechicleInspections,
     vechicleCustomerCharter,
     transferLicence,
     surrenderLicence,
-    renewPriviateLicence,
-    renewVechicleLicence,
     medicalNeeds,
     applyTaxiDriver,
-    applyPrivateLicence,
     applyPrivateOperator,
     renewPrivateOperator
   ]
